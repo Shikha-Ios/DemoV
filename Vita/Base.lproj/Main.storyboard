@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Ya-e1-Hov">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="onR-VX-CrV">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="8Ya-e1-Hov" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E7g-LJ-pmc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="D2G-OP-8pa">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Dg1-7y-MS9" kind="relationship" relationship="rootViewController" id="UuN-rX-Hn3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqp-GT-Cnu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1073" y="-138"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="Okn-90-0oE">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" id="Dg1-7y-MS9" customClass="InitialViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3k6-Sj-HRP"/>
+                        <viewControllerLayoutGuide type="bottom" id="h5h-nw-KFv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ko6-Oe-cdw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-e6-S1P">
+                                <rect key="frame" x="160" y="231" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="buttonSignUpClickedWithSender:" destination="Dg1-7y-MS9" eventType="touchUpInside" id="eaj-fL-zLj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-2s-YH2">
+                                <rect key="frame" x="164" y="290" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="buttonSignInClickedWithSender:" destination="Dg1-7y-MS9" eventType="touchUpInside" id="Sto-hd-FKQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J7s-e6-S1P" firstAttribute="centerX" secondItem="Ko6-Oe-cdw" secondAttribute="centerX" id="mZg-Wd-5B0"/>
+                            <constraint firstItem="0q8-2s-YH2" firstAttribute="top" secondItem="J7s-e6-S1P" secondAttribute="bottom" constant="29" id="sIu-AP-hvd"/>
+                            <constraint firstItem="0q8-2s-YH2" firstAttribute="centerX" secondItem="Ko6-Oe-cdw" secondAttribute="centerX" id="wFi-e4-tNk"/>
+                            <constraint firstItem="J7s-e6-S1P" firstAttribute="top" secondItem="3k6-Sj-HRP" secondAttribute="bottom" constant="211" id="xBB-SK-RMZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X5u-Dx-7iM"/>
+                    <connections>
+                        <segue destination="keB-5R-LMk" kind="show" identifier="LoginViewController" id="DPK-lg-YRS"/>
+                        <segue destination="DMD-UC-FpW" kind="show" identifier="RegisterViewController" id="bxt-p2-n2u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVK-9T-7N4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="-138.0809595202399"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="xAf-fa-yVA">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="keB-5R-LMk" customClass="LoginViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tDK-cK-4mK"/>
+                        <viewControllerLayoutGuide type="bottom" id="GYT-Un-kOD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vM0-hC-ur0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZS-Ln-6Sj">
+                                <rect key="frame" x="16" y="15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="buttonBackClickedWithSender:" destination="keB-5R-LMk" eventType="touchUpInside" id="QXg-BJ-N7t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxR-2E-Vpg">
+                                <rect key="frame" x="164" y="384" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="buttonSignInClickedWithSender:" destination="keB-5R-LMk" eventType="touchUpInside" id="y8i-ij-6Pm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AxR-2E-Vpg" firstAttribute="centerX" secondItem="vM0-hC-ur0" secondAttribute="centerX" id="1oz-G8-Imo"/>
+                            <constraint firstItem="GYT-Un-kOD" firstAttribute="top" secondItem="AxR-2E-Vpg" secondAttribute="bottom" constant="253" id="4k4-1E-6fh"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="CameraDashboard" id="Ax0-RL-dGG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzD-RG-PcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="561"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="L24-Go-FcG">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="DMD-UC-FpW" customClass="RegisterViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wa5-aX-C2l"/>
+                        <viewControllerLayoutGuide type="bottom" id="DnC-Sd-aBE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kgp-ib-SSC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EER-r5-vjp">
+                                <rect key="frame" x="16" y="15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="buttonBackClickedWithSender:" destination="DMD-UC-FpW" eventType="touchUpInside" id="ea2-br-eSQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whF-h9-pTv">
+                                <rect key="frame" x="160" y="433" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="buttonSignUpClickedWithSender:" destination="DMD-UC-FpW" eventType="touchUpInside" id="QP2-Fp-l6A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="whF-h9-pTv" firstAttribute="centerX" secondItem="Kgp-ib-SSC" secondAttribute="centerX" id="3o1-Pf-cdh"/>
+                            <constraint firstItem="DnC-Sd-aBE" firstAttribute="top" secondItem="whF-h9-pTv" secondAttribute="bottom" constant="204" id="VTn-wj-M8u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="CameraDashboard" id="Czj-9D-9tv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcX-QF-lEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="-138"/>
+        </scene>
+        <!--Camera Dashboard View Controller-->
+        <scene sceneID="AuM-tM-DlR">
+            <objects>
+                <viewController storyboardIdentifier="CameraDashboardViewController" id="hwt-6q-dHI" customClass="CameraDashboardViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0kq-X1-PAo"/>
+                        <viewControllerLayoutGuide type="bottom" id="jXO-Tg-9v5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BYd-36-CVk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-xT-krH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="-138"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ax0-RL-dGG"/>
+    </inferredMetricsTieBreakers>
+</document>

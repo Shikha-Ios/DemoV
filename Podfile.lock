@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.4.0)
+  - KeychainSwift (8.0.2)
+  - ReachabilitySwift (3)
+  - SwifterSwift (1.6.4)
+  - SwiftyBeaver (1.2.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - KeychainSwift (~> 8.0)
+  - ReachabilitySwift (~> 3)
+  - SwifterSwift
+  - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwifterSwift: 92c73c47c3cbf7d5f788adf6459bf07b5d23d3fb
+  SwiftyBeaver: 90a39e3dc5136b7285f2e4c870b107e3933b8b84
+
+PODFILE CHECKSUM: a8b03bff9d57bd49cd66ed8358b0c0fbe22c1efb
+
+COCOAPODS: 1.1.1
