@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Ya-e1-Hov">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -38,19 +38,24 @@
                         <viewControllerLayoutGuide type="bottom" id="h5h-nw-KFv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ko6-Oe-cdw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_bg" translatesAutoresizingMaskIntoConstraints="NO" id="NWT-SG-Mnb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-e6-S1P">
-                                <rect key="frame" x="160" y="231" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <rect key="frame" x="108.66666666666669" y="345.66666666666669" width="197" height="45"/>
+                                <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg"/>
                                 <connections>
                                     <action selector="buttonSignUpClickedWithSender:" destination="Dg1-7y-MS9" eventType="touchUpInside" id="eaj-fL-zLj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-2s-YH2">
-                                <rect key="frame" x="164" y="290" width="47" height="30"/>
-                                <state key="normal" title="Sign In"/>
+                                <rect key="frame" x="108.66666666666669" y="404.66666666666669" width="197" height="45"/>
+                                <state key="normal" title="Sign In" backgroundImage="Common_buttonBg">
+                                    <color key="titleColor" red="0.12941176470588234" green="0.50588235294117645" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonSignInClickedWithSender:" destination="Dg1-7y-MS9" eventType="touchUpInside" id="Sto-hd-FKQ"/>
                                 </connections>
@@ -58,10 +63,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="h5h-nw-KFv" firstAttribute="top" secondItem="NWT-SG-Mnb" secondAttribute="bottom" id="9Fn-Tz-49m"/>
+                            <constraint firstAttribute="trailing" secondItem="NWT-SG-Mnb" secondAttribute="trailing" id="Jl6-oE-5vO"/>
+                            <constraint firstItem="NWT-SG-Mnb" firstAttribute="leading" secondItem="Ko6-Oe-cdw" secondAttribute="leading" id="Pxc-r7-cXH"/>
+                            <constraint firstItem="NWT-SG-Mnb" firstAttribute="top" secondItem="Ko6-Oe-cdw" secondAttribute="top" id="fCA-5C-JgS"/>
                             <constraint firstItem="J7s-e6-S1P" firstAttribute="centerX" secondItem="Ko6-Oe-cdw" secondAttribute="centerX" id="mZg-Wd-5B0"/>
-                            <constraint firstItem="0q8-2s-YH2" firstAttribute="top" secondItem="J7s-e6-S1P" secondAttribute="bottom" constant="29" id="sIu-AP-hvd"/>
+                            <constraint firstItem="J7s-e6-S1P" firstAttribute="centerY" secondItem="Ko6-Oe-cdw" secondAttribute="centerY" id="nx2-yD-5EN"/>
+                            <constraint firstItem="0q8-2s-YH2" firstAttribute="top" secondItem="J7s-e6-S1P" secondAttribute="bottom" constant="14" id="sIu-AP-hvd"/>
                             <constraint firstItem="0q8-2s-YH2" firstAttribute="centerX" secondItem="Ko6-Oe-cdw" secondAttribute="centerX" id="wFi-e4-tNk"/>
-                            <constraint firstItem="J7s-e6-S1P" firstAttribute="top" secondItem="3k6-Sj-HRP" secondAttribute="bottom" constant="211" id="xBB-SK-RMZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X5u-Dx-7iM"/>
@@ -83,7 +92,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GYT-Un-kOD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vM0-hC-ur0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZS-Ln-6Sj">
@@ -95,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxR-2E-Vpg">
-                                <rect key="frame" x="164" y="384" width="47" height="30"/>
+                                <rect key="frame" x="183.66666666666666" y="453" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="buttonSignInClickedWithSender:" destination="keB-5R-LMk" eventType="touchUpInside" id="y8i-ij-6Pm"/>
@@ -127,7 +136,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DnC-Sd-aBE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kgp-ib-SSC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EER-r5-vjp">
@@ -139,7 +148,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whF-h9-pTv">
-                                <rect key="frame" x="160" y="433" width="55" height="30"/>
+                                <rect key="frame" x="179.66666666666666" y="502" width="55" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="buttonSignUpClickedWithSender:" destination="DMD-UC-FpW" eventType="touchUpInside" id="QP2-Fp-l6A"/>
@@ -169,7 +178,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jXO-Tg-9v5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BYd-36-CVk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -179,7 +188,11 @@
             <point key="canvasLocation" x="908" y="-138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Common_bg" width="414" height="736"/>
+        <image name="Common_buttonBg" width="197" height="45"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ax0-RL-dGG"/>
+        <segue reference="Czj-9D-9tv"/>
     </inferredMetricsTieBreakers>
 </document>
