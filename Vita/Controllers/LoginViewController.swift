@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func buttonSignInClicked(sender: UIButton){
-        self.performSegue(withIdentifier:"CameraDashboard", sender: nil)
+        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
     }
 
     /*

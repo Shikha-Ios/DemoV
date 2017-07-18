@@ -6,43 +6,68 @@
 	<dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>KeychainSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LLSimpleCamera.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Vita.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-VitaTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwifterSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyBeaver.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>113AA0873FBA65E0B039653CEDE2219F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1796F59DECEE9E0F1B3E376354974073</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1947194BEE495486918D3DA2D8FC661F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B941F6E089879E2698B6146F0B70CF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3801D131B45B7AD812A7CAFD3E76AB1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,27 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45CA64D1C5BF72DB6382C21D62B4627D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8803BEF3242EBF376736C0B7F56862E1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A6164E7A5B4696F5D8CC782D0927E4EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB6F404D52E627EB69B02D01C3665E7C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E64DCF446254E85D319B39B009B3BBAA</key>
+		<key>DB4694587B65104FC9D64142934D694E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

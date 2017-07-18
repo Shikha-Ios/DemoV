@@ -10,6 +10,7 @@ pod 'SwifterSwift'
 pod 'KeychainSwift', '~> 8.0'
 pod 'SwiftyBeaver'
 pod 'Alamofire', '~> 4.4'
+pod 'LLSimpleCamera', '~> 4.1'
 
   # Pods for Vita
   target 'VitaTests' do

@@ -22,6 +22,9 @@
 		985857D31EE1ECCA00CC2755 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985857D21EE1ECCA00CC2755 /* RegistrationViewModel.swift */; };
 		985857D71EE2409200CC2755 /* BaseViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985857D61EE2409200CC2755 /* BaseViewModels.swift */; };
 		985857D91EE242F700CC2755 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985857D81EE242F700CC2755 /* UserInfo.swift */; };
+		9861FD8E1F1E90260070CC4D /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861FD8D1F1E90260070CC4D /* CameraViewModel.swift */; };
+		9861FD921F1EBF170070CC4D /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861FD911F1EBF170070CC4D /* MIBadgeButton.swift */; };
+		9861FD941F1EBFF80070CC4D /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861FD931F1EBFF80070CC4D /* StoryBoardHelper.swift */; };
 		98707EF41E9BC5AA00652782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98707EF21E9BC5AA00652782 /* Main.storyboard */; };
 		98707EF61E9BC5AA00652782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98707EF51E9BC5AA00652782 /* Assets.xcassets */; };
 		98707EF91E9BC5AA00652782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98707EF71E9BC5AA00652782 /* LaunchScreen.storyboard */; };
@@ -29,6 +32,10 @@
 		98707F171E9BC81100652782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98707F161E9BC81100652782 /* AppDelegate.swift */; };
 		98707F2C1E9BEFFE00652782 /* ConfigEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98707F2B1E9BEFFE00652782 /* ConfigEndPoints.swift */; };
 		98707F2D1E9BEFFE00652782 /* ConfigEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98707F2B1E9BEFFE00652782 /* ConfigEndPoints.swift */; };
+		988A90F41F1E34BD005E272E /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F31F1E34BD005E272E /* DashBoardController.swift */; };
+		988A90F61F1E354D005E272E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F51F1E354D005E272E /* MapViewController.swift */; };
+		988A90F81F1E3656005E272E /* AYSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F71F1E3656005E272E /* AYSwipeController.swift */; };
+		988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F91F1E36D8005E272E /* ContainerViewController.swift */; };
 		C39D622C54D21A8175B70C3B /* Pods_Vita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E23BAD1EE76B716D68D928 /* Pods_Vita.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +71,9 @@
 		985857D21EE1ECCA00CC2755 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		985857D61EE2409200CC2755 /* BaseViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModels.swift; sourceTree = "<group>"; };
 		985857D81EE242F700CC2755 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9861FD8D1F1E90260070CC4D /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		9861FD911F1EBF170070CC4D /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MIBadgeButton.swift; path = Vita/ViewModels/MIBadgeButton.swift; sourceTree = SOURCE_ROOT; };
+		9861FD931F1EBFF80070CC4D /* StoryBoardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryBoardHelper.swift; path = Vita/HelperClasses/StoryBoardHelper.swift; sourceTree = SOURCE_ROOT; };
 		98707EEB1E9BC5AA00652782 /* Vita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98707EF31E9BC5AA00652782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98707EF51E9BC5AA00652782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +85,10 @@
 		98707F161E9BC81100652782 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98707F1C1E9BCA9800652782 /* VitaTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VitaTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		98707F2B1E9BEFFE00652782 /* ConfigEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigEndPoints.swift; sourceTree = "<group>"; };
+		988A90F31F1E34BD005E272E /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
+		988A90F51F1E354D005E272E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		988A90F71F1E3656005E272E /* AYSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AYSwipeController.swift; sourceTree = "<group>"; };
+		988A90F91F1E36D8005E272E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A6A19353B5E75044083ADC12 /* Pods-VitaTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.production.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.production.xcconfig"; sourceTree = "<group>"; };
 		C3F5C1E1F27D706A4F8ACDBE /* Pods-Vita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.debug.xcconfig"; sourceTree = "<group>"; };
 		F2B8D91D8F6C294533765CFC /* Pods-Vita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,11 +203,15 @@
 		98707F011E9BC73D00652782 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				988A90F71F1E3656005E272E /* AYSwipeController.swift */,
 				2BD1E1D61F1CCA50009EC279 /* InitialViewController.swift */,
 				2BD1E1D41F1CC79E009EC279 /* LoginViewController.swift */,
 				2BD1E1D81F1CCAD1009EC279 /* RegisterViewController.swift */,
 				2BD1E1DA1F1CCB43009EC279 /* PrivacyPolicyViewController.swift */,
+				988A90F91F1E36D8005E272E /* ContainerViewController.swift */,
 				2BD1E1DC1F1CD5BC009EC279 /* CameraDashboardViewController.swift */,
+				988A90F31F1E34BD005E272E /* DashBoardController.swift */,
+				988A90F51F1E354D005E272E /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				98439E271EB381E400FB4331 /* LoginViewModel.swift */,
+				9861FD8D1F1E90260070CC4D /* CameraViewModel.swift */,
 				985857D21EE1ECCA00CC2755 /* RegistrationViewModel.swift */,
 				985857D61EE2409200CC2755 /* BaseViewModels.swift */,
 			);
@@ -219,6 +238,7 @@
 		98707F041E9BC73D00652782 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9861FD911F1EBF170070CC4D /* MIBadgeButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +263,7 @@
 		98707F181E9BC83C00652782 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				9861FD931F1EBFF80070CC4D /* StoryBoardHelper.swift */,
 				984A9E0A1EE2E5CA00B20B45 /* ErrorManagers */,
 				985857CF1EE1DB8400CC2755 /* CommonProtocols */,
 				98707F2A1E9BEFDB00652782 /* NetworkEndPoints */,
@@ -327,7 +348,7 @@
 				TargetAttributes = {
 					98707EEA1E9BC5AA00652782 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2KAL3NND99;
+						DevelopmentTeam = S3U2WWC2U2;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -480,15 +501,22 @@
 				2BD1E1D71F1CCA50009EC279 /* InitialViewController.swift in Sources */,
 				2BD1E1D51F1CC79E009EC279 /* LoginViewController.swift in Sources */,
 				985857D71EE2409200CC2755 /* BaseViewModels.swift in Sources */,
+				9861FD941F1EBFF80070CC4D /* StoryBoardHelper.swift in Sources */,
 				98284BA01E9E502500FB3CEB /* Requestable.swift in Sources */,
 				985857D31EE1ECCA00CC2755 /* RegistrationViewModel.swift in Sources */,
+				988A90F81F1E3656005E272E /* AYSwipeController.swift in Sources */,
 				98707F171E9BC81100652782 /* AppDelegate.swift in Sources */,
 				98439E281EB381E400FB4331 /* LoginViewModel.swift in Sources */,
 				98707F2C1E9BEFFE00652782 /* ConfigEndPoints.swift in Sources */,
 				984A9E0C1EE2E77A00B20B45 /* ErrorManager.swift in Sources */,
+				988A90F41F1E34BD005E272E /* DashBoardController.swift in Sources */,
+				9861FD8E1F1E90260070CC4D /* CameraViewModel.swift in Sources */,
 				2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */,
 				2BD1E1DB1F1CCB43009EC279 /* PrivacyPolicyViewController.swift in Sources */,
+				988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */,
 				98284B9E1E9E460D00FB3CEB /* APIEndPoints.swift in Sources */,
+				988A90F61F1E354D005E272E /* MapViewController.swift in Sources */,
+				9861FD921F1EBF170070CC4D /* MIBadgeButton.swift in Sources */,
 				985857D11EE1DB9800CC2755 /* CommonProtocols.swift in Sources */,
 				985857D91EE242F700CC2755 /* UserInfo.swift in Sources */,
 				2BD1E1DD1F1CD5BC009EC279 /* CameraDashboardViewController.swift in Sources */,
@@ -644,10 +672,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2KAL3NND99;
+				DEVELOPMENT_TEAM = S3U2WWC2U2;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.QDiBrand.a1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
 				PRODUCT_NAME = Vita;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
@@ -665,10 +693,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2KAL3NND99;
+				DEVELOPMENT_TEAM = S3U2WWC2U2;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Distribution.Takeda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
 				PRODUCT_NAME = Vita;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
@@ -774,10 +802,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2KAL3NND99;
+				DEVELOPMENT_TEAM = S3U2WWC2U2;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Distribution.Takeda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
 				PRODUCT_NAME = Vita;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
@@ -860,10 +888,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2KAL3NND99;
+				DEVELOPMENT_TEAM = S3U2WWC2U2;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Distribution.Takeda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
 				PRODUCT_NAME = Vita;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";

@@ -1,24 +1,33 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.5.0)
   - KeychainSwift (8.0.2)
+  - LLSimpleCamera (4.2.0)
   - ReachabilitySwift (3)
-  - SwifterSwift (1.6.4)
-  - SwiftyBeaver (1.2.2)
+  - SwifterSwift (3.0.0):
+    - SwifterSwift/Cocoa (= 3.0.0)
+    - SwifterSwift/Foundation (= 3.0.0)
+    - SwifterSwift/UIKit (= 3.0.0)
+  - SwifterSwift/Cocoa (3.0.0)
+  - SwifterSwift/Foundation (3.0.0)
+  - SwifterSwift/UIKit (3.0.0)
+  - SwiftyBeaver (1.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - KeychainSwift (~> 8.0)
+  - LLSimpleCamera (~> 4.1)
   - ReachabilitySwift (~> 3)
   - SwifterSwift
   - SwiftyBeaver
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
+  LLSimpleCamera: ed7813ce4827ff3e34c6af159c99b5b56e54d1c6
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  SwifterSwift: 92c73c47c3cbf7d5f788adf6459bf07b5d23d3fb
-  SwiftyBeaver: 90a39e3dc5136b7285f2e4c870b107e3933b8b84
+  SwifterSwift: b35d1fee5352da68878f6321b245d3d99c1af32f
+  SwiftyBeaver: d4b551ba34b4206c52cc4684ae90444b8aaa5afd
 
-PODFILE CHECKSUM: a8b03bff9d57bd49cd66ed8358b0c0fbe22c1efb
+PODFILE CHECKSUM: 1cc56e7c7d7a9a0cb793af0985348bb9214a0142
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

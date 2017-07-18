@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Ya-e1-Hov">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Ya-e1-Hov">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,7 +120,7 @@
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="hwt-6q-dHI" kind="show" identifier="CameraDashboard" id="Ax0-RL-dGG"/>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="Ax0-RL-dGG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzD-RG-PcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,17 +162,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="hwt-6q-dHI" kind="show" identifier="CameraDashboard" id="Czj-9D-9tv"/>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="Czj-9D-9tv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcX-QF-lEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242" y="-138"/>
         </scene>
-        <!--Camera Dashboard View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="AuM-tM-DlR">
             <objects>
-                <viewController storyboardIdentifier="CameraDashboardViewController" id="hwt-6q-dHI" customClass="CameraDashboardViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContainerViewControllerIdentifier" id="hwt-6q-dHI" customClass="ContainerViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0kq-X1-PAo"/>
                         <viewControllerLayoutGuide type="bottom" id="jXO-Tg-9v5"/>
@@ -187,10 +187,185 @@
             </objects>
             <point key="canvasLocation" x="908" y="-138"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="PHW-dh-Zvx">
+            <objects>
+                <viewController storyboardIdentifier="MapViewControllerIdentifier" id="Efo-Yn-Zr2" customClass="MapViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EKs-Sw-Uo2"/>
+                        <viewControllerLayoutGuide type="bottom" id="fI6-A8-pc6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vnt-wH-RDR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAP SCREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs9-xt-kvo">
+                                <rect key="frame" x="154.66666666666669" y="357.66666666666669" width="105.00000000000006" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.32535104180000002" blue="0.52364168580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bs9-xt-kvo" firstAttribute="centerX" secondItem="vnt-wH-RDR" secondAttribute="centerX" id="XUA-LE-6PT"/>
+                            <constraint firstItem="bs9-xt-kvo" firstAttribute="centerY" secondItem="vnt-wH-RDR" secondAttribute="centerY" id="sIy-iP-LsI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wq-r2-OB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="-814"/>
+        </scene>
+        <!--Dash Board Controller-->
+        <scene sceneID="9aO-x0-z0T">
+            <objects>
+                <viewController storyboardIdentifier="DashBoardControllerIdentifier" id="7ja-vD-07E" customClass="DashBoardController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0yz-vV-yTO"/>
+                        <viewControllerLayoutGuide type="bottom" id="0nB-WM-Sah"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="duY-BM-Owu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DASHBOARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efS-0n-nRp">
+                                <rect key="frame" x="156" y="358" width="102" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.75882843170000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="efS-0n-nRp" firstAttribute="centerX" secondItem="duY-BM-Owu" secondAttribute="centerX" id="8Xc-bW-4OZ"/>
+                            <constraint firstItem="efS-0n-nRp" firstAttribute="centerY" secondItem="duY-BM-Owu" secondAttribute="centerY" id="hMR-nz-4wv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmh-mq-Dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="-813.58695652173924"/>
+        </scene>
+        <!--Camera Dashboard View Controller-->
+        <scene sceneID="svt-9t-JdE">
+            <objects>
+                <viewController storyboardIdentifier="cameraIde" id="4Hf-rM-MSi" customClass="CameraDashboardViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SpS-oN-Fok"/>
+                        <viewControllerLayoutGuide type="bottom" id="ffD-6D-FQY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YOx-Wr-pOG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bki-Ed-c7M">
+                                <rect key="frame" x="0.0" y="616" width="414" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="a2k-dj-Y3v"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-CQ-0qc" userLabel="Dashboard">
+                                <rect key="frame" x="15" y="41" width="40" height="40"/>
+                                <state key="normal" image="eye"/>
+                                <connections>
+                                    <action selector="tapToCallDashBoardViewController:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="nPB-IT-lci"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65m-dq-JsZ" userLabel="map">
+                                <rect key="frame" x="359" y="41" width="40" height="40"/>
+                                <state key="normal" image="map"/>
+                                <connections>
+                                    <action selector="tapToCallMapViewController:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="xAc-Lt-0bn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSF-nK-exV" userLabel="Flash">
+                                <rect key="frame" x="15" y="557" width="41" height="41"/>
+                                <state key="normal" image="flash"/>
+                                <connections>
+                                    <action selector="flashButton:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="DSE-rV-P91"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-Lc-wVb" userLabel="SwipeCamera">
+                                <rect key="frame" x="66" y="557" width="41" height="41"/>
+                                <state key="normal" image="redo"/>
+                                <connections>
+                                    <action selector="swipeCamera:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="ZuS-Ym-e6c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-ZE-zdU" userLabel="Gallery">
+                                <rect key="frame" x="15" y="653" width="33" height="46"/>
+                                <state key="normal" image="Gallery"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zin-2L-qid" userLabel="Camera Capture" customClass="MIBadgeButton" customModule="Vita" customModuleProvider="target">
+                                <rect key="frame" x="172" y="633" width="71" height="103"/>
+                                <state key="normal" image="camera"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeBackgroundColor">
+                                        <color key="value" red="0.88430970909999995" green="1" blue="0.19217249750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="edgeInsetBottom">
+                                        <real key="value" value="-15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="edgeInsetLeft">
+                                        <real key="value" value="-11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="VO0-xC-dau"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SSF-nK-exV" firstAttribute="top" secondItem="D3N-Lc-wVb" secondAttribute="top" id="0lP-w5-9vH"/>
+                            <constraint firstAttribute="trailing" secondItem="Bki-Ed-c7M" secondAttribute="trailing" id="240-oN-EYc"/>
+                            <constraint firstItem="65m-dq-JsZ" firstAttribute="top" secondItem="SpS-oN-Fok" secondAttribute="bottom" constant="21" id="2CI-JI-Utj"/>
+                            <constraint firstItem="ffD-6D-FQY" firstAttribute="top" secondItem="Zin-2L-qid" secondAttribute="bottom" id="6Ol-YY-Ipp"/>
+                            <constraint firstItem="D3N-Lc-wVb" firstAttribute="leading" secondItem="SSF-nK-exV" secondAttribute="trailing" constant="10" id="KGp-Iw-FIm"/>
+                            <constraint firstItem="948-CQ-0qc" firstAttribute="top" secondItem="SpS-oN-Fok" secondAttribute="bottom" constant="21" id="LmI-Qr-k42"/>
+                            <constraint firstItem="948-CQ-0qc" firstAttribute="leading" secondItem="YOx-Wr-pOG" secondAttribute="leading" constant="15" id="On0-AC-o88"/>
+                            <constraint firstItem="Bki-Ed-c7M" firstAttribute="leading" secondItem="YOx-Wr-pOG" secondAttribute="leading" id="Q2V-2X-2VR"/>
+                            <constraint firstItem="Zin-2L-qid" firstAttribute="leading" secondItem="8Hr-ZE-zdU" secondAttribute="trailing" constant="124" id="W1H-GC-uDI"/>
+                            <constraint firstAttribute="trailing" secondItem="65m-dq-JsZ" secondAttribute="trailing" constant="15" id="WpU-oV-aRx"/>
+                            <constraint firstItem="D3N-Lc-wVb" firstAttribute="leading" secondItem="SSF-nK-exV" secondAttribute="trailing" constant="10" id="f1i-eI-ify"/>
+                            <constraint firstItem="8Hr-ZE-zdU" firstAttribute="top" secondItem="SSF-nK-exV" secondAttribute="bottom" constant="55" id="kD5-yc-lbr"/>
+                            <constraint firstItem="ffD-6D-FQY" firstAttribute="top" secondItem="Bki-Ed-c7M" secondAttribute="bottom" id="s0n-cA-9ON"/>
+                            <constraint firstItem="8Hr-ZE-zdU" firstAttribute="leading" secondItem="YOx-Wr-pOG" secondAttribute="leading" constant="15" id="sXU-7k-XLh"/>
+                            <constraint firstItem="ffD-6D-FQY" firstAttribute="top" secondItem="8Hr-ZE-zdU" secondAttribute="bottom" constant="37" id="tWu-j1-qwW"/>
+                            <constraint firstItem="Bki-Ed-c7M" firstAttribute="top" secondItem="SSF-nK-exV" secondAttribute="bottom" constant="18" id="xyR-P6-UaK"/>
+                            <constraint firstItem="SSF-nK-exV" firstAttribute="leading" secondItem="YOx-Wr-pOG" secondAttribute="leading" constant="15" id="zTv-5Z-4mS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraBottomLayer" destination="Bki-Ed-c7M" id="5AX-tH-GHT"/>
+                        <outlet property="cameraCapture" destination="Zin-2L-qid" id="mx3-sS-mv8"/>
+                        <outlet property="dashBoardButton" destination="948-CQ-0qc" id="x6S-Iy-OBB"/>
+                        <outlet property="flashButton" destination="SSF-nK-exV" id="oTl-bp-3Hh"/>
+                        <outlet property="galleryAccessbutton" destination="8Hr-ZE-zdU" id="OXw-rI-9Tf"/>
+                        <outlet property="mapViewButton" destination="65m-dq-JsZ" id="hdz-Zc-OOW"/>
+                        <outlet property="swipeCamera" destination="D3N-Lc-wVb" id="ag8-gO-lBt"/>
+                        <outlet property="view" destination="YOx-Wr-pOG" id="Vt8-gH-S9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7U-po-dHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1178.2608695652175" y="560.86956521739137"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Common_bg" width="414" height="736"/>
         <image name="Common_buttonBg" width="197" height="45"/>
+        <image name="Gallery" width="33" height="32"/>
+        <image name="camera" width="71" height="103"/>
+        <image name="eye" width="40" height="40"/>
+        <image name="flash" width="41" height="41"/>
+        <image name="map" width="40" height="40"/>
+        <image name="redo" width="41" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Czj-9D-9tv"/>
