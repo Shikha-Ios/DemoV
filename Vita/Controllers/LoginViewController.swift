@@ -10,6 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +27,32 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: Action Methods
-    @IBAction func buttonBackClicked(sender: UIButton){
+    @IBAction func backClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-    @IBAction func buttonSignInClicked(sender: UIButton){
+    @IBAction func signInClicked(sender: UIButton){
         self.performSegue(withIdentifier:"ContainerVC", sender: nil)
     }
+    @IBAction func facebookSignInClicked(sender: UIButton){
+    }
+    
+    @IBAction func googlePlusSignInClicked(sender: UIButton){
+    }
+    
+    @IBAction func privacyClicked(sender: UIButton){
+    }
+    
+    @IBAction func forgotPasswordClicked(sender: UIButton){
+    }
+    
+    // MARK: UITextField Delegates
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+
 
     /*
     // MARK: - Navigation
