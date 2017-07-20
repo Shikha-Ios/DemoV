@@ -17,6 +17,7 @@
 		98284BA01E9E502500FB3CEB /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98284B9F1E9E502500FB3CEB /* Requestable.swift */; };
 		98439E281EB381E400FB4331 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98439E271EB381E400FB4331 /* LoginViewModel.swift */; };
 		984A9E0C1EE2E77A00B20B45 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984A9E0B1EE2E77A00B20B45 /* ErrorManager.swift */; };
+		984C03411F21423500CBF7A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984C03401F21423500CBF7A9 /* MapKit.framework */; };
 		985857CE1EE1CDE400CC2755 /* WebAPIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985857CD1EE1CDE400CC2755 /* WebAPIWrapper.swift */; };
 		985857D11EE1DB9800CC2755 /* CommonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985857D01EE1DB9800CC2755 /* CommonProtocols.swift */; };
 		985857D31EE1ECCA00CC2755 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985857D21EE1ECCA00CC2755 /* RegistrationViewModel.swift */; };
@@ -36,6 +37,7 @@
 		988A90F61F1E354D005E272E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F51F1E354D005E272E /* MapViewController.swift */; };
 		988A90F81F1E3656005E272E /* AYSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F71F1E3656005E272E /* AYSwipeController.swift */; };
 		988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F91F1E36D8005E272E /* ContainerViewController.swift */; };
+		989911031F20DDC500F57C64 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989911021F20DDC500F57C64 /* NavigationBar.swift */; };
 		C39D622C54D21A8175B70C3B /* Pods_Vita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E23BAD1EE76B716D68D928 /* Pods_Vita.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,7 @@
 		98284B9F1E9E502500FB3CEB /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		98439E271EB381E400FB4331 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		984A9E0B1EE2E77A00B20B45 /* ErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		984C03401F21423500CBF7A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		985857CD1EE1CDE400CC2755 /* WebAPIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIWrapper.swift; sourceTree = "<group>"; };
 		985857D01EE1DB9800CC2755 /* CommonProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonProtocols.swift; sourceTree = "<group>"; };
 		985857D21EE1ECCA00CC2755 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		988A90F51F1E354D005E272E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		988A90F71F1E3656005E272E /* AYSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AYSwipeController.swift; sourceTree = "<group>"; };
 		988A90F91F1E36D8005E272E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		989911021F20DDC500F57C64 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A6A19353B5E75044083ADC12 /* Pods-VitaTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.production.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.production.xcconfig"; sourceTree = "<group>"; };
 		C3F5C1E1F27D706A4F8ACDBE /* Pods-Vita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.debug.xcconfig"; sourceTree = "<group>"; };
 		F2B8D91D8F6C294533765CFC /* Pods-Vita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984C03411F21423500CBF7A9 /* MapKit.framework in Frameworks */,
 				C39D622C54D21A8175B70C3B /* Pods_Vita.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +138,7 @@
 		4588C20C3D5F0C36091F743A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				984C03401F21423500CBF7A9 /* MapKit.framework */,
 				83E23BAD1EE76B716D68D928 /* Pods_Vita.framework */,
 				0769A93900DF1AB71A40509B /* Pods_VitaTests.framework */,
 			);
@@ -231,6 +237,7 @@
 				9861FD8D1F1E90260070CC4D /* CameraViewModel.swift */,
 				985857D21EE1ECCA00CC2755 /* RegistrationViewModel.swift */,
 				985857D61EE2409200CC2755 /* BaseViewModels.swift */,
+				989911021F20DDC500F57C64 /* NavigationBar.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -509,6 +516,7 @@
 				98439E281EB381E400FB4331 /* LoginViewModel.swift in Sources */,
 				98707F2C1E9BEFFE00652782 /* ConfigEndPoints.swift in Sources */,
 				984A9E0C1EE2E77A00B20B45 /* ErrorManager.swift in Sources */,
+				989911031F20DDC500F57C64 /* NavigationBar.swift in Sources */,
 				988A90F41F1E34BD005E272E /* DashBoardController.swift in Sources */,
 				9861FD8E1F1E90260070CC4D /* CameraViewModel.swift in Sources */,
 				2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */,

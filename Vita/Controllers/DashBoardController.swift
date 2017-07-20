@@ -22,6 +22,16 @@ class DashBoardController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  @IBAction func tapForCameraViewController(_ sender: UIButton) {
+    let viewControllersArray = self.navigationController?.viewControllers
+    
+    for viewController in viewControllersArray! {
+      if viewController .isMember(of: ContainerViewController.self)  {
+        let controller = viewController as! ContainerViewController
+        controller.moveToPage(sender.tag, animated: true)
+      }
+    }
+  }
   
   /*
    // MARK: - Navigation
