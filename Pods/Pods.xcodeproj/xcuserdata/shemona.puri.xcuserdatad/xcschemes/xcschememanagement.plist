@@ -9,6 +9,41 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FacebookCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FacebookLogin.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FacebookShare.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +97,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D434C9691D496C8578E74D891547751</key>
+		<key>0843C6171A972BA993090F6EE7CA014D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14BAADA026FFC7F4443D376B092D5FA2</key>
+		<key>1341C6180249E2C859171F8BE86EF07B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +117,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2E3558AA7FBFE3AD0AAE0E02A3888739</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>335FC5E7DF8530DC1462429A5F914419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41E32D12B979FC9D337A256C28022F6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44F2BEAB7666BB0E056EC4C4EAB843FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>48737925C04503960EE4A3790C976D7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5406817FFC5972461058B5E6C0BFCA35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +157,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9732E1100AAFCF1B3601BE1C6600A186</key>
+		<key>97B1BAEA5D748D15E15C7C1780DD8678</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +172,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6CC860BDEEA7E33BEC006AD08400E4E</key>
+		<key>B6E5FBF3EB2C032964F03A560EB91C71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D33A971E36C7D614827B65C7112CAB71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7015F1B23F26EE9ED934C00316ADF4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
