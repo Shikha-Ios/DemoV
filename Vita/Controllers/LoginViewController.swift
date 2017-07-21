@@ -30,7 +30,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInClicked(sender: UIButton){
-        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        //self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        if (!self.checkValidation())
+        {
+            return
+        }
+        else
+        {
+            self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        }
+
     }
     @IBAction func facebookSignInClicked(sender: UIButton){
     }
@@ -51,6 +60,56 @@ class LoginViewController: UIViewController {
         return true
     }
 
+    //MARK: -  Input Validation Methods/Alert Methods...
+    func checkValidation() ->Bool
+    {
+        if (userNameTextField.text?.characters.count == 0 && passwordTextField.text?.characters.count == 0)
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the information")
+            return false
+        }
+        if (userNameTextField.text?.characters.count == 0)
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the valid email id")
+            return false
+        }
+        if (passwordTextField.text?.characters.count == 0)
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter a valid password")
+            return false
+        }
+        if ((userNameTextField.text?.characters.count)! > 0 && (!self.isValidEmail(email: userNameTextField.text as String!)))
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the valid email id")
+            return false
+        }
+        
+        return true
+    }
+    
+    func isValidPassword(password: String) -> Bool {
+        //Minimum 6 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character:
+        let passwordRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{6,}"
+        let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+        return passwordTest.evaluate(with: password)
+    }
+    
+    func isValidEmail(email:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: email)
+    }
+
+    // MARK: - Alert Handler
+    func showAlertControllerWithTitle(title: String?, message: String?)
+    {
+        let appearance = VitaAlertViewController.SCLAppearance(showCloseButton: false)
+        let alert = VitaAlertViewController(appearance: appearance)
+        alert.addButton("Ok"){
+            print("Ok tapped")
+        }
+        alert.showWarning(title!, subTitle: message!)
+    }
 
     /*
     // MARK: - Navigation
