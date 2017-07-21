@@ -11,6 +11,7 @@ import LLSimpleCamera
 
 
 class CameraDashboardViewController: UIViewController {
+  @IBOutlet weak var placeHolderImageView: UIImageView!
   
   @IBOutlet weak var galleryAccessbutton: UIButton!
   @IBOutlet weak var cameraCapture: MIBadgeButton!
@@ -41,9 +42,7 @@ class CameraDashboardViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-  }
+ 
   
   // MARK: - Camera Functions
   
@@ -52,14 +51,14 @@ class CameraDashboardViewController: UIViewController {
       let done: Bool = camera.updateFlashMode(LLCameraFlashOn)
       if done {
         flashButton.isSelected = true
-        flashButton.backgroundColor = UIColor.yellow
+        //flashButton.backgroundColor = UIColor.yellow
       }
     }
     else {
       let done: Bool = camera.updateFlashMode(LLCameraFlashOff)
       if done {
         flashButton.isSelected = false
-        flashButton.backgroundColor = UIColor.white
+        //flashButton.backgroundColor = UIColor.white
       }
     }
   }
@@ -88,9 +87,16 @@ class CameraDashboardViewController: UIViewController {
   // MARK: - Private Functions
   
 
-  @IBAction func tapToCallMapViewController(_ sender: Any) {
-  }
+
   @IBAction func tapToCallDashBoardViewController(_ sender: UIButton) {
+  let viewControllersArray = self.navigationController?.viewControllers
+    
+    for viewController in viewControllersArray! {
+      if viewController .isMember(of: ContainerViewController.self)  {
+        let controller = viewController as! ContainerViewController
+        controller.moveToPage(sender.tag, animated: true)
+      }
+    }
   }
   fileprivate func brignSubViewsToFront () {
     view.bringSubview(toFront: mapViewButton!)
@@ -100,14 +106,16 @@ class CameraDashboardViewController: UIViewController {
     view.bringSubview(toFront: cameraBottomLayer!)
     view.bringSubview(toFront: galleryAccessbutton!)
     view.bringSubview(toFront: cameraCapture!)
+    view.bringSubview(toFront: placeHolderImageView!)
   }
   
   fileprivate func initializeCamera() {
     let screenRect: CGRect = UIScreen.main.bounds
-    camera = LLSimpleCamera()
     camera = LLSimpleCamera(videoEnabled: true)
     camera = LLSimpleCamera(quality: AVCaptureSessionPresetHigh, position: LLCameraPositionRear, videoEnabled: true)
     camera.attach(to: self, withFrame: CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height))
+    placeHolderImageView.isHidden = true
+   
   }
   
 }

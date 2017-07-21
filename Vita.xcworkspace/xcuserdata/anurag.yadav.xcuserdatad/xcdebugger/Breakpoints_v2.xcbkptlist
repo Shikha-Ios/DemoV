@@ -6,80 +6,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/EZSwipeController.swift"
-            timestampString = "522079222.160803"
+            filePath = "Vita/Controllers/DashBoardController.swift"
+            timestampString = "522272458.667708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
-            landmarkName = "pageViewController(_:didFinishAnimating:previousViewControllers:transitionCompleted:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "tapForCameraViewController(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/EZSwipeController.swift"
-            timestampString = "522079222.160803"
+            filePath = "Pods/LLSimpleCamera/LLSimpleCamera/LLSimpleCamera.m"
+            timestampString = "522276925.0768"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
-            landmarkName = "pageViewController(_:viewControllerAfter:)"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-gestureRecognizerShouldBegin:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/EZSwipeController.swift"
-            timestampString = "522079222.160803"
+            filePath = "Pods/LLSimpleCamera/LLSimpleCamera/LLSimpleCamera.m"
+            timestampString = "522276926.00034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "pageViewController(_:viewControllerBefore:)"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-handlePinchGesture:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/MySwipeVC.swift"
-            timestampString = "522082126.807562"
+            filePath = "Vita/Controllers/AYSwipeController.swift"
+            timestampString = "522278532.160655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "viewControllerData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/MySwipeVC.swift"
-            timestampString = "522082139.531756"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "moveToEnd()"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "setupPageViewController()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

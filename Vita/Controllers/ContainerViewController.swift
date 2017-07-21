@@ -17,6 +17,10 @@ class ContainerViewController: AYSwipeController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
     }
+  
+  class func movePageAtIndex(index: Int){
+    self.movePageAtIndex(index: index)
+  }
 }
 
 extension ContainerViewController: AYSwipeControllerDataSource {
@@ -31,20 +35,8 @@ extension ContainerViewController: AYSwipeControllerDataSource {
         return [dashBoard,camera,mapViewController]
     }
   
-    func changedToPageIndex(_ index: Int) {
-        print("Page has changed to: \(index)")
-    }
-    
-    func moveToEnd() {
-        self.moveToPage(2, animated: true)
-    }
   func indexOfStartingPage() -> Int {
     return 1
   }
-    
-    func alert(title: String?, message: String, action: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: action, style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
+  
 }
