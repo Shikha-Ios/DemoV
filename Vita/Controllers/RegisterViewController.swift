@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
 
@@ -34,10 +35,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
     }
     
     @IBAction func signUpClicked(sender: UIButton){
+
+       // self.performSegue(withIdentifier:"ContainerVC", sender: nil)
         
-        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
         
-        /*
         if (!self.checkValidation())
         {
             return
@@ -46,11 +47,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         {
         self.performSegue(withIdentifier:"ContainerVC", sender: nil)
         }
- */
+ 
     }
     
     @IBAction func facebookSignUpClicked(sender: UIButton){
-        
         self.fbLoginButtonClicked()
     }
     
@@ -71,26 +71,27 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
     //MARK: -  Input Validation Methods/Alert Methods...
     func checkValidation() ->Bool
     {
-        if(emailAddressTextField.text?.characters.count == 0 && passwordTextField.text?.characters.count == 0 )
+        if (emailAddressTextField.text?.characters.count == 0 && passwordTextField.text?.characters.count == 0)
         {
-            print("Please enter information")
-            return false
-        }
-            if (emailAddressTextField.text?.characters.count == 0)
-        {
-            print("Please enter the valid email")
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the information")
             return false
         }
         if (emailAddressTextField.text?.characters.count == 0)
         {
-            print("Please enter the valid password")
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the valid email id")
+            return false
+        }
+        if (passwordTextField.text?.characters.count == 0)
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter a valid password")
             return false
         }
         if ((emailAddressTextField.text?.characters.count)! > 0 && (!self.isValidEmail(email: emailAddressTextField.text as String!)))
         {
-            print("Please enter the valid email")
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the valid email id")
             return false
         }
+
         return true
     }
 
@@ -121,6 +122,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         print("userProfile email:",profile?.email)
         print("userProfile name:",profile?.name)
 
+        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
@@ -142,6 +145,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
                 let token = accessToken
                 print("Logged in!", token.authenticationToken)
                 self.getUserProfile()
+                
             }
         }
     }
@@ -156,6 +160,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
                 print("Custom Graph Request Succeeded: \(response)")
                 print("My facebook id is \(response.dictionaryValue?["id"])")
                 print("My name is \(response.dictionaryValue?["name"])")
+                self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+
                 
             case .failed(let error):
                 print("Graph Request Failed: \(error)")
@@ -164,6 +170,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         connection.start()
     }
 
+    // MARK: - Alert Handler
+    func showAlertControllerWithTitle(title: String?, message: String?)
+    {
+        let appearance = VitaAlertViewController.SCLAppearance(showCloseButton: false)
+        let alert = VitaAlertViewController(appearance: appearance)
+        alert.addButton("Ok"){
+            print("Ok tapped")
+        }
+        alert.showWarning(title!, subTitle: message!)
+    }
 
 
     /*
