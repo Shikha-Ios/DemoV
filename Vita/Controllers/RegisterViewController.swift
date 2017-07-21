@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSignInUIDelegate{
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailAddressTextField: UITextField!
@@ -16,6 +16,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -50,6 +52,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func googlePlusSignUpClicked(sender: UIButton){
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func privacyClicked(sender: UIButton){
@@ -106,7 +109,28 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         return emailTest.evaluate(with: email)
     }
     
-       
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        let authentication = user.authentication
+        let profile = user.profile
+
+        print("Access token:", authentication?.accessToken!)
+        print("userProfile email:",profile?.email)
+        print("userProfile name:",profile?.name)
+
+
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
+
+
     /*
     // MARK: - Navigation
 

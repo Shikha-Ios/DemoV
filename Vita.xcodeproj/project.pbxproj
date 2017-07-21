@@ -12,6 +12,8 @@
 		2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1E1D81F1CCAD1009EC279 /* RegisterViewController.swift */; };
 		2BD1E1DB1F1CCB43009EC279 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1E1DA1F1CCB43009EC279 /* PrivacyPolicyViewController.swift */; };
 		2BD1E1DD1F1CD5BC009EC279 /* CameraDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1E1DC1F1CD5BC009EC279 /* CameraDashboardViewController.swift */; };
+		2BDB28BE1F20D55400477E6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB28BD1F20D55400477E6E /* GoogleService-Info.plist */; };
+		2BDB28BF1F20D55400477E6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB28BD1F20D55400477E6E /* GoogleService-Info.plist */; };
 		4BE0034A94FF636BC2837E67 /* Pods_VitaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0769A93900DF1AB71A40509B /* Pods_VitaTests.framework */; };
 		98284B9E1E9E460D00FB3CEB /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98284B9D1E9E460D00FB3CEB /* APIEndPoints.swift */; };
 		98284BA01E9E502500FB3CEB /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98284B9F1E9E502500FB3CEB /* Requestable.swift */; };
@@ -57,6 +59,7 @@
 		2BD1E1D81F1CCAD1009EC279 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2BD1E1DA1F1CCB43009EC279 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		2BD1E1DC1F1CD5BC009EC279 /* CameraDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraDashboardViewController.swift; sourceTree = "<group>"; };
+		2BDB28BD1F20D55400477E6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		395D23DB9F5A28803D52405C /* Pods-VitaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.release.xcconfig"; sourceTree = "<group>"; };
 		3DE5834D6081C8860696C5AE /* Pods-VitaTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.development.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.development.xcconfig"; sourceTree = "<group>"; };
 		8329EA1D768992FA6DC4B5C9 /* Pods-Vita.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.production.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.production.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 				98707F031E9BC73D00652782 /* ViewModels */,
 				98707F041E9BC73D00652782 /* Views */,
 				98707EFA1E9BC5AA00652782 /* Info.plist */,
+				2BDB28BD1F20D55400477E6E /* GoogleService-Info.plist */,
 				98707EF51E9BC5AA00652782 /* Assets.xcassets */,
 			);
 			path = Vita;
@@ -386,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98707EF91E9BC5AA00652782 /* LaunchScreen.storyboard in Resources */,
+				2BDB28BE1F20D55400477E6E /* GoogleService-Info.plist in Resources */,
 				98707EF61E9BC5AA00652782 /* Assets.xcassets in Resources */,
 				98707EF41E9BC5AA00652782 /* Main.storyboard in Resources */,
 			);
@@ -395,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDB28BF1F20D55400477E6E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

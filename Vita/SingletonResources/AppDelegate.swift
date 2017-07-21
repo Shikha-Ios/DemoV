@@ -19,9 +19,16 @@ class AppDelegate: UIResponder {
 
 //MARK UIApplication Delegates
 extension AppDelegate : UIApplicationDelegate {
+  
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         ConfigEndPoints.shared.initialize()
+        
+        // Initialize sign-in
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
+        
         return true
     }
     
@@ -40,5 +47,13 @@ extension AppDelegate : UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
+    
+    
+    
+  
 
 }
