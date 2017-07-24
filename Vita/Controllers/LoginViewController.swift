@@ -51,6 +51,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordClicked(sender: UIButton){
+        self.performSegue(withIdentifier:"PasswordVC", sender: nil)
     }
     
     // MARK: UITextField Delegates
