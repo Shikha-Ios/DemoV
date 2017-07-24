@@ -41,6 +41,8 @@
 	<string>244843792688890</string>
 	<key>FacebookDisplayName</key>
 	<string>Vita</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

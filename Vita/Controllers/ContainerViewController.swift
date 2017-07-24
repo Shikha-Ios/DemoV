@@ -10,13 +10,22 @@ import UIKit
 
 class ContainerViewController: AYSwipeController {
     override func setupView() {
-        datasource = self
+      datasource = self
   }
-    
+  override func viewWillAppear(_ animated: Bool) {
+  
+  }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
-    }
+      
+      //signInNavigationIdentifier
+      if AppDelegate.sharedDelegate().isUserLoggedIn {
+        let initalViewController: UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInNavigationIdentifier") as! UINavigationController
+        self.navigationController?.present(initalViewController, animated: true, completion: nil)
+        
+      }
+  }
   
   class func movePageAtIndex(index: Int){
     self.movePageAtIndex(index: index)
@@ -24,7 +33,7 @@ class ContainerViewController: AYSwipeController {
 }
 
 extension ContainerViewController: AYSwipeControllerDataSource {
-    
+
     func viewControllerData() -> [UIViewController] {
       let dashBoard: DashBoardController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashBoardControllerIdentifier") as UIViewController as! DashBoardController
       

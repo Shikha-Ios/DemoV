@@ -11,8 +11,11 @@ import FacebookCore
 import FacebookLogin
 
 @UIApplicationMain
-class AppDelegate: UIResponder {
 
+
+
+class AppDelegate: UIResponder {
+var isUserLoggedIn = true
     var window: UIWindow?
     class func sharedDelegate()->AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -22,18 +25,18 @@ class AppDelegate: UIResponder {
 //MARK UIApplication Delegates
 extension AppDelegate : UIApplicationDelegate {
   
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        ConfigEndPoints.shared.initialize()
+      
         
-        // Initialize sign-in
+               // Initialize sign-in
         var configureError: NSError?
         
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
-        
+    
+
         return true
     }
     
@@ -69,8 +72,7 @@ extension AppDelegate : UIApplicationDelegate {
 //        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
 //    }
     
-    
-    
+
   
 
 }

@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/DashBoardController.swift"
-            timestampString = "522272458.667708"
+            filePath = "Vita/Controllers/ContainerViewController.swift"
+            timestampString = "522372029.667928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "tapForCameraViewController(_:)"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "setupView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/LLSimpleCamera/LLSimpleCamera/LLSimpleCamera.m"
-            timestampString = "522276925.0768"
+            filePath = "Vita/Controllers/ContainerViewController.swift"
+            timestampString = "522372120.024819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-gestureRecognizerShouldBegin:"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,29 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/LLSimpleCamera/LLSimpleCamera/LLSimpleCamera.m"
-            timestampString = "522276926.00034"
+            filePath = "Vita/Controllers/CameraDashboardViewController.swift"
+            timestampString = "522610111.349671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-handlePinchGesture:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/AYSwipeController.swift"
-            timestampString = "522278532.160655"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "setupPageViewController()"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "assetsPickerController(_:didFinishPickingAssets:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

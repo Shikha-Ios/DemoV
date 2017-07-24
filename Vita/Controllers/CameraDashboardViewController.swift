@@ -8,6 +8,10 @@
 
 import UIKit
 import LLSimpleCamera
+import Photos
+import CTAssetsPickerController
+
+
 
 
 class CameraDashboardViewController: UIViewController {
@@ -21,6 +25,13 @@ class CameraDashboardViewController: UIViewController {
   @IBOutlet weak var swipeCamera: UIButton!
   
   var arrayImages = [UIImage]()
+  var color1: UIColor? = UIColor(red: 102.0 / 255.0, green: 161.0 / 255.0, blue: 130.0 / 255.0, alpha: 1)
+  var color2: UIColor? = UIColor(red: 60.0 / 255.0, green: 71.0 / 255.0, blue: 75.0 / 255.0, alpha: 1)
+  var color3: UIColor? = UIColor(white: 0.9, alpha: 1)
+  var font: UIFont? = UIFont(name: "Futura-Medium", size: 22.0)
+  
+
+
 		
   
   @IBOutlet weak var cameraBottomLayer: UIView!
@@ -64,6 +75,20 @@ class CameraDashboardViewController: UIViewController {
   }
   
   
+  @IBAction func openGallery(_ sender: Any) {
+    PHPhotoLibrary.requestAuthorization({(_ status: PHAuthorizationStatus) -> Void in
+      DispatchQueue.main.async(execute: {() -> Void in
+        let picker = CTAssetsPickerController()
+        picker.delegate = self
+        if UI_USER_INTERFACE_IDIOM() == .pad {
+        
+          picker.modalPresentationStyle = .formSheet
+        }
+        self.present(picker, animated: true, completion: nil)
+      })
+    })
+  
+  }
   
   @IBAction func swipeCamera(_ sender: UIButton) {
     self.camera.togglePosition()
@@ -117,5 +142,13 @@ class CameraDashboardViewController: UIViewController {
     placeHolderImageView.isHidden = true
    
   }
-  
+}
+
+extension CameraDashboardViewController: CTAssetsPickerControllerDelegate {
+
+  func assetsPickerController(_ picker: CTAssetsPickerController!, didFinishPickingAssets assets: [Any]!) {
+    picker.dismiss(animated: true, completion: nil)
+    print(assets)
+  }
+
 }

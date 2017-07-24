@@ -374,9 +374,9 @@
 				TargetAttributes = {
 					98707EEA1E9BC5AA00652782 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = S3U2WWC2U2;
+						DevelopmentTeam = 2KAL3NND99;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					98707F081E9BC76100652782 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -616,8 +616,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -640,6 +640,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.QDiBrand.a1;
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -687,6 +688,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Distribution.Takeda;
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -701,14 +703,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = S3U2WWC2U2;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				DEVELOPMENT_TEAM = 2KAL3NND99;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
 				PRODUCT_NAME = Vita;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
+				PROVISIONING_PROFILE_SPECIFIER = Distribute_Enterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -723,13 +726,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = S3U2WWC2U2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				DEVELOPMENT_TEAM = 2KAL3NND99;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
 				PRODUCT_NAME = Vita;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
+				PROVISIONING_PROFILE_SPECIFIER = Distribute_Enterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -793,8 +797,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -817,6 +821,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Distribution.Takeda;
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -831,14 +836,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ishwari  Singh (7UWHA6464A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = S3U2WWC2U2;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				DEVELOPMENT_TEAM = 2KAL3NND99;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
 				PRODUCT_NAME = Vita;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
+				PROVISIONING_PROFILE_SPECIFIER = Distribute_Enterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -903,6 +909,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Distribution.Takeda;
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -918,13 +925,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = S3U2WWC2U2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: A-1 Technology Inc";
+				DEVELOPMENT_TEAM = 2KAL3NND99;
 				INFOPLIST_FILE = Vita/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alok.project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
 				PRODUCT_NAME = Vita;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "884aed42-c189-4e37-8786-d83c6ce99737";
+				PROVISIONING_PROFILE_SPECIFIER = Distribute_Enterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
