@@ -15,6 +15,15 @@ import CTAssetsPickerController
 
 
 class CameraDashboardViewController: UIViewController {
+  
+  @IBOutlet weak var cameraOutlet: UIButton!
+  
+  @IBOutlet weak var videoOutlet: UIButton!
+  
+  @IBOutlet weak var centerXConstraint: NSLayoutConstraint!
+  
+ 
+  
   @IBOutlet weak var placeHolderImageView: UIImageView!
   
   @IBOutlet weak var galleryAccessbutton: UIButton!
@@ -24,16 +33,10 @@ class CameraDashboardViewController: UIViewController {
   @IBOutlet weak var flashButton: UIButton!
   @IBOutlet weak var swipeCamera: UIButton!
   
+  var flashSelecteion = 0
+  
   var arrayImages = [UIImage]()
-  var color1: UIColor? = UIColor(red: 102.0 / 255.0, green: 161.0 / 255.0, blue: 130.0 / 255.0, alpha: 1)
-  var color2: UIColor? = UIColor(red: 60.0 / 255.0, green: 71.0 / 255.0, blue: 75.0 / 255.0, alpha: 1)
-  var color3: UIColor? = UIColor(white: 0.9, alpha: 1)
-  var font: UIFont? = UIFont(name: "Futura-Medium", size: 22.0)
-  
 
-
-		
-  
   @IBOutlet weak var cameraBottomLayer: UIView!
   var camera = LLSimpleCamera()
   var snapButton: UIButton?
@@ -58,21 +61,27 @@ class CameraDashboardViewController: UIViewController {
   // MARK: - Camera Functions
   
   @IBAction func flashButton(_ sender: UIButton) {
-    if camera.flash == LLCameraFlashOff {
-      let done: Bool = camera.updateFlashMode(LLCameraFlashOn)
-      if done {
-        flashButton.isSelected = true
-        //flashButton.backgroundColor = UIColor.yellow
+    if flashSelecteion == 0 {
+      if camera.updateFlashMode(LLCameraFlashOn){
+        flashSelecteion = 1
+        flashButton.setImageWith(imageName: "Flash_Seleted", forState: UIControlState.normal)
+        
       }
     }
-    else {
-      let done: Bool = camera.updateFlashMode(LLCameraFlashOff)
-      if done {
-        flashButton.isSelected = false
-        //flashButton.backgroundColor = UIColor.white
+      else if flashSelecteion == 1 {
+        if camera.updateFlashMode(LLCameraFlashOff){
+          flashSelecteion = 2
+          flashButton.setImageWith(imageName: "Flash_Unselected", forState: UIControlState.normal)
+        }
       }
-    }
-  }
+      else if flashSelecteion == 2 {
+        if camera.updateFlashMode(LLCameraFlashAuto){
+          flashSelecteion = 0
+          flashButton.setImageWith(imageName: "Flash_Auto", forState: UIControlState.normal)
+        }
+      }
+    
+}
   
   
   @IBAction func openGallery(_ sender: Any) {
@@ -94,6 +103,24 @@ class CameraDashboardViewController: UIViewController {
     self.camera.togglePosition()
   }
   
+  @IBAction func cameraAction(_ sender: Any) {
+    self.centerXConstraint.constant = 0
+    self.videoOutlet.setColorForDefaultState(withColor: UIColor.white)
+    self.cameraOutlet.setColorForDefaultState(withColor: UIColor.vitaDefaultColor)
+    UIView.animate(withDuration: 1.0, animations:{
+      self.view.layoutIfNeeded()
+    })
+    
+  }
+  
+  @IBAction func videoAction(_ sender: Any) {
+    self.videoOutlet.setColorForDefaultState(withColor: UIColor.vitaDefaultColor)
+    self.cameraOutlet.setColorForDefaultState(withColor: UIColor.white)
+    self.centerXConstraint.constant = -50-self.videoOutlet.frame.size.width
+    UIView.animate(withDuration: 1.0, animations:{
+      self.view.layoutIfNeeded()
+    })
+  }
   @IBAction func capturePhoto(_ sender: UIButton) {
     
     camera.capture {[unowned self] (_ camera: LLSimpleCamera?, _ image: UIImage?, _ metadata: [AnyHashable: Any]?, _ error: Error?)  in
@@ -132,12 +159,15 @@ class CameraDashboardViewController: UIViewController {
     view.bringSubview(toFront: galleryAccessbutton!)
     view.bringSubview(toFront: cameraCapture!)
     view.bringSubview(toFront: placeHolderImageView!)
+    view.bringSubview(toFront: videoOutlet!)
+    view.bringSubview(toFront: cameraOutlet!)
   }
   
   fileprivate func initializeCamera() {
     let screenRect: CGRect = UIScreen.main.bounds
     camera = LLSimpleCamera(videoEnabled: true)
     camera = LLSimpleCamera(quality: AVCaptureSessionPresetHigh, position: LLCameraPositionRear, videoEnabled: true)
+    camera.updateFlashMode(LLCameraFlashAuto)
     camera.attach(to: self, withFrame: CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height))
     placeHolderImageView.isHidden = true
    

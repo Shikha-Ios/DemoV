@@ -623,7 +623,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSF-nK-exV" userLabel="Flash">
                                 <rect key="frame" x="15" y="557" width="41" height="41"/>
-                                <state key="normal" image="flash"/>
+                                <state key="normal" image="Flash_Auto"/>
                                 <connections>
                                     <action selector="flashButton:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="DSE-rV-P91"/>
                                 </connections>
@@ -663,6 +663,22 @@
                                     <action selector="capturePhoto:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="VO0-xC-dau"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-oR-DpM" userLabel="Camera swipe">
+                                <rect key="frame" x="175.66666666666666" y="697" width="63" height="34"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.2740222812" green="0.71355134249999996" blue="0.78995603319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraAction:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="NVs-c0-DS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPa-k2-4Gq" userLabel="video Swipe">
+                                <rect key="frame" x="288.66666666666669" y="697" width="47" height="34"/>
+                                <state key="normal" title="Video"/>
+                                <connections>
+                                    <action selector="videoAction:" destination="4Hf-rM-MSi" eventType="touchUpInside" id="LBA-5u-818"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="JHX-re-oYW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
@@ -674,12 +690,16 @@
                             <constraint firstAttribute="trailing" secondItem="Bki-Ed-c7M" secondAttribute="trailing" id="240-oN-EYc"/>
                             <constraint firstItem="65m-dq-JsZ" firstAttribute="top" secondItem="SpS-oN-Fok" secondAttribute="bottom" constant="4" id="2CI-JI-Utj"/>
                             <constraint firstItem="JHX-re-oYW" firstAttribute="top" secondItem="YOx-Wr-pOG" secondAttribute="top" id="6Oc-66-bPj"/>
+                            <constraint firstItem="BPa-k2-4Gq" firstAttribute="leading" secondItem="yAb-oR-DpM" secondAttribute="trailing" constant="50" id="7JK-ue-rAQ"/>
+                            <constraint firstItem="ffD-6D-FQY" firstAttribute="top" secondItem="BPa-k2-4Gq" secondAttribute="bottom" constant="5" id="9rc-4U-6la"/>
+                            <constraint firstItem="ffD-6D-FQY" firstAttribute="top" secondItem="yAb-oR-DpM" secondAttribute="bottom" constant="5" id="Czv-d3-sTe"/>
                             <constraint firstItem="D3N-Lc-wVb" firstAttribute="leading" secondItem="SSF-nK-exV" secondAttribute="trailing" constant="10" id="KGp-Iw-FIm"/>
                             <constraint firstItem="948-CQ-0qc" firstAttribute="top" secondItem="SpS-oN-Fok" secondAttribute="bottom" constant="4" id="LmI-Qr-k42"/>
                             <constraint firstItem="ffD-6D-FQY" firstAttribute="top" secondItem="Zin-2L-qid" secondAttribute="bottom" id="NT9-3T-6D3"/>
                             <constraint firstItem="948-CQ-0qc" firstAttribute="leading" secondItem="YOx-Wr-pOG" secondAttribute="leading" constant="15" id="On0-AC-o88"/>
                             <constraint firstItem="Bki-Ed-c7M" firstAttribute="leading" secondItem="YOx-Wr-pOG" secondAttribute="leading" id="Q2V-2X-2VR"/>
                             <constraint firstAttribute="bottom" secondItem="JHX-re-oYW" secondAttribute="bottom" id="QEu-mf-Pxa"/>
+                            <constraint firstItem="yAb-oR-DpM" firstAttribute="centerX" secondItem="YOx-Wr-pOG" secondAttribute="centerX" id="WOZ-VP-Mgq"/>
                             <constraint firstAttribute="trailing" secondItem="65m-dq-JsZ" secondAttribute="trailing" constant="15" id="WpU-oV-aRx"/>
                             <constraint firstItem="D3N-Lc-wVb" firstAttribute="leading" secondItem="SSF-nK-exV" secondAttribute="trailing" constant="10" id="f1i-eI-ify"/>
                             <constraint firstItem="8Hr-ZE-zdU" firstAttribute="top" secondItem="SSF-nK-exV" secondAttribute="bottom" constant="55" id="kD5-yc-lbr"/>
@@ -701,12 +721,15 @@
                     <connections>
                         <outlet property="cameraBottomLayer" destination="Bki-Ed-c7M" id="5AX-tH-GHT"/>
                         <outlet property="cameraCapture" destination="Zin-2L-qid" id="mx3-sS-mv8"/>
+                        <outlet property="cameraOutlet" destination="yAb-oR-DpM" id="OBi-dm-B7N"/>
+                        <outlet property="centerXConstraint" destination="WOZ-VP-Mgq" id="YmC-Ut-RHd"/>
                         <outlet property="dashBoardButton" destination="948-CQ-0qc" id="x6S-Iy-OBB"/>
                         <outlet property="flashButton" destination="SSF-nK-exV" id="oTl-bp-3Hh"/>
                         <outlet property="galleryAccessbutton" destination="8Hr-ZE-zdU" id="ttq-7e-qU7"/>
                         <outlet property="mapViewButton" destination="65m-dq-JsZ" id="hdz-Zc-OOW"/>
                         <outlet property="placeHolderImageView" destination="JHX-re-oYW" id="pyJ-72-8Ra"/>
                         <outlet property="swipeCamera" destination="D3N-Lc-wVb" id="ag8-gO-lBt"/>
+                        <outlet property="videoOutlet" destination="BPa-k2-4Gq" id="qdT-2O-ZRy"/>
                         <outlet property="view" destination="YOx-Wr-pOG" id="Vt8-gH-S9h"/>
                     </connections>
                 </viewController>
@@ -737,13 +760,13 @@
         <image name="Common_VitaLogo" width="196" height="165"/>
         <image name="Common_bg" width="414" height="736"/>
         <image name="Common_buttonBg" width="197" height="45"/>
+        <image name="Flash_Auto" width="41" height="41"/>
         <image name="Gallery" width="33" height="32"/>
         <image name="bg" width="414" height="736"/>
         <image name="cam" width="40" height="40"/>
         <image name="camera" width="71" height="103"/>
         <image name="eye" width="40" height="40"/>
         <image name="feature" width="410" height="141"/>
-        <image name="flash" width="41" height="41"/>
         <image name="high" width="203" height="218"/>
         <image name="icon_facebook" width="40" height="40"/>
         <image name="icon_googlePlus" width="40" height="40"/>
