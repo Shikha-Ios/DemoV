@@ -6,6 +6,8 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CTAssetsPickerController (3.3.1):
+    - PureLayout (~> 3.0.0)
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.15)
@@ -62,6 +64,7 @@ PODS:
     - GTMSessionFetcher/Core (= 1.1.11)
   - KeychainSwift (8.0.2)
   - LLSimpleCamera (4.2.0)
+  - PureLayout (3.0.2)
   - ReachabilitySwift (3)
   - SwifterSwift (3.0.0):
     - SwifterSwift/Cocoa (= 3.0.0)
@@ -74,6 +77,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - CTAssetsPickerController (~> 3.3.0)
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -87,6 +91,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CTAssetsPickerController: b1d1d50ab87cf6b8b13531de5f4530482e7e53ed
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
@@ -103,10 +108,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
   LLSimpleCamera: ed7813ce4827ff3e34c6af159c99b5b56e54d1c6
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwifterSwift: b35d1fee5352da68878f6321b245d3d99c1af32f
   SwiftyBeaver: d4b551ba34b4206c52cc4684ae90444b8aaa5afd
 
-PODFILE CHECKSUM: 9f1b94ed73ca846110602470f10f69da8d4308c9
+PODFILE CHECKSUM: 5a913505f79c6d3903a6af634753129ff3438e9a
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0
