@@ -1,11 +1,10 @@
 //
 //  UserInfo.swift
-//  TemplateProject
+//  Vita
 //
-//  Created by Vishal Lohia on 6/3/17.
+//  Created by Shemona.Puri on 24/07/17.
 //  Copyright © 2017 Mobileprogramming. All rights reserved.
 //
-
 import Foundation
 
 protocol Identifiable {
@@ -15,31 +14,28 @@ protocol Identifiable {
 class UserInfo:Identifiable {
 
     var userId:String?
-    var firstName:String?
     var email:String?
-    var lastName:String?
-    
+    var token:String?
+
     static func parseJSON(data:Any?)->ResponseResult<Any>? {
-
-        if let d = data as? [String:String] {
-
-                if let status = d["status"], status != "200" {
-                    let desc = d["msg"]
-                    let err = APIResponseError.generalError(domain: "Parsing Error", description: desc, errorCode:111)
-                    return .failure(err)
-                }
-           
+        if let responseData = data as? [String : AnyObject] {
+            print("value is\(responseData)")
+            let status : String = (responseData["status"]! as AnyObject).stringValue
+            if status != "1"
+            {
+                print("check error")
+                let err = APIResponseError.generalError(domain: "Parsing Error", description: "test", errorCode:111)
+                return .failure(err)
+            }
+            let userDict = responseData["user"] as! NSDictionary
             let user = UserInfo()
-            user.firstName = d["first_name"]
-            user.lastName = d["last_name"]
-            user.email = d["email"]
-            user.userId = d["id"]
-
+            user.email =  (userDict["email"] as? String)!
+            user.userId = (userDict["id"]! as AnyObject).stringValue
+            user.token =  responseData["token"] as? String
             return .success(user)
         }
-       
         let err = APIResponseError.generalError(domain: "Parsing Error", description: "Wrong Data Format", errorCode:111)
         return .failure(err)
-   }
+    }
 
 }
