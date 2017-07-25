@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */; };
 		2B58BCF01F2229A400B49013 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEF1F2229A400B49013 /* Constants.swift */; };
+		2BAECB111F25D492001BF62C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAECB101F25D491001BF62C /* ForgotPasswordViewController.swift */; };
+		2BAECB131F25D4B6001BF62C /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAECB121F25D4B6001BF62C /* VerificationCodeViewController.swift */; };
+		2BAECB151F260324001BF62C /* RegisterUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAECB141F260324001BF62C /* RegisterUserData.swift */; };
 		2BD1E1D51F1CC79E009EC279 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1E1D41F1CC79E009EC279 /* LoginViewController.swift */; };
 		2BD1E1D71F1CCA50009EC279 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1E1D61F1CCA50009EC279 /* InitialViewController.swift */; };
 		2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1E1D81F1CCAD1009EC279 /* RegisterViewController.swift */; };
@@ -61,6 +64,9 @@
 		19A5293E47050F297FCD5D4C /* Pods-VitaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaAlertViewController.swift; sourceTree = "<group>"; };
 		2B58BCEF1F2229A400B49013 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Vita/HelperClasses/Constants.swift; sourceTree = SOURCE_ROOT; };
+		2BAECB101F25D491001BF62C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		2BAECB121F25D4B6001BF62C /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewController.swift; sourceTree = "<group>"; };
+		2BAECB141F260324001BF62C /* RegisterUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserData.swift; sourceTree = "<group>"; };
 		2BD1E1D41F1CC79E009EC279 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2BD1E1D61F1CCA50009EC279 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2BD1E1D81F1CCAD1009EC279 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +251,8 @@
 				2BD1E1DC1F1CD5BC009EC279 /* CameraDashboardViewController.swift */,
 				988A90F31F1E34BD005E272E /* DashBoardController.swift */,
 				988A90F51F1E354D005E272E /* MapViewController.swift */,
+				2BAECB101F25D491001BF62C /* ForgotPasswordViewController.swift */,
+				2BAECB121F25D4B6001BF62C /* VerificationCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				985857D81EE242F700CC2755 /* UserInfo.swift */,
+				2BAECB141F260324001BF62C /* RegisterUserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -557,13 +566,19 @@
 				98284B9E1E9E460D00FB3CEB /* APIEndPoints.swift in Sources */,
 				2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */,
 				988A90F61F1E354D005E272E /* MapViewController.swift in Sources */,
+				2BAECB131F25D4B6001BF62C /* VerificationCodeViewController.swift in Sources */,
 				9861FD921F1EBF170070CC4D /* MIBadgeButton.swift in Sources */,
 				985857D11EE1DB9800CC2755 /* CommonProtocols.swift in Sources */,
 				985857D91EE242F700CC2755 /* UserInfo.swift in Sources */,
+<<<<<<< HEAD
 				9825911E1F267A5F0093C9A2 /* UICategory.swift in Sources */,
+=======
+				2BAECB111F25D492001BF62C /* ForgotPasswordViewController.swift in Sources */,
+>>>>>>> Development
 				2BD1E1DD1F1CD5BC009EC279 /* CameraDashboardViewController.swift in Sources */,
 				985857CE1EE1CDE400CC2755 /* WebAPIWrapper.swift in Sources */,
 				2B58BCF01F2229A400B49013 /* Constants.swift in Sources */,
+				2BAECB151F260324001BF62C /* RegisterUserData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
