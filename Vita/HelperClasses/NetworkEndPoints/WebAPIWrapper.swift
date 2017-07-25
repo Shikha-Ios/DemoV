@@ -28,14 +28,13 @@ class WebAPIWrapper {
             encoding:JSONEncoding.default,
             headers: requestEnvelop.httpHeaders()).validate()
             .responseJSON { (response) -> Void in
+                print("api response\(response)")
                 
                 if let cls = requestEnvelop.modelType  {
                    let results = cls.parseJSON(data: response.value)
                     self.delegate?.didReceiveResponse(request:requestEnvelop , data: results, error: response.result.error)
                     return
                 }
-                
-                
                 self.delegate?.didReceiveResponse(request:requestEnvelop , data: response.data, error: response.result.error)
                 }
         }

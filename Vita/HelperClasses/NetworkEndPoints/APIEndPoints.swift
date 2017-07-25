@@ -18,22 +18,19 @@ Request Envelops are mentioned here with api path, pathType(Enum with tupple whi
 */
 struct LoginEnvelop:Requestable  {
     
-    var apiPath:String { return "/login.php" }
+    var apiPath:String { return "/api/login" }
     var httpType:HttpType { return .post }
     var pathType : ServicePath
-    
     /* This member property for data model in which data need to be parsed. */
     var modelType:Identifiable.Type? { return UserInfo.self }
 }
 
-struct RegEnvelop:Requestable  {
-    var apiPath:String { return "/sign_up.php" }
+struct RegisterEnvelop:Requestable  {
+    var apiPath:String { return "/api/register" }
     var httpType:HttpType { return .post }
     var pathType : ServicePath 
-    
     /* */
-    var modelType:Identifiable.Type? { return nil }
-
+    var modelType:Identifiable.Type? { return RegisterUserData.self }
 }
 
 /*
@@ -42,20 +39,21 @@ struct RegEnvelop:Requestable  {
  This enum also wrap a method which provides dictionary for post body.
 */
 internal enum ServicePath:ParameterBodyMaker {
-    case login(username:String, password:String)
-    case registration(first_name:String, last_name:String, email:String, pass:String, deviceid:String,phone:String)
+    case login(email:String, password:String)
+    case registration(email:String, password:String, device_id:String,device_type:String,authentication_type:String,facebook_id:String,guid:String)
+
     
     func httpBodyEnvelop()->[String:Any]? {
         
         switch self {
-        case .login(username: let user, password: let pwd):
+        case .login(email: let email, password: let pwd):
 
-            let postBody = ["email":user, "pass":pwd]
+            let postBody = ["email":email, "password":pwd]
             return postBody
             
-        case .registration(first_name: let fname, last_name: let lname, email: let email, pass: let password, deviceid: let did, phone: let ph):
-            let postBody = ["first_name":fname,"last_name":lname,"email":email,"pass":password,"deviceid":did,"phone":ph]
-
+          
+        case .registration(email:let email, password:let password, device_id:let device_id,device_type:let device_type,authentication_type:let authentication_type,facebook_id:let facebook_id,guid:let guid):
+            let postBody = ["email":email,"password":password,"device_id":device_id,"device_type":device_type,"authentication_type":authentication_type,"facebook_id":facebook_id,"guid":guid]
             return postBody
         }
     }
