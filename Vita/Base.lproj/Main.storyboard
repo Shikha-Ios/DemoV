@@ -13,7 +13,7 @@
         <scene sceneID="onR-VX-CrV">
             <objects>
                 <navigationController storyboardIdentifier="signInNavigationIdentifier" navigationBarHidden="YES" id="8Ya-e1-Hov" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="E7g-LJ-pmc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E7g-LJ-pmc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -27,7 +27,6 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqp-GT-Cnu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="-1309" y="-139"/>
         </scene>
         <!--Initial View Controller-->
@@ -419,7 +418,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-xT-krH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3326.0869565217395" y="-139.4021739130435"/>
-
         </scene>
         <!--Map View Controller-->
         <scene sceneID="PHW-dh-Zvx">
@@ -589,7 +587,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmh-mq-Dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="-859"/>
-
         </scene>
         <!--Camera Dashboard View Controller-->
         <scene sceneID="svt-9t-JdE">
@@ -1031,7 +1028,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Mmf-NH-wLH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m3V-ZF-Oeh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m3V-ZF-Oeh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1043,7 +1040,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCJ-Qv-ho8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2418.840579710145" y="-139.4021739130435"/>
-
         </scene>
     </scenes>
     <resources>
@@ -1057,7 +1053,6 @@
         <image name="camera" width="71" height="103"/>
         <image name="eye" width="40" height="40"/>
         <image name="feature" width="410" height="141"/>
-        <image name="flash" width="41" height="41"/>
         <image name="guest" width="44" height="44"/>
         <image name="high" width="203" height="218"/>
         <image name="icon_facebook" width="40" height="40"/>

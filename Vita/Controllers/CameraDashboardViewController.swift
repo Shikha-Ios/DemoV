@@ -11,44 +11,36 @@ import LLSimpleCamera
 import Photos
 import CTAssetsPickerController
 
-
-
-
 class CameraDashboardViewController: UIViewController {
   
   @IBOutlet weak var cameraOutlet: UIButton!
-  
   @IBOutlet weak var videoOutlet: UIButton!
-  
   @IBOutlet weak var centerXConstraint: NSLayoutConstraint!
-  
- 
-  
   @IBOutlet weak var placeHolderImageView: UIImageView!
-  
   @IBOutlet weak var galleryAccessbutton: UIButton!
   @IBOutlet weak var cameraCapture: MIBadgeButton!
   @IBOutlet weak var mapViewButton: UIButton!
   @IBOutlet weak var dashBoardButton: UIButton!
   @IBOutlet weak var flashButton: UIButton!
   @IBOutlet weak var swipeCamera: UIButton!
+  @IBOutlet weak var cameraBottomLayer: UIView!
   
   var flashSelecteion = 0
+  var cameraViewModel = CameraViewModel()
+		
   
-  var arrayImages = [UIImage]()
-
-  @IBOutlet weak var cameraBottomLayer: UIView!
   var camera = LLSimpleCamera()
   var snapButton: UIButton?
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    cameraViewModel.delegate = self
     self.initializeCamera()
     self.brignSubViewsToFront()
     
   }
   
-   override func viewWillAppear(_ animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     self.camera.start()
   }
   
@@ -56,7 +48,7 @@ class CameraDashboardViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
- 
+  
   
   // MARK: - Camera Functions
   
@@ -68,20 +60,20 @@ class CameraDashboardViewController: UIViewController {
         
       }
     }
-      else if flashSelecteion == 1 {
-        if camera.updateFlashMode(LLCameraFlashOff){
-          flashSelecteion = 2
-          flashButton.setImageWith(imageName: "Flash_Unselected", forState: UIControlState.normal)
-        }
+    else if flashSelecteion == 1 {
+      if camera.updateFlashMode(LLCameraFlashOff){
+        flashSelecteion = 2
+        flashButton.setImageWith(imageName: "Flash_Unselected", forState: UIControlState.normal)
       }
-      else if flashSelecteion == 2 {
-        if camera.updateFlashMode(LLCameraFlashAuto){
-          flashSelecteion = 0
-          flashButton.setImageWith(imageName: "Flash_Auto", forState: UIControlState.normal)
-        }
+    }
+    else if flashSelecteion == 2 {
+      if camera.updateFlashMode(LLCameraFlashAuto){
+        flashSelecteion = 0
+        flashButton.setImageWith(imageName: "Flash_Auto", forState: UIControlState.normal)
       }
+    }
     
-}
+  }
   
   
   @IBAction func openGallery(_ sender: Any) {
@@ -90,13 +82,13 @@ class CameraDashboardViewController: UIViewController {
         let picker = CTAssetsPickerController()
         picker.delegate = self
         if UI_USER_INTERFACE_IDIOM() == .pad {
-        
+          
           picker.modalPresentationStyle = .formSheet
         }
         self.present(picker, animated: true, completion: nil)
       })
     })
-  
+    
   }
   
   @IBAction func swipeCamera(_ sender: UIButton) {
@@ -127,21 +119,21 @@ class CameraDashboardViewController: UIViewController {
       if error == nil {
         print(image?.size.height ?? 0.0)
         self.camera.start()
-        self.arrayImages.append(image!)
-        self.cameraCapture.badgeString = "\(self.arrayImages.count)"
+        self.cameraViewModel.imageArray.append(image!)
+        self.cameraCapture.badgeString = "\(self.cameraViewModel.imageArray.count)"
       }
       else {
         print("An error has occured: \(String(describing: error))")
       }
     }
   }
-
+  
   // MARK: - Private Functions
   
-
-
+  
+  
   @IBAction func tapToCallDashBoardViewController(_ sender: UIButton) {
-  let viewControllersArray = self.navigationController?.viewControllers
+    let viewControllersArray = self.navigationController?.viewControllers
     
     for viewController in viewControllersArray! {
       if viewController .isMember(of: ContainerViewController.self)  {
@@ -170,15 +162,18 @@ class CameraDashboardViewController: UIViewController {
     camera.updateFlashMode(LLCameraFlashAuto)
     camera.attach(to: self, withFrame: CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height))
     placeHolderImageView.isHidden = true
-   
   }
 }
 
 extension CameraDashboardViewController: CTAssetsPickerControllerDelegate {
-
   func assetsPickerController(_ picker: CTAssetsPickerController!, didFinishPickingAssets assets: [Any]!) {
     picker.dismiss(animated: true, completion: nil)
-    print(assets)
+    self.cameraViewModel.getAssetFromMediaLibrary(asset: assets as! [PHAsset])
   }
+}
 
+extension CameraDashboardViewController: CameraViewModelDelegate {
+  func updateUI() {
+    self.cameraCapture.badgeString = "\(self.cameraViewModel.imageArray.count)"
+  }
 }
