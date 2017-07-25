@@ -17,6 +17,7 @@ extension UIButton {
     self.setTitleColor(color, for: .normal)
   }
 }
+
 extension UIColor {
  public class var vitaDefaultColor:UIColor {
     return UIColor(colorLiteralRed: 70.0/255.0, green: 182.0/255.0, blue: 201.0/255.0, alpha: 1.0)  }
