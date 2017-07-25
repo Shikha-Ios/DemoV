@@ -27,11 +27,8 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqp-GT-Cnu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
+
             <point key="canvasLocation" x="-1309" y="-139"/>
-=======
-            <point key="canvasLocation" x="-2355" y="-806"/>
->>>>>>> Development
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="Okn-90-0oE">
@@ -258,11 +255,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="LRM-7o-fEh" id="eIi-iF-p3o"/>
                         <outlet property="userNameTextField" destination="S7a-SZ-a7l" id="7jk-n7-reV"/>
-<<<<<<< HEAD
-=======
                         <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="Ax0-RL-dGG"/>
-                        <segue destination="Zml-4T-12S" kind="show" identifier="PasswordVC" id="4wd-32-vRG"/>
->>>>>>> Development
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzD-RG-PcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,11 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcX-QF-lEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="655" y="-130"/>
-=======
-            <point key="canvasLocation" x="-1091" y="-806"/>
->>>>>>> Development
         </scene>
         <!--Container View Controller-->
         <scene sceneID="AuM-tM-DlR">
@@ -429,11 +418,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-xT-krH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="3326.0869565217395" y="-139.4021739130435"/>
-=======
-            <point key="canvasLocation" x="188" y="-801"/>
->>>>>>> Development
+
         </scene>
         <!--Map View Controller-->
         <scene sceneID="PHW-dh-Zvx">
@@ -500,11 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wq-r2-OB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="28" y="-859"/>
-=======
-            <point key="canvasLocation" x="820" y="-806"/>
->>>>>>> Development
         </scene>
         <!--Dash Board Controller-->
         <scene sceneID="9aO-x0-z0T">
@@ -606,11 +588,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmh-mq-Dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-610" y="-859"/>
-=======
-            <point key="canvasLocation" x="928" y="-51"/>
->>>>>>> Development
+
         </scene>
         <!--Camera Dashboard View Controller-->
         <scene sceneID="svt-9t-JdE">
@@ -1064,6 +1043,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCJ-Qv-ho8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2418.840579710145" y="-139.4021739130435"/>
+
         </scene>
     </scenes>
     <resources>
@@ -1077,11 +1057,8 @@
         <image name="camera" width="71" height="103"/>
         <image name="eye" width="40" height="40"/>
         <image name="feature" width="410" height="141"/>
-<<<<<<< HEAD
-=======
         <image name="flash" width="41" height="41"/>
         <image name="guest" width="44" height="44"/>
->>>>>>> Development
         <image name="high" width="203" height="218"/>
         <image name="icon_facebook" width="40" height="40"/>
         <image name="icon_googlePlus" width="40" height="40"/>
@@ -1093,10 +1070,7 @@
         <image name="watch" width="410" height="142"/>
         <image name="whats" width="204" height="218"/>
     </resources>
-<<<<<<< HEAD
-=======
     <inferredMetricsTieBreakers>
         <segue reference="QvW-Py-3f3"/>
     </inferredMetricsTieBreakers>
->>>>>>> Development
 </document>
