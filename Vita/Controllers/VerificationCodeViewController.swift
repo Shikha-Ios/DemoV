@@ -37,7 +37,12 @@ class VerificationCodeViewController: UIViewController {
     @IBAction func backClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
-
+    // MARK: UITextField Delegates
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
 
     /*
     // MARK: - Navigation

@@ -60,6 +60,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.11)
   - GTMSessionFetcher/Full (1.1.11):
     - GTMSessionFetcher/Core (= 1.1.11)
+  - IQKeyboardManagerSwift (4.0.10)
   - KeychainSwift (8.0.2)
   - LLSimpleCamera (4.2.0)
   - ReachabilitySwift (3)
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - Google/SignIn
+  - IQKeyboardManagerSwift (= 4.0.10)
   - KeychainSwift (~> 8.0)
   - LLSimpleCamera (~> 4.1)
   - ReachabilitySwift (~> 3)
@@ -101,12 +103,13 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
   LLSimpleCamera: ed7813ce4827ff3e34c6af159c99b5b56e54d1c6
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwifterSwift: b35d1fee5352da68878f6321b245d3d99c1af32f
   SwiftyBeaver: d4b551ba34b4206c52cc4684ae90444b8aaa5afd
 
-PODFILE CHECKSUM: 9f1b94ed73ca846110602470f10f69da8d4308c9
+PODFILE CHECKSUM: 5ebd352c4f4eaed4c1aacbd4d68644c67b49e075
 
 COCOAPODS: 1.1.1

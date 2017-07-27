@@ -9,6 +9,7 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
@@ -26,6 +27,8 @@ extension AppDelegate : UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         ConfigEndPoints.shared.initialize()
         
+        IQKeyboardManager.sharedManager().enable = true
+
         // Initialize sign-in
         var configureError: NSError?
         
