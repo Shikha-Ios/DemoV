@@ -9,6 +9,7 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 
@@ -28,6 +29,7 @@ extension AppDelegate : UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
         
+
                // Initialize sign-in
         var configureError: NSError?
         

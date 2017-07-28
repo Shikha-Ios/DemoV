@@ -33,6 +33,14 @@ struct RegisterEnvelop:Requestable  {
     var modelType:Identifiable.Type? { return RegisterUserData.self }
 }
 
+struct ForgotPasswordEnvelop:Requestable  {
+    var apiPath:String { return "/api/register" }
+    var httpType:HttpType { return .post }
+    var pathType : ServicePath
+    /* */
+    var modelType:Identifiable.Type? { return ForgotPasswordData.self }
+}
+
 /*
  ALL services post dictionary is mentioned under enum switch statement.
  These cases get their values in ViewController (or respective controller or other class).
@@ -41,6 +49,7 @@ struct RegisterEnvelop:Requestable  {
 internal enum ServicePath:ParameterBodyMaker {
     case login(email:String, password:String)
     case registration(email:String, password:String, device_id:String,device_type:String,authentication_type:String,facebook_id:String,guid:String)
+    case forgotPassword(email:String)
 
     
     func httpBodyEnvelop()->[String:Any]? {
@@ -55,7 +64,14 @@ internal enum ServicePath:ParameterBodyMaker {
         case .registration(email:let email, password:let password, device_id:let device_id,device_type:let device_type,authentication_type:let authentication_type,facebook_id:let facebook_id,guid:let guid):
             let postBody = ["email":email,"password":password,"device_id":device_id,"device_type":device_type,"authentication_type":authentication_type,"facebook_id":facebook_id,"guid":guid]
             return postBody
+        
+        case .forgotPassword(email: let email):
+        
+        let postBody = ["email":email]
+        return postBody
         }
+        
+
     }
     
     func encodeBodyEnvelop() throws -> Data? {

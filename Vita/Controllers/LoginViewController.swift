@@ -38,16 +38,19 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     }
     
     @IBAction func signInClicked(sender: UIButton){
-        self.callLoginService()
         
-        //self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
 //        if (!self.checkValidation())
 //        {
-//            return
+//            self.callLoginService(email: "shemona.puri@mobileprogrammingllc.com", password: "welcome")
+//
+//           // return
 //        }
 //        else
 //        {
-//            self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+//            self.callLoginService(email: "shemona.puri@mobileprogrammingllc.com", password: "welcome")
+//
+//            //self.callLoginService(email: userNameTextField.text!, password: passwordTextField.text!)
 //        }
 
     }
@@ -77,10 +80,9 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     }
 
     
-    
     //MARK: Login API Call
-    func callLoginService() {
-        let login = ServicePath.login(email:"aa@gmail.com", password:"123456" )
+    func callLoginService(email: String, password: String) {
+        let login = ServicePath.login(email: email, password: password)
         viewModel.delegate = self
         viewModel.apiCallWithType(type: login)
     }
