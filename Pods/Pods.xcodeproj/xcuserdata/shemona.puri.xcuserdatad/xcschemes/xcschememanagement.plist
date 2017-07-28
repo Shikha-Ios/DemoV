@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CTAssetsPickerController-CTAssetsPickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CTAssetsPickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -84,6 +94,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,11 +117,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>054E9A423559C2282A160DC691045507</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0843C6171A972BA993090F6EE7CA014D</key>
 		<dict>
 			<key>primary</key>
@@ -122,17 +132,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>26BD856A11FE756554223EBD55A82C63</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>335FC5E7DF8530DC1462429A5F914419</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>38535AA8F4F6BD5EBF15FDD0C29448E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40750F1D145F1294C575033F1D9784D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,12 +162,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>55BAC9F8E8139246A429848E2588F4BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7D4CF68C42A4E7073EDC8995C3FAA7EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>7E6BA416F5796065A523869A1FC238A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>871FB45D38F8F1E8C9C71F6580481815</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E4EE38CB4623DC02F8BF28249849811</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,17 +202,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BE9883BA288F4C1EAD7C14E2896880CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2B8128DDEE5E8AC3069D85D065EFC27</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D33A971E36C7D614827B65C7112CAB71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E21D101074699DF87560068FBB70285E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1CBD7226348E22F345EA4126675556D</key>
+		<key>D3B2707A04918DC945185A5FFBD8BFA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
