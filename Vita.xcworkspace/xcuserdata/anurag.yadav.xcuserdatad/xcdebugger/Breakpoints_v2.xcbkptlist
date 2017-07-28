@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/DashBoardController.swift"
-            timestampString = "522272458.667708"
+            filePath = "Vita/Controllers/LoginViewController.swift"
+            timestampString = "522703198.16471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "tapForCameraViewController(_:)"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "refreshController(model:info:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/LLSimpleCamera/LLSimpleCamera/LLSimpleCamera.m"
-            timestampString = "522276925.0768"
+            filePath = "Vita/Controllers/RegisterViewController.swift"
+            timestampString = "522703306.435102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-gestureRecognizerShouldBegin:"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "sign(_:didSignInFor:withError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/LLSimpleCamera/LLSimpleCamera/LLSimpleCamera.m"
-            timestampString = "522276926.00034"
+            filePath = "Vita/Controllers/LoginViewController.swift"
+            timestampString = "522703338.562855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-handlePinchGesture:"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "sign(_:didSignInFor:withError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,14 +67,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vita/Controllers/AYSwipeController.swift"
-            timestampString = "522278532.160655"
+            filePath = "Vita/Controllers/LoginViewController.swift"
+            timestampString = "522703388.945245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "setupPageViewController()"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "fbLoginButtonClicked()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Vita/HelperClasses/NetworkEndPoints/ConfigEndPoints.swift"
+            timestampString = "522703451.54373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "appMode"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

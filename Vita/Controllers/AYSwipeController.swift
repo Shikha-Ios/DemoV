@@ -40,8 +40,7 @@ open class AYSwipeController: UIViewController {
       }
     }
     public static var StatusBarHeight: CGFloat {
-      return 0
-    }
+      return 0    }
     public static var ScreenHeightWithoutStatusBar: CGFloat {
       if UIInterfaceOrientationIsPortrait(Orientation) {
         return UIScreen.main.bounds.height - StatusBarHeight
@@ -310,6 +309,9 @@ extension AYSwipeController: UIPageViewControllerDataSource {
 
 extension AYSwipeController: UIPageViewControllerDelegate {
   
+  public func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+    print("abcabcbacbabc")
+  }
   public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
     if !completed {
       return

@@ -33,7 +33,7 @@ class InitialViewController: UIViewController {
     }
 
     @IBAction func guestClicked(sender: UIButton){
-        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
   

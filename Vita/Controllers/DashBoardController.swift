@@ -33,6 +33,10 @@ class DashBoardController: UIViewController {
     }
   }
   
+  @IBAction func navigateToMyVitaUpdates(_ sender: UIButton) {
+    
+  }
+ 
   /*
    // MARK: - Navigation
    

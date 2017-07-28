@@ -8,9 +8,58 @@
 
 import Foundation
 import LLSimpleCamera
+import Photos
+
+protocol CameraViewModelDelegate {
+  func updateUI()
+}
 
 class CameraViewModel {
   
-  //********** Should be for API request **********//
-    static var defaultModel = CameraViewModel()
+  public var imageArray = [UIImage]()
+  public var videoArray = [URL]()
+  
+  fileprivate let manager = PHImageManager.default()
+  fileprivate let option = PHImageRequestOptions()
+  fileprivate let videoRequestOptions = PHVideoRequestOptions()
+
+  fileprivate var image: UIImage?
+  
+  static var defaultModel = CameraViewModel()
+  var delegate: CameraViewModelDelegate?
+		
+  init() {
+    self.option.isSynchronous = true
+    self.option.deliveryMode = .highQualityFormat
+    self.videoRequestOptions.deliveryMode = .fastFormat
+    self.videoRequestOptions.version = .original
+    self.videoRequestOptions.isNetworkAccessAllowed = true
+  }
+  
+  func getAssetFromMediaLibrary(asset assets: [PHAsset]) {
+    for asset in assets {
+      switch asset.mediaType {
+      case .image:
+        self.getAssetImage(asset: asset)
+      case .video:
+        self.getVideoURLFromAsset(asset: asset)
+      default:
+        print("FUNK YOU DUDE, i don't need you")
+      }
+    }
+    delegate?.updateUI()
+  }
+  
+fileprivate func getAssetImage(asset: PHAsset) {
+      manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: self.option, resultHandler: {(result, info)->Void in
+        self.imageArray.append(result!)
+      })
+ }
+  
+  fileprivate func getVideoURLFromAsset(asset: PHAsset) {
+     manager.requestAVAsset(forVideo: asset, options: self.videoRequestOptions) { (asset, audioMix, info) in
+      let urlAsset = asset as! AVURLAsset
+      self.videoArray.append(urlAsset.url)
+    }
+  }
 }
