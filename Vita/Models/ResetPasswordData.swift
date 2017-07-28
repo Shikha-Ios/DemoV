@@ -10,7 +10,7 @@
 
 import Foundation
 
-class ResetPasswordData:NSObject {
+class ResetPasswordData:Identifiable {
     
     var token:String?
     
