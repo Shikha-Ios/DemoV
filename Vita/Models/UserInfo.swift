@@ -24,7 +24,8 @@ class UserInfo:Identifiable {
             if status != "1"
             {
                 print("check error")
-                let err = APIResponseError.generalError(domain: "Parsing Error", description: "test", errorCode:111)
+                let desc = responseData["error"]
+                let err = APIResponseError.generalError(domain: "Parsing Error", description: desc as? String, errorCode:111)
                 return .failure(err)
             }
             let userDict = responseData["user"] as! NSDictionary

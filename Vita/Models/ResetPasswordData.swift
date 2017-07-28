@@ -1,14 +1,16 @@
 //
-//  ForgotPasswordData.swift
+//  ResetPasswordData.swift
 //  Vita
 //
-//  Created by Shemona.Puri on 27/07/17.
+//  Created by Shemona.Puri on 28/07/17.
 //  Copyright © 2017 Mobileprogramming. All rights reserved.
 //
 
+
+
 import Foundation
 
-class ForgotPasswordData:Identifiable {
+class ResetPasswordData:NSObject {
     
     var token:String?
     
@@ -23,7 +25,7 @@ class ForgotPasswordData:Identifiable {
                 let err = APIResponseError.generalError(domain: "Parsing Error", description: desc as? String, errorCode:111)
                 return .failure(err)
             }
-            let obj_passwordData = ForgotPasswordData()
+            let obj_passwordData = ResetPasswordData()
             obj_passwordData.token =  responseData["token"] as? String
             return .success(obj_passwordData)
         }
