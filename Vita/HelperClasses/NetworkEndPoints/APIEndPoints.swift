@@ -34,12 +34,20 @@ struct RegisterEnvelop:Requestable  {
 }
 
 struct ForgotPasswordEnvelop:Requestable  {
-    var apiPath:String { return "/api/register" }
+    var apiPath:String { return "/api/forgotpassword" }
     var httpType:HttpType { return .post }
     var pathType : ServicePath
     /* */
     var modelType:Identifiable.Type? { return ForgotPasswordData.self }
 }
+struct ResetPasswordEnvelop:Requestable  {
+    var apiPath:String { return "/api/resetpassword" }
+    var httpType:HttpType { return .post }
+    var pathType : ServicePath
+    /* */
+    var modelType:Identifiable.Type? { return ResetPasswordData.self }
+}
+
 
 /*
  ALL services post dictionary is mentioned under enum switch statement.
@@ -50,6 +58,7 @@ internal enum ServicePath:ParameterBodyMaker {
     case login(email:String, password:String)
     case registration(email:String, password:String, device_id:String,device_type:String,authentication_type:String,facebook_id:String,guid:String)
     case forgotPassword(email:String)
+    case resetPassword(email:String, verification_code:String, password:String,confirm_password:String,token:String)
 
     
     func httpBodyEnvelop()->[String:Any]? {
@@ -62,13 +71,21 @@ internal enum ServicePath:ParameterBodyMaker {
             
           
         case .registration(email:let email, password:let password, device_id:let device_id,device_type:let device_type,authentication_type:let authentication_type,facebook_id:let facebook_id,guid:let guid):
-            let postBody = ["email":email,"password":password,"device_id":device_id,"device_type":device_type,"authentication_type":authentication_type,"facebook_id":facebook_id,"guid":guid]
+            
+        let postBody = ["email":email,"password":password,"device_id":device_id,"device_type":device_type,"authentication_type":authentication_type,"facebook_id":facebook_id,"guid":guid]
             return postBody
         
         case .forgotPassword(email: let email):
         
         let postBody = ["email":email]
         return postBody
+
+
+        case .resetPassword(email:let email, verification_code:let verification_code, password:let password,confirm_password:let confirm_password,token:let token):
+            
+            let postBody = ["email":email,"verification_code":verification_code,"password":password,"confirm_password":confirm_password,"token":token]
+            return postBody
+        
         }
         
 

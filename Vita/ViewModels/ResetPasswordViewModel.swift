@@ -1,23 +1,25 @@
 //
-//  ForgotPasswordViewModel.swift
+//  ResetPasswordViewModel.swift
 //  Vita
 //
-//  Created by Shemona.Puri on 27/07/17.
+//  Created by Shemona.Puri on 28/07/17.
 //  Copyright © 2017 Mobileprogramming. All rights reserved.
 //
 
 
+
 import Foundation
 
-class ForgotPasswordViewModel:BaseViewModels, ViewModelParams {
+
+class ResetPasswordViewModel:BaseViewModels, ViewModelParams {
     
-    var forgorPasswordInfo:ForgotPasswordData?
+    var resetPasswordInfo:ResetPasswordData?
     
     let webAPIWrapper:WebAPIWrapper = WebAPIWrapper()
     
     func apiCallWithType(type:ServicePath) {
         
-        let envelop = RegisterEnvelop(pathType: type)
+        let envelop = ResetPasswordEnvelop(pathType: type)
         webAPIWrapper.delegate = self
         webAPIWrapper.callServiceWithRequest(requestEnvelop: envelop)
     }
@@ -31,16 +33,16 @@ class ForgotPasswordViewModel:BaseViewModels, ViewModelParams {
         
         if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.error   {
-            self.forgorPasswordInfo = nil
+            self.resetPasswordInfo = nil
             self.delegate?.refreshController(model: self, info: nil, error: resultValue)
         }
         
         if let result = responseData as? ResponseResult<Any>,
-            let resultValue = result.value as? ForgotPasswordData {
-            self.forgorPasswordInfo = resultValue
+            let resultValue = result.value as? ResetPasswordData {
+            self.resetPasswordInfo = resultValue
             self.delegate?.refreshController(model: self, info: nil, error: error)
         }
         
     }
+    
 }
-

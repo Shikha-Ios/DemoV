@@ -32,11 +32,14 @@ class VerificationCodeViewController: UIViewController {
     }
 
     @IBAction func signInClicked(sender: UIButton){
+        
     self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        
     }
     @IBAction func backClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
+    
     // MARK: UITextField Delegates
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {

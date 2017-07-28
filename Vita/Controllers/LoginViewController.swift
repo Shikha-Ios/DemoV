@@ -38,21 +38,15 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     }
     
     @IBAction func signInClicked(sender: UIButton){
-        
-        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
-//        if (!self.checkValidation())
-//        {
-//            self.callLoginService(email: "shemona.puri@mobileprogrammingllc.com", password: "welcome")
-//
-//           // return
-//        }
-//        else
-//        {
-//            self.callLoginService(email: "shemona.puri@mobileprogrammingllc.com", password: "welcome")
-//
-//            //self.callLoginService(email: userNameTextField.text!, password: passwordTextField.text!)
-//        }
-
+        if (!self.checkValidation())
+        {
+            return
+        }
+        else
+        {
+           // self.callLoginService(email: "shemona.puri@mobileprogrammingllc.com", password: "welcome")
+            self.callLoginService(email: userNameTextField.text!, password: passwordTextField.text!)
+        }
     }
     
     @IBAction func facebookSignInClicked(sender: UIButton){
@@ -204,8 +198,17 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
 
 extension LoginViewController:BaseModelDelegate {
     func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
+        
         //Refresh the screen over here...
-        print("login user info\(String(describing: viewModel.userInfo?.email))")
-        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        if(error == nil)
+        {
+            print("login user info\(String(describing: viewModel.userInfo?.email))")
+            self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+        }
+        else
+        {
+            print("error is \(String(describing: error))")
+            self.showAlertControllerWithTitle(title: "Error", message: error?.localizedDescription )
+        }
     }
 }
