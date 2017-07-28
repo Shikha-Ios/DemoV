@@ -16,6 +16,7 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'CTAssetsPickerController',  '~> 3.3.0'
+pod 'IQKeyboardManagerSwift', '4.0.10'
   # Pods for Vita
   target 'VitaTests' do
     inherit! :search_paths
