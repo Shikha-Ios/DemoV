@@ -18,11 +18,13 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     
     let viewModel = LoginViewModel()
     var deviceID: String!
+    let viewModelReg = RegistrationViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        deviceID = UIDevice.current.identifierForVendor!.uuidString
+     
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
     }
@@ -81,6 +83,18 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
         viewModel.apiCallWithType(type: login)
     }
     
+    func callFacebookRegService(email: String, device_id:String,facebook_id: String ) {
+        let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "facebook", facebook_id: facebook_id, guid: "")
+        viewModelReg.delegate = self
+        viewModelReg.apiCallWithType(type: registration)
+    }
+    
+    func callGoogleRegService(email: String, device_id:String, google_id: String ) {
+        let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "google", facebook_id: "", guid: google_id)
+        viewModelReg.delegate = self
+        viewModelReg.apiCallWithType(type: registration)
+    }
+
 
     //MARK: -  Input Validation Methods/Alert Methods...
     func checkValidation() ->Bool
@@ -133,6 +147,10 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
         print("Access token:", authentication?.accessToken! ?? "" )
         print("userProfile email:",profile?.email ?? "" )
         print("userProfile name:",profile?.name ?? "" )
+        
+        // Call API for Registration
+        self.callGoogleRegService(email: (profile?.email)!, device_id: deviceID,google_id: (authentication?.accessToken!)!)
+
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
@@ -166,6 +184,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
             case .success(let response):
                 print("Facebook API response: \(response)")
                 // Call API for Registration
+                self.callFacebookRegService(email: response.dictionaryValue?["email"] as! String, device_id: self.deviceID, facebook_id: response.dictionaryValue?["id"] as! String)
             case .failed(let error):
                 print("Graph Request Failed: \(error)")
             }
@@ -198,12 +217,23 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
 
 extension LoginViewController:BaseModelDelegate {
     func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
-        
         //Refresh the screen over here...
         if(error == nil)
         {
-            print("login user info\(String(describing: viewModel.userInfo?.email))")
-            self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+            let str_identifier = info as! String
+            if(str_identifier == "Registration")
+            {
+                print("login fb or google info\(String(describing: viewModelReg.regUserInfo?.email))")
+                APPDELEGATE.isUserLoggedIn = false
+                self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+            }
+            if(str_identifier == "Login")
+            {
+                print("login user info\(String(describing: viewModel.userInfo?.email))")
+                APPDELEGATE.isUserLoggedIn = false
+                self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+            }
+          
         }
         else
         {

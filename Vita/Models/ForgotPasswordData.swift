@@ -11,7 +11,8 @@ import Foundation
 class ForgotPasswordData:Identifiable {
     
     var token:String?
-    
+    var message:String?
+
     static func parseJSON(data:Any?)->ResponseResult<Any>? {
         if let responseData = data as? [String : AnyObject] {
             print("value is\(responseData)")
@@ -25,6 +26,7 @@ class ForgotPasswordData:Identifiable {
             }
             let obj_passwordData = ForgotPasswordData()
             obj_passwordData.token =  responseData["token"] as? String
+            obj_passwordData.message = responseData["message"] as? String
             return .success(obj_passwordData)
         }
         let err = APIResponseError.generalError(domain: "Parsing Error", description: "Wrong Data Format", errorCode:111)

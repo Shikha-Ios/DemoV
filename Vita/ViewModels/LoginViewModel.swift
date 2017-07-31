@@ -35,13 +35,13 @@ class LoginViewModel:BaseViewModels, ViewModelParams  {
         if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.error   {
             self.userInfo = nil
-            self.delegate?.refreshController(model: self, info: nil, error: resultValue)
+            self.delegate?.refreshController(model: self, info: "Login", error: resultValue)
         }
         
         if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.value as? UserInfo {
             self.userInfo = resultValue
-            self.delegate?.refreshController(model: self, info: nil, error: error)
+            self.delegate?.refreshController(model: self, info: "Login", error: error)
         }
     }
 }

@@ -381,6 +381,7 @@
                     <connections>
                         <outlet property="emailAddressTextField" destination="EhJ-H2-EXV" id="7aI-If-A9c"/>
                         <outlet property="passwordTextField" destination="s4U-7w-3H3" id="hrH-Hs-XOa"/>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="WFE-G2-c8O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcX-QF-lEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -850,7 +851,7 @@
                                 <rect key="frame" x="16" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="backClickedWithSender:" destination="hu6-1b-AIA" eventType="touchUpInside" id="9ie-9u-m5N"/>
+                                    <action selector="backClickedWithSender:" destination="hu6-1b-AIA" eventType="touchUpInside" id="391-Uc-uid"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-Nh-Yag">
@@ -864,7 +865,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="delegate" destination="hu6-1b-AIA" id="D6H-ul-WZO"/>
+                                    <outlet property="delegate" destination="hu6-1b-AIA" id="eEb-IX-uuE"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verification Code" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="dIx-Km-IYL">
@@ -878,7 +879,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="delegate" destination="hu6-1b-AIA" id="ckz-VS-uZS"/>
+                                    <outlet property="delegate" destination="hu6-1b-AIA" id="8C6-LX-L9W"/>
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Gt-NW-EN8">
@@ -888,14 +889,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="197" height="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="delegate" destination="hu6-1b-AIA" id="LkY-D2-dPA"/>
+                                            <outlet property="delegate" destination="hu6-1b-AIA" id="8uQ-nb-1f7"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -904,14 +905,14 @@
                                 <rect key="frame" x="108" y="523.33333333333337" width="197" height="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="delegate" destination="hu6-1b-AIA" id="h4A-sf-jZj"/>
+                                    <outlet property="delegate" destination="hu6-1b-AIA" id="l94-eL-vne"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-p9-9cC">
@@ -921,8 +922,8 @@
                                     <color key="titleColor" red="0.12941176469999999" green="0.50588235290000005" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="signInClickedWithSender:" destination="hu6-1b-AIA" eventType="touchUpInside" id="Pc7-tJ-1tB"/>
                                     <action selector="signInClickedWithSender:" destination="Dg1-7y-MS9" eventType="touchUpInside" id="mIw-hR-y0s"/>
-                                    <action selector="signInClickedWithSender:" destination="hu6-1b-AIA" eventType="touchUpInside" id="yTc-p1-FTT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trouble Logging In?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-ES-AnB">
@@ -944,7 +945,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="privacyClickedWithSender:" destination="hu6-1b-AIA" eventType="touchUpInside" id="N8k-7I-hkm"/>
+                                    <action selector="privacyClickedWithSender:" destination="hu6-1b-AIA" eventType="touchUpInside" id="TRA-sc-P4I"/>
                                     <action selector="privacyClickedWithSender:" destination="Zml-4T-12S" eventType="touchUpInside" id="pbI-Hr-1N9"/>
                                 </connections>
                             </button>
@@ -990,11 +991,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailAddressTextField" destination="FYd-Nh-Yag" id="Uf9-Ne-OEQ"/>
-                        <outlet property="newPasswordTextField" destination="DNi-jw-nSv" id="aEa-TJ-HIc"/>
-                        <outlet property="retypePasswordTextField" destination="h28-tv-Pch" id="qIb-me-Vsb"/>
-                        <outlet property="verificationCodeTextField" destination="dIx-Km-IYL" id="mQS-As-N5G"/>
-                        <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="QvW-Py-3f3"/>
+                        <outlet property="emailAddressTextField" destination="FYd-Nh-Yag" id="Jqb-Qb-gKH"/>
+                        <outlet property="newPasswordTextField" destination="DNi-jw-nSv" id="2zd-Zt-hvz"/>
+                        <outlet property="retypePasswordTextField" destination="h28-tv-Pch" id="DLK-bl-KU2"/>
+                        <outlet property="verificationCodeTextField" destination="dIx-Km-IYL" id="ZdK-ke-IvD"/>
+                        <segue destination="keB-5R-LMk" kind="show" identifier="LoginVC" id="9Tx-rf-6Qq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0A-ng-EHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1044,6 +1045,7 @@
         <image name="whats" width="204" height="218"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QvW-Py-3f3"/>
+        <segue reference="WFE-G2-c8O"/>
+        <segue reference="9Tx-rf-6Qq"/>
     </inferredMetricsTieBreakers>
 </document>

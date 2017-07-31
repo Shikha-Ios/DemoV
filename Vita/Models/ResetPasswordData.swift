@@ -13,7 +13,8 @@ import Foundation
 class ResetPasswordData:Identifiable {
     
     var token:String?
-    
+    var message:String?
+
     static func parseJSON(data:Any?)->ResponseResult<Any>? {
         if let responseData = data as? [String : AnyObject] {
             print("value is\(responseData)")
@@ -25,9 +26,11 @@ class ResetPasswordData:Identifiable {
                 let err = APIResponseError.generalError(domain: "Parsing Error", description: desc as? String, errorCode:111)
                 return .failure(err)
             }
-            let obj_passwordData = ResetPasswordData()
-            obj_passwordData.token =  responseData["token"] as? String
-            return .success(obj_passwordData)
+            let obj_resetPasswordData = ResetPasswordData()
+            obj_resetPasswordData.token =  responseData["token"] as? String
+            obj_resetPasswordData.message = responseData["message"] as? String
+
+            return .success(obj_resetPasswordData)
         }
         let err = APIResponseError.generalError(domain: "Parsing Error", description: "Wrong Data Format", errorCode:111)
         return .failure(err)
