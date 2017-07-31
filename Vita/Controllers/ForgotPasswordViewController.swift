@@ -12,11 +12,12 @@ class ForgotPasswordViewController: UIViewController {
 
     @IBOutlet weak var emailAddressTextField: UITextField!
     let PasswordViewModel = ForgotPaswordViewModel()
-    
+    var passwordApiToken : String?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //emailAddressTextField.text = "shemona.puri@mobileprogrammingllc.com"
         // Do any additional setup after loading the view.
     }
 
@@ -54,8 +55,6 @@ class ForgotPasswordViewController: UIViewController {
     
     //MARK: Forgot Password API Call
     func callForgotService(email: String) {
-        //let forgotPassword = ServicePath.forgotPassword(email:"shemona.puri@mobileprogrammingllc.com")
-
        let forgotPassword = ServicePath.forgotPassword(email:emailAddressTextField.text!)
         PasswordViewModel.delegate = self
         PasswordViewModel.apiCallWithType(type: forgotPassword)
@@ -68,6 +67,10 @@ class ForgotPasswordViewController: UIViewController {
         let alert = VitaAlertViewController(appearance: appearance)
         alert.addButton("Ok"){
             print("Ok tapped")
+            if(message == "Verification code sent to email address")
+            {
+                self.performSegue(withIdentifier:"VerificationVC", sender: nil)
+            }
         }
         alert.showWarning(title!, subTitle: message!)
     }
@@ -91,31 +94,37 @@ class ForgotPasswordViewController: UIViewController {
         return true
     }
     
-    
     func isValidEmail(email:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: email)
     }
 
-    /*
+    
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        if (segue.identifier == "VerificationVC") {
+            // pass data to next view
+            let viewController: VerificationCodeViewController = (segue.destination as? VerificationCodeViewController)!
+            viewController.passwordApiToken = passwordApiToken
+            viewController.emailAddress  = emailAddressTextField.text
 
+        }
+    }
 }
+
 extension ForgotPasswordViewController:BaseModelDelegate {
     func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
         //Refresh the screen over here...
         if(error == nil)
         {
             print("ForgotPassword info\(String(describing: PasswordViewModel.forgotPasswordInfo?.token))")
-            self.performSegue(withIdentifier:"VerificationVC", sender: nil)
+            passwordApiToken = PasswordViewModel.forgotPasswordInfo?.token
+            self.showAlertControllerWithTitle(title: "Alert", message: PasswordViewModel.forgotPasswordInfo?.message )
+
         }
         else
         {

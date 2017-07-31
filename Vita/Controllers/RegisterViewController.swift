@@ -220,7 +220,8 @@ extension RegisterViewController:BaseModelDelegate {
         if(error == nil)
         {
         print("registered user info\(String(describing: viewModelReg.regUserInfo?.token))")
-        self.performSegue(withIdentifier:"ContainerVC", sender: nil)
+            APPDELEGATE.isUserLoggedIn = false
+       self.performSegue(withIdentifier:"ContainerVC", sender: nil)
         }
         else
         {

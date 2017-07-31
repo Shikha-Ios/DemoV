@@ -15,10 +15,18 @@ class VerificationCodeViewController: UIViewController {
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var retypePasswordTextField: UITextField!
 
+    var passwordApiToken : String?
+    var emailAddress : String?
+
+    let resetPasswordViewModel = ResetPasswordViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("pass\(String(describing: passwordApiToken))")
+        emailAddressTextField.isUserInteractionEnabled = false
+        emailAddressTextField.text = emailAddress
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,10 +40,16 @@ class VerificationCodeViewController: UIViewController {
     }
 
     @IBAction func signInClicked(sender: UIButton){
-        
-    self.performSegue(withIdentifier:"ContainerVC", sender: nil)
-        
+        if (!self.checkValidation())
+        {
+            return
+        }
+        else
+        {
+            self.callResetPasswordService(email: emailAddressTextField.text!, verification_code: verificationCodeTextField.text!, password: newPasswordTextField.text!, confirm_password: retypePasswordTextField.text!, token: passwordApiToken!)
+        }
     }
+    
     @IBAction func backClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
@@ -45,6 +59,90 @@ class VerificationCodeViewController: UIViewController {
     {
         textField.resignFirstResponder()
         return true
+    }
+    
+    //MARK: -  Input Validation Methods/Alert Methods...
+    func checkValidation() ->Bool
+    {
+        if (verificationCodeTextField.text?.characters.count == 0 && newPasswordTextField.text?.characters.count == 0 && retypePasswordTextField.text?.characters.count == 0 )
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter the information")
+            return false
+        }
+        if (verificationCodeTextField.text?.characters.count == 0)
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Please enter a valid verification code.")
+            return false
+        }
+        if ((newPasswordTextField.text?.characters.count)! > 0 && (!self.isValidPassword(password: newPasswordTextField.text!)))
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters")
+            return false
+        }
+        
+        if ((retypePasswordTextField.text?.characters.count)! > 0 && (!self.isValidPassword(password: retypePasswordTextField.text!)))
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters")
+            return false
+        }
+        if(!self.isPasswordSame(password: newPasswordTextField.text!, confirmPassword: retypePasswordTextField.text!))
+        {
+            self.showAlertControllerWithTitle(title: "Alert", message: "Passwords do not match.")
+            return false
+        }
+        
+        return true
+    }
+    
+    func isValidEmail(email:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: email)
+    }
+    
+    func isValidPassword(password: String ) -> Bool {
+        if password.characters.count > 6 {
+            return true
+        }
+        else{
+            return false
+        }
+    }
+     func isPasswordSame(password: String , confirmPassword : String) -> Bool {
+        if password == confirmPassword{
+            return true
+        }
+        else{
+            return false
+        }
+    }
+
+    
+
+
+    // MARK: - Alert Handler
+    func showAlertControllerWithTitle(title: String?, message: String?)
+    {
+        let appearance = VitaAlertViewController.SCLAppearance(showCloseButton: false)
+        let alert = VitaAlertViewController(appearance: appearance)
+        alert.addButton("Ok"){
+            print("Ok tapped")
+            if(message == "Password updated")
+            {
+                self.performSegue(withIdentifier:"LoginVC", sender: nil)
+            }
+        }
+        alert.showWarning(title!, subTitle: message!)
+    }
+    
+
+    //MARK: ResetPassword API Call
+    func callResetPasswordService(email: String, verification_code: String, password:String, confirm_password:String, token:String) {
+        
+        let resetPassword = ServicePath.resetPassword(email: email, verification_code: verification_code, password: password, confirm_password: confirm_password, token: token)
+        resetPasswordViewModel.delegate = self
+        resetPasswordViewModel.apiCallWithType(type: resetPassword)
+        
     }
 
     /*
@@ -57,4 +155,23 @@ class VerificationCodeViewController: UIViewController {
     }
     */
 
+}
+
+
+
+extension VerificationCodeViewController:BaseModelDelegate {
+    func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
+        //Refresh the screen over here...
+        if(error == nil)
+        {
+            print("ResetPassword info\(String(describing: resetPasswordViewModel.resetPasswordInfo?.token))")
+            self.showAlertControllerWithTitle(title: "Alert", message: resetPasswordViewModel.resetPasswordInfo?.message )
+
+        }
+        else
+        {
+            print("error is \(String(describing: error))")
+            self.showAlertControllerWithTitle(title: "Error", message: error?.localizedDescription )
+        }
+    }
 }

@@ -31,13 +31,13 @@ class RegistrationViewModel:BaseViewModels, ViewModelParams {
         if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.error   {
             self.regUserInfo = nil
-            self.delegate?.refreshController(model: self, info: nil, error: resultValue)
+            self.delegate?.refreshController(model: self, info: "Registration", error: resultValue)
         }
         
         if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.value as? RegisterUserData {
             self.regUserInfo = resultValue
-            self.delegate?.refreshController(model: self, info: nil, error: error)
+            self.delegate?.refreshController(model: self, info: "Registration", error: error)
         }
         
     }
