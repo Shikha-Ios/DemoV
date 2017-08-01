@@ -13,4 +13,4 @@ let APPDELEGATE  = UIApplication.shared.delegate as! AppDelegate
 let APPWINDOW    = APPDELEGATE.window
 
 
-let greenBgColor : UIColor = UIColor(red: 33.0/255.0, green: 129.0/255.0, blue: 133.0/255.0, alpha: 1.0)
+let greenBgColor : UIColor = UIColor(red: 33.0/255.0, green: 129.0/255.0, blue: 133.0/255.0, alpha: 0.7)

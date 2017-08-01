@@ -35,6 +35,8 @@ class ForgotPasswordViewController: UIViewController {
         }
         else
         {
+            emailAddressTextField.resignFirstResponder()
+            VitaActivityIndicator.showIndicator(containerView: self.view)
             self.callForgotService(email: emailAddressTextField.text!)
         }
     }
@@ -118,6 +120,8 @@ class ForgotPasswordViewController: UIViewController {
 
 extension ForgotPasswordViewController:BaseModelDelegate {
     func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
+        VitaActivityIndicator.hideIndicator()
+
         //Refresh the screen over here...
         if(error == nil)
         {

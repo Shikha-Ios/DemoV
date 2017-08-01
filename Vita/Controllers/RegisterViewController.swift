@@ -47,15 +47,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         }
         else
         {
-       self.callEmailRegService(email: emailAddressTextField.text!, password: passwordTextField.text!, device_id: deviceID)
+            self.resignTextFields()
+            VitaActivityIndicator.showIndicator(containerView: self.view)
+            self.callEmailRegService(email: emailAddressTextField.text!, password: passwordTextField.text!, device_id: deviceID, device_token: "12345")
         }
     }
     
     @IBAction func facebookSignUpClicked(sender: UIButton){
+        VitaActivityIndicator.showIndicator(containerView: self.view)
+
         self.fbLoginButtonClicked()
     }
     
     @IBAction func googlePlusSignUpClicked(sender: UIButton){
+        VitaActivityIndicator.showIndicator(containerView: self.view)
+
         GIDSignIn.sharedInstance().signIn()
     }
     
@@ -70,22 +76,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
     }
     
     //MARK: Registration API Call
-    func callEmailRegService(email: String, password: String, device_id:String) {
+    func callEmailRegService(email: String, password: String, device_id:String,device_token:String) {
         
        // let registration = ServicePath.registration(email: "teavdgst5659@gmail.com", password: "1234567", device_id: "111111", device_type: "1",authentication_type: "email", facebook_id: "", guid: "")
-        let registration = ServicePath.registration(email: email, password: password, device_id: deviceID, device_type: "1",authentication_type: "email", facebook_id: "", guid: "")
+        let registration = ServicePath.registration(email: email, password: password, device_id: deviceID, device_type: "1",authentication_type: "email", facebook_id: "", guid: "",device_token: device_token)
         viewModelReg.delegate = self
         viewModelReg.apiCallWithType(type: registration)
     }
     
-    func callFacebookRegService(email: String, device_id:String,facebook_id: String ) {
-        let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "facebook", facebook_id: facebook_id, guid: "")
+    func callFacebookRegService(email: String, device_id:String,facebook_id: String,device_token:String ) {
+        let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "facebook", facebook_id: facebook_id, guid: "",device_token: device_token)
         viewModelReg.delegate = self
         viewModelReg.apiCallWithType(type: registration)
     }
     
-    func callGoogleRegService(email: String, device_id:String, google_id: String ) {
-        let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "google", facebook_id: "", guid: google_id)
+    func callGoogleRegService(email: String, device_id:String, google_id: String,device_token:String ) {
+        let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "google", facebook_id: "", guid: google_id,device_token: device_token)
         viewModelReg.delegate = self
         viewModelReg.apiCallWithType(type: registration)
     }
@@ -116,7 +122,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         }
         if ((passwordTextField.text?.characters.count)! > 0 && (!self.isValidPassword(password: passwordTextField.text!)))
         {
-            self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters")
+        self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters and contain at least 1 Uppercase character or 1 numeric or non-alphanumeric character")
+            //self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters")
             return false
         }
         return true
@@ -128,13 +135,48 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         return emailTest.evaluate(with: email)
     }
     
-     func isValidPassword(password: String ) -> Bool {
-        if password.characters.count > 6 {
-            return true
+//     func isValidPassword(password: String ) -> Bool {
+//        if password.characters.count > 6 {
+//            return true
+//        }
+//        else{
+//            return false
+//        }
+//    }
+    
+    func isValidPassword(password: String) -> Bool {
+        var lowerCaseLetter: Bool = false
+        var upperCaseLetter: Bool = false
+        var digit: Bool = false
+        var specialCharacter: Bool = false
+        
+        if password.characters.count  > 6 {
+            for char in password.unicodeScalars {
+                if !lowerCaseLetter {
+                    lowerCaseLetter = CharacterSet.lowercaseLetters.contains(char)
+                }
+                if !upperCaseLetter {
+                    upperCaseLetter = CharacterSet.uppercaseLetters.contains(char)
+                }
+                if !digit {
+                    digit = CharacterSet.decimalDigits.contains(char)
+                }
+                if !specialCharacter {
+                    specialCharacter = CharacterSet.punctuationCharacters.contains(char)
+                }
+            }
+            if (specialCharacter || upperCaseLetter || digit)
+            {
+                print ("correct")
+                return true
+            }
+            else {
+                print ("Incorrect")
+                
+                return false
+            }
         }
-        else{
-            return false
-        }
+        return false
     }
 
     
@@ -150,7 +192,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         print("userProfile email:",profile?.email ?? "" )
         print("userProfile name:",profile?.name ?? "" )
         // Call API for Registration
-        self.callGoogleRegService(email: (profile?.email)!, device_id: deviceID,google_id: (authentication?.accessToken!)!)
+        self.callGoogleRegService(email: (profile?.email)!, device_id: deviceID,google_id: (authentication?.accessToken!)!, device_token: "123456")
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
@@ -184,7 +226,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
             case .success(let response):
             print("Facebook API response: \(response)")
             // Call API for Registration
-            self.callFacebookRegService(email: response.dictionaryValue?["email"] as! String, device_id: self.deviceID, facebook_id: response.dictionaryValue?["id"] as! String)
+            self.callFacebookRegService(email: response.dictionaryValue?["email"] as! String, device_id: self.deviceID, facebook_id: response.dictionaryValue?["id"] as! String,device_token: "7575")
             case .failed(let error):
                 print("Graph Request Failed: \(error)")
             }
@@ -202,6 +244,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         }
         alert.showWarning(title!, subTitle: message!)
     }
+    
+    //MARK: -  Helper Methods...
+    
+    func resignTextFields()
+    {
+        emailAddressTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+
 
 
     /*
@@ -217,6 +268,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
 extension RegisterViewController:BaseModelDelegate {
     func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
         //Refresh the screen over here...
+        VitaActivityIndicator.hideIndicator()
+
         if(error == nil)
         {
         print("registered user info\(String(describing: viewModelReg.regUserInfo?.token))")
