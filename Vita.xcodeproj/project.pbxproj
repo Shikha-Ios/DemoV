@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B463E1D1F3082D400367EB9 /* VitaActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B463E1C1F3082D400367EB9 /* VitaActivityIndicator.swift */; };
 		2B4D558D1F2A166400B7A7D7 /* ForgotPasswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D558C1F2A166400B7A7D7 /* ForgotPasswordData.swift */; };
 		2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */; };
 		2B58BCF01F2229A400B49013 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEF1F2229A400B49013 /* Constants.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		0769A93900DF1AB71A40509B /* Pods_VitaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VitaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A5293E47050F297FCD5D4C /* Pods-VitaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B463E1C1F3082D400367EB9 /* VitaActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaActivityIndicator.swift; sourceTree = "<group>"; };
 		2B4D558C1F2A166400B7A7D7 /* ForgotPasswordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordData.swift; sourceTree = "<group>"; };
 		2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaAlertViewController.swift; sourceTree = "<group>"; };
 		2B58BCEF1F2229A400B49013 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Vita/HelperClasses/Constants.swift; sourceTree = SOURCE_ROOT; };
@@ -298,6 +300,7 @@
 			children = (
 				9861FD911F1EBF170070CC4D /* MIBadgeButton.swift */,
 				2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */,
+				2B463E1C1F3082D400367EB9 /* VitaActivityIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				989911031F20DDC500F57C64 /* NavigationBar.swift in Sources */,
 				988A90F41F1E34BD005E272E /* DashBoardController.swift in Sources */,
 				9861FD8E1F1E90260070CC4D /* CameraViewModel.swift in Sources */,
+				2B463E1D1F3082D400367EB9 /* VitaActivityIndicator.swift in Sources */,
 				2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */,
 				2BD1E1DB1F1CCB43009EC279 /* PrivacyPolicyViewController.swift in Sources */,
 				988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */,

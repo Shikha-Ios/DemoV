@@ -47,7 +47,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-e6-S1P">
                                 <rect key="frame" x="108.66666666666669" y="345.66666666666669" width="197" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg"/>
+                                <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.50588235290000005" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpClickedWithSender:" destination="Dg1-7y-MS9" eventType="touchUpInside" id="FRC-3v-adA"/>
                                 </connections>
@@ -1045,7 +1047,7 @@
         <image name="whats" width="204" height="218"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WFE-G2-c8O"/>
-        <segue reference="9Tx-rf-6Qq"/>
+        <segue reference="DPK-lg-YRS"/>
+        <segue reference="Ax0-RL-dGG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -46,6 +46,8 @@ class VerificationCodeViewController: UIViewController {
         }
         else
         {
+            self.resignTextFields()
+            VitaActivityIndicator.showIndicator(containerView: self.view)
             self.callResetPasswordService(email: emailAddressTextField.text!, verification_code: verificationCodeTextField.text!, password: newPasswordTextField.text!, confirm_password: retypePasswordTextField.text!, token: passwordApiToken!)
         }
     }
@@ -82,7 +84,7 @@ class VerificationCodeViewController: UIViewController {
         
         if ((retypePasswordTextField.text?.characters.count)! > 0 && (!self.isValidPassword(password: retypePasswordTextField.text!)))
         {
-            self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters")
+            self.showAlertControllerWithTitle(title: "Alert", message: "Password must be 6+ characters and contain at least 1 Uppercase character or 1 numeric or non-alphanumeric character")
             return false
         }
         if(!self.isPasswordSame(password: newPasswordTextField.text!, confirmPassword: retypePasswordTextField.text!))
@@ -100,14 +102,50 @@ class VerificationCodeViewController: UIViewController {
         return emailTest.evaluate(with: email)
     }
     
-    func isValidPassword(password: String ) -> Bool {
-        if password.characters.count > 6 {
-            return true
+//    func isValidPassword(password: String ) -> Bool {
+//        if password.characters.count > 6 {
+//            return true
+//        }
+//        else{
+//            return false
+//        }
+//    }
+    
+    func isValidPassword(password: String) -> Bool {
+        var lowerCaseLetter: Bool = false
+        var upperCaseLetter: Bool = false
+        var digit: Bool = false
+        var specialCharacter: Bool = false
+        
+        if password.characters.count  > 6 {
+            for char in password.unicodeScalars {
+                if !lowerCaseLetter {
+                    lowerCaseLetter = CharacterSet.lowercaseLetters.contains(char)
+                }
+                if !upperCaseLetter {
+                    upperCaseLetter = CharacterSet.uppercaseLetters.contains(char)
+                }
+                if !digit {
+                    digit = CharacterSet.decimalDigits.contains(char)
+                }
+                if !specialCharacter {
+                    specialCharacter = CharacterSet.punctuationCharacters.contains(char)
+                }
+            }
+            if (specialCharacter || upperCaseLetter || digit)
+            {
+                print ("correct")
+                return true
+            }
+            else {
+                print ("Incorrect")
+                
+                return false
+            }
         }
-        else{
-            return false
-        }
+        return false
     }
+    
      func isPasswordSame(password: String , confirmPassword : String) -> Bool {
         if password == confirmPassword{
             return true
@@ -138,12 +176,22 @@ class VerificationCodeViewController: UIViewController {
 
     //MARK: ResetPassword API Call
     func callResetPasswordService(email: String, verification_code: String, password:String, confirm_password:String, token:String) {
-        
         let resetPassword = ServicePath.resetPassword(email: email, verification_code: verification_code, password: password, confirm_password: confirm_password, token: token)
         resetPasswordViewModel.delegate = self
         resetPasswordViewModel.apiCallWithType(type: resetPassword)
         
     }
+    
+    //MARK: -  Helper Methods...
+    
+    func resignTextFields()
+    {
+         emailAddressTextField.resignFirstResponder()
+         verificationCodeTextField.resignFirstResponder()
+         newPasswordTextField.resignFirstResponder()
+         retypePasswordTextField.resignFirstResponder()
+    }
+
 
     /*
     // MARK: - Navigation
@@ -162,6 +210,7 @@ class VerificationCodeViewController: UIViewController {
 extension VerificationCodeViewController:BaseModelDelegate {
     func refreshController(model:BaseViewModels?,info:Any?,error:Error?) {
         //Refresh the screen over here...
+        VitaActivityIndicator.hideIndicator()
         if(error == nil)
         {
             print("ResetPassword info\(String(describing: resetPasswordViewModel.resetPasswordInfo?.token))")

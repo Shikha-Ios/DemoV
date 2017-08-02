@@ -55,8 +55,8 @@ struct ResetPasswordEnvelop:Requestable  {
  This enum also wrap a method which provides dictionary for post body.
 */
 internal enum ServicePath:ParameterBodyMaker {
-    case login(email:String, password:String)
-    case registration(email:String, password:String, device_id:String,device_type:String,authentication_type:String,facebook_id:String,guid:String)
+    case login(email:String, password:String, device_token:String)
+    case registration(email:String, password:String, device_id:String,device_type:String,authentication_type:String,facebook_id:String,guid:String,device_token:String)
     case forgotPassword(email:String)
     case resetPassword(email:String, verification_code:String, password:String,confirm_password:String,token:String)
 
@@ -64,19 +64,18 @@ internal enum ServicePath:ParameterBodyMaker {
     func httpBodyEnvelop()->[String:Any]? {
         
         switch self {
-        case .login(email: let email, password: let pwd):
+        case .login(email: let email, password: let pwd, device_token: let device_token):
 
-            let postBody = ["email":email, "password":pwd]
+            let postBody = ["email":email, "password":pwd, "device_token":device_token]
             return postBody
             
           
-        case .registration(email:let email, password:let password, device_id:let device_id,device_type:let device_type,authentication_type:let authentication_type,facebook_id:let facebook_id,guid:let guid):
+        case .registration(email:let email, password:let password, device_id:let device_id,device_type:let device_type,authentication_type:let authentication_type,facebook_id:let facebook_id,guid:let guid,device_token: let device_token):
             
-        let postBody = ["email":email,"password":password,"device_id":device_id,"device_type":device_type,"authentication_type":authentication_type,"facebook_id":facebook_id,"guid":guid]
+        let postBody = ["email":email,"password":password,"device_id":device_id,"device_type":device_type,"authentication_type":authentication_type,"facebook_id":facebook_id,"guid":guid,"device_token":device_token]
             return postBody
         
         case .forgotPassword(email: let email):
-        
         let postBody = ["email":email]
         return postBody
 
