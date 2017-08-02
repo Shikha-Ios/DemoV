@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mmf-NH-wLH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mmf-NH-wLH">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -254,6 +254,7 @@
                         <outlet property="userNameTextField" destination="S7a-SZ-a7l" id="7jk-n7-reV"/>
                         <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="Ax0-RL-dGG"/>
                         <segue destination="Zml-4T-12S" kind="show" identifier="PasswordVC" id="LCZ-yH-AYi"/>
+                        <segue destination="ozN-ol-ykM" kind="show" identifier="FbEmailVC" id="1rg-DH-FXa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzD-RG-PcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,6 +385,7 @@
                         <outlet property="emailAddressTextField" destination="EhJ-H2-EXV" id="7aI-If-A9c"/>
                         <outlet property="passwordTextField" destination="s4U-7w-3H3" id="hrH-Hs-XOa"/>
                         <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="WFE-G2-c8O"/>
+                        <segue destination="ozN-ol-ykM" kind="show" identifier="FbEmailVC" id="FQb-L0-Yti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcX-QF-lEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1022,6 +1024,103 @@
             </objects>
             <point key="canvasLocation" x="-1733" y="-51"/>
         </scene>
+        <!--Facebook Email Register View Controller-->
+        <scene sceneID="SrZ-2d-aUv">
+            <objects>
+                <viewController id="ozN-ol-ykM" customClass="FacebookEmailRegisterViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZuT-9B-grP"/>
+                        <viewControllerLayoutGuide type="bottom" id="MsM-CO-f1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xz7-Li-DYy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_bg" translatesAutoresizingMaskIntoConstraints="NO" id="dTt-Eo-tvX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email to Register To Vita App." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-Jr-33N">
+                                <rect key="frame" x="80.666666666666686" y="360.33333333333331" width="252.66666666666663" height="16.333333333333371"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsJ-Gs-OhR">
+                                <rect key="frame" x="16" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backClickedWithSender:" destination="ozN-ol-ykM" eventType="touchUpInside" id="n1R-HN-6t4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_VitaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="35p-3D-DsQ">
+                                <rect key="frame" x="109" y="164" width="196" height="165"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="eJI-PW-Zlq">
+                                <rect key="frame" x="108.66666666666669" y="407.66666666666669" width="197" height="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="ozN-ol-ykM" id="g1M-EK-EDc"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpY-8O-0HO">
+                                <rect key="frame" x="108.66666666666669" y="467.66666666666663" width="197" height="44.999999999999886"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.50588235290000005" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RegisterClickedWithSender:" destination="ozN-ol-ykM" eventType="touchUpInside" id="FRU-x9-245"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPW-sl-eg6">
+                                <rect key="frame" x="106" y="687" width="202" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Privacy Policy and Terms of Use">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyClickedWithSender:" destination="ozN-ol-ykM" eventType="touchUpInside" id="f7S-lB-AbT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="height" secondItem="gpY-8O-0HO" secondAttribute="height" id="0lQ-zE-HiH"/>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="top" secondItem="nJd-Jr-33N" secondAttribute="bottom" constant="31" id="1M0-fR-f2B"/>
+                            <constraint firstAttribute="trailing" secondItem="dTt-Eo-tvX" secondAttribute="trailing" id="1XP-t9-Osg"/>
+                            <constraint firstItem="nJd-Jr-33N" firstAttribute="top" secondItem="35p-3D-DsQ" secondAttribute="bottom" constant="31.329999999999998" id="AUE-e1-7UP"/>
+                            <constraint firstItem="MsM-CO-f1W" firstAttribute="top" secondItem="dTt-Eo-tvX" secondAttribute="bottom" id="Dzt-nN-Zls"/>
+                            <constraint firstItem="nJd-Jr-33N" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="GHX-eD-X95"/>
+                            <constraint firstItem="dTt-Eo-tvX" firstAttribute="top" secondItem="xz7-Li-DYy" secondAttribute="top" id="HL8-T4-uHf"/>
+                            <constraint firstItem="CsJ-Gs-OhR" firstAttribute="leading" secondItem="xz7-Li-DYy" secondAttribute="leading" constant="16" id="T3b-s0-pnc"/>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="width" secondItem="gpY-8O-0HO" secondAttribute="width" id="UzT-9k-P86"/>
+                            <constraint firstItem="MsM-CO-f1W" firstAttribute="top" secondItem="gPW-sl-eg6" secondAttribute="bottom" constant="20" id="YqL-nu-aOm"/>
+                            <constraint firstItem="35p-3D-DsQ" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="ZDC-hT-o84"/>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="asA-QS-uoK"/>
+                            <constraint firstItem="gpY-8O-0HO" firstAttribute="top" secondItem="eJI-PW-Zlq" secondAttribute="bottom" constant="15" id="cCm-Qj-qH4"/>
+                            <constraint firstItem="nJd-Jr-33N" firstAttribute="centerY" secondItem="xz7-Li-DYy" secondAttribute="centerY" id="cqt-cY-aJA"/>
+                            <constraint firstItem="gpY-8O-0HO" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="jZo-qp-HcU"/>
+                            <constraint firstItem="dTt-Eo-tvX" firstAttribute="leading" secondItem="xz7-Li-DYy" secondAttribute="leading" id="pmz-A6-W4R"/>
+                            <constraint firstItem="CsJ-Gs-OhR" firstAttribute="top" secondItem="xz7-Li-DYy" secondAttribute="top" constant="15" id="sOC-Ye-ile"/>
+                            <constraint firstItem="gPW-sl-eg6" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="tvm-9k-l24"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="eJI-PW-Zlq" id="6pJ-Ak-evj"/>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="dNK-MD-wYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFp-Hn-zqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-806"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Common_VitaLogo" width="196" height="165"/>
@@ -1047,7 +1146,8 @@
         <image name="whats" width="204" height="218"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DPK-lg-YRS"/>
-        <segue reference="Ax0-RL-dGG"/>
+        <segue reference="FQb-L0-Yti"/>
+        <segue reference="9Tx-rf-6Qq"/>
+        <segue reference="4Li-5e-AIN"/>
     </inferredMetricsTieBreakers>
 </document>

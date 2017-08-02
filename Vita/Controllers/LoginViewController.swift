@@ -19,6 +19,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     let viewModel = LoginViewModel()
     var deviceID: String!
     let viewModelReg = RegistrationViewModel()
+    var fbAccessToken : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +93,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     
     func callFacebookRegService(email: String, device_id:String,facebook_id: String , device_token:String) {
         let registration = ServicePath.registration(email: email, password: "", device_id: deviceID, device_type: "1",authentication_type: "facebook", facebook_id: facebook_id, guid: "",device_token: device_token)
+        
         viewModelReg.delegate = self
         viewModelReg.apiCallWithType(type: registration)
     }
@@ -146,6 +148,8 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     //MARK: -  Google Plus Sign In Delegates
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
+            VitaActivityIndicator.hideIndicator()
+
             print(error.localizedDescription)
             return
         }
@@ -161,17 +165,23 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        
+        VitaActivityIndicator.hideIndicator()
+
     }
     
     //MARK: -  Facebook Login Helper Methods
     func fbLoginButtonClicked() {
         let loginManager = LoginManager()
-        loginManager.logIn([ .publicProfile, .email, .userFriends ], viewController: self) { (loginResult) in
+
+       loginManager.logIn([ .publicProfile, .email, .userFriends ], viewController: self) { (loginResult) in
             switch loginResult {
             case .failed(let error):
+                VitaActivityIndicator.hideIndicator()
+
                 print(error)
             case .cancelled:
+                VitaActivityIndicator.hideIndicator()
+
                 print("User cancelled login.")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 print("YES! \n--- GRANTED PERMISSIONS ---\n\(grantedPermissions) \n--- DECLINED PERMISSIONS ---\n\(declinedPermissions) \n--- ACCESS TOKEN ---\n\(accessToken)")
@@ -190,9 +200,23 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
             switch result {
             case .success(let response):
                 print("Facebook API response: \(response)")
-                // Call API for Registration
-                self.callFacebookRegService(email: response.dictionaryValue?["email"] as! String, device_id: self.deviceID, facebook_id: response.dictionaryValue?["id"] as! String, device_token: "123456677")
+                
+                if let _ = response.dictionaryValue?["email"]{
+                    print(" email id exists")
+                    // Call API for Registration
+                    self.callFacebookRegService(email: response.dictionaryValue?["email"] as! String, device_id: self.deviceID, facebook_id: response.dictionaryValue?["id"] as! String,device_token: "7575")
+                }
+                else {
+                    self.fbAccessToken = response.dictionaryValue?["id"] as! String
+                    print("no email id")
+                    VitaActivityIndicator.hideIndicator()
+                    self.showAlertControllerWithTitle(title: "Email Required", message: "Email Id is required to login to Vita App" )
+                }
+                
+                let loginManager = LoginManager()
+                loginManager.logOut()
             case .failed(let error):
+                VitaActivityIndicator.hideIndicator()
                 print("Graph Request Failed: \(error)")
             }
         }
@@ -205,6 +229,12 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
         let appearance = VitaAlertViewController.SCLAppearance(showCloseButton: false)
         let alert = VitaAlertViewController(appearance: appearance)
         alert.addButton("Ok"){
+            
+            if(message == "Email Id is required to login to Vita App")
+            {
+                self.performSegue(withIdentifier:"FbEmailVC", sender: nil)
+            }
+
             print("Ok tapped")
         }
         alert.showWarning(title!, subTitle: message!)
@@ -220,15 +250,21 @@ class LoginViewController: UIViewController,GIDSignInDelegate , GIDSignInUIDeleg
 
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "FbEmailVC") {
+            // pass data to next view
+            let viewController: FacebookEmailRegisterViewController = (segue.destination as? FacebookEmailRegisterViewController)!
+            viewController.fbAccessToken = fbAccessToken
+        }
+
     }
-    */
+    
 }
 
 extension LoginViewController:BaseModelDelegate {
