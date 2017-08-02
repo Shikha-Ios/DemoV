@@ -9,7 +9,77 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CTAssetsPickerController-CTAssetsPickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CTAssetsPickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FacebookCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FacebookLogin.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FacebookShare.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMOAuth2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KeychainSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LLSimpleCamera.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -20,6 +90,11 @@
 			<false/>
 		</dict>
 		<key>Pods-VitaTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +117,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0843C6171A972BA993090F6EE7CA014D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1796F59DECEE9E0F1B3E376354974073</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1947194BEE495486918D3DA2D8FC661F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>335FC5E7DF8530DC1462429A5F914419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>38535AA8F4F6BD5EBF15FDD0C29448E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40750F1D145F1294C575033F1D9784D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,12 +152,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45CA64D1C5BF72DB6382C21D62B4627D</key>
+		<key>48737925C04503960EE4A3790C976D7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8803BEF3242EBF376736C0B7F56862E1</key>
+		<key>5406817FFC5972461058B5E6C0BFCA35</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55BAC9F8E8139246A429848E2588F4BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D4CF68C42A4E7073EDC8995C3FAA7EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E6BA416F5796065A523869A1FC238A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>871FB45D38F8F1E8C9C71F6580481815</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E4EE38CB4623DC02F8BF28249849811</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97B1BAEA5D748D15E15C7C1780DD8678</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A55E0F6AE13672FA4AF55196DBA211F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +202,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB6F404D52E627EB69B02D01C3665E7C</key>
+		<key>BE9883BA288F4C1EAD7C14E2896880CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E64DCF446254E85D319B39B009B3BBAA</key>
+		<key>D2B8128DDEE5E8AC3069D85D065EFC27</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D33A971E36C7D614827B65C7112CAB71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3B2707A04918DC945185A5FFBD8BFA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7015F1B23F26EE9ED934C00316ADF4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

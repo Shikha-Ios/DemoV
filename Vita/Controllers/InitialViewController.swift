@@ -12,6 +12,7 @@ class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -21,14 +22,20 @@ class InitialViewController: UIViewController {
     }
     
     //MARK: Action Methods
-    @IBAction func buttonSignInClicked(sender: UIButton){
-    self.performSegue(withIdentifier:"LoginViewController", sender: nil)
+    @IBAction func signInClicked(sender: UIButton){
+    self.performSegue(withIdentifier:"LoginVC", sender: nil)
     }
     
-    @IBAction func buttonSignUpClicked(sender: UIButton){
-    self.performSegue(withIdentifier:"RegisterViewController", sender: nil)
+    @IBAction func signUpClicked(sender: UIButton){
+    self.performSegue(withIdentifier:"RegisterVC", sender: nil)
+    }
+    
+    @IBAction func privacyClicked(sender: UIButton){
     }
 
+    @IBAction func guestClicked(sender: UIButton){
+        self.dismiss(animated: true, completion: nil)
+    }
     
   
     

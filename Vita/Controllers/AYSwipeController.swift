@@ -40,8 +40,7 @@ open class AYSwipeController: UIViewController {
       }
     }
     public static var StatusBarHeight: CGFloat {
-      return 20
-    }
+      return 0    }
     public static var ScreenHeightWithoutStatusBar: CGFloat {
       if UIInterfaceOrientationIsPortrait(Orientation) {
         return UIScreen.main.bounds.height - StatusBarHeight
@@ -178,7 +177,7 @@ open class AYSwipeController: UIViewController {
       pageViewControllerY = 0
       pageViewControllerH = Constants.ScreenHeight
     } else {
-      pageViewControllerY = Constants.StatusBarHeight
+      pageViewControllerY = 0.0
       pageViewControllerH = Constants.ScreenHeightWithoutStatusBar
     }
     pageViewController.view.frame = CGRect(x: 0, y: pageViewControllerY, width: Constants.ScreenWidth, height: pageViewControllerH)
@@ -269,8 +268,16 @@ open class AYSwipeController: UIViewController {
     
     datasource?.changedToPageIndex?(index)
     currentStackVC = stackPageVC[index]
-    
+    if currentIndex != 1 {
+      self.disableBouncingOfPageViewController(bounce: true)
+      
+    }else{
+       self.disableBouncingOfPageViewController(bounce: false)
+      
+    }
+   // self.disableBouncingOfPageViewController(bounce: false)
     pageViewController.setViewControllers([currentStackVC], direction: direction, animated: animated, completion: nil)
+    
   }
   
   fileprivate func disableBouncingOfPageViewController(bounce: Bool){
@@ -281,14 +288,12 @@ open class AYSwipeController: UIViewController {
       }
     }
   }
-  
 }
 
 extension AYSwipeController: UIPageViewControllerDataSource {
   
   public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
     if viewController == stackPageVC.first {
-      // self.disableBouncingOfPageViewController()
       return nil
     }
     return stackPageVC[stackPageVC.index(of: viewController)! - 1]
@@ -304,6 +309,9 @@ extension AYSwipeController: UIPageViewControllerDataSource {
 
 extension AYSwipeController: UIPageViewControllerDelegate {
   
+  public func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+    print("abcabcbacbabc")
+  }
   public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
     if !completed {
       return

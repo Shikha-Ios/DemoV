@@ -27,11 +27,11 @@ struct ConfigEndPoints {
 
             switch self {
             case .Debug, .Dev:
-                return "http://64.150.183.17:1054"
+                return "http://209.160.65.49:1006"
             case .Prod:
-                return "http://64.150.183.17:1054"
+                return "http://209.160.65.49:1006"
             default:
-                return "http://64.150.183.17:1054"
+                return "http://209.160.65.49:1006"
             }
         }
     }

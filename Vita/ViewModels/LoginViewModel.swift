@@ -27,21 +27,21 @@ class LoginViewModel:BaseViewModels, ViewModelParams  {
     //MARK:Overridden Delegate Method Of Webservice Wrapper.
     override func didReceiveResponse(request:Requestable, data:Any?,error:Error?) {
         
-        guard let d = data else {
+        guard let responseData = data else {
             self.delegate?.refreshController(model: self, info: data, error: error)
             return
         }
         
-        if let result = d as? ResponseResult<Any>,
+        if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.error   {
             self.userInfo = nil
-            self.delegate?.refreshController(model: self, info: nil, error: resultValue)
+            self.delegate?.refreshController(model: self, info: "Login", error: resultValue)
         }
         
-        if let result = d as? ResponseResult<Any>,
+        if let result = responseData as? ResponseResult<Any>,
             let resultValue = result.value as? UserInfo {
             self.userInfo = resultValue
-            self.delegate?.refreshController(model: self, info: nil, error: error)
+            self.delegate?.refreshController(model: self, info: "Login", error: error)
         }
     }
 }

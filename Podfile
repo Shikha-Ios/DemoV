@@ -11,7 +11,12 @@ pod 'KeychainSwift', '~> 8.0'
 pod 'SwiftyBeaver'
 pod 'Alamofire', '~> 4.4'
 pod 'LLSimpleCamera', '~> 4.1'
-
+pod 'Google/SignIn'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+pod 'CTAssetsPickerController',  '~> 3.3.0'
+pod 'IQKeyboardManagerSwift', '4.0.10'
   # Pods for Vita
   target 'VitaTests' do
     inherit! :search_paths
