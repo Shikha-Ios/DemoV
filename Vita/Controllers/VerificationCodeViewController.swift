@@ -54,6 +54,8 @@ class VerificationCodeViewController: UIViewController {
     
     @IBAction func backClicked(sender: UIButton){
         self.navigationController?.popViewController(animated: true)
+        
+        
     }
     
     // MARK: UITextField Delegates

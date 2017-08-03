@@ -22,7 +22,7 @@ class ContainerViewController: AYSwipeController {
       //signInNavigationIdentifier
       if AppDelegate.sharedDelegate().isUserLoggedIn {
         let initalViewController: UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInNavigationIdentifier") as! UINavigationController
-        self.navigationController?.present(initalViewController, animated: true, completion: nil)
+        self.navigationController?.present(initalViewController, animated: false, completion: nil)
         
       }
   }
