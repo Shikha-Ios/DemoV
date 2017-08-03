@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2B463E1D1F3082D400367EB9 /* VitaActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B463E1C1F3082D400367EB9 /* VitaActivityIndicator.swift */; };
 		2B4D558D1F2A166400B7A7D7 /* ForgotPasswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D558C1F2A166400B7A7D7 /* ForgotPasswordData.swift */; };
+		2B50F5D91F33051A009D76F4 /* VitaUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50F5D81F33051A009D76F4 /* VitaUpdatesViewController.swift */; };
+		2B50F5DB1F33053D009D76F4 /* AroundMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50F5DA1F33053D009D76F4 /* AroundMeViewController.swift */; };
+		2B50F5DD1F33054E009D76F4 /* HighFivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50F5DC1F33054E009D76F4 /* HighFivesViewController.swift */; };
+		2B50F5DF1F33055D009D76F4 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50F5DE1F33055D009D76F4 /* WatchListViewController.swift */; };
+		2B50F5E11F330574009D76F4 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50F5E01F330574009D76F4 /* FeaturedViewController.swift */; };
 		2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */; };
 		2B58BCF01F2229A400B49013 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEF1F2229A400B49013 /* Constants.swift */; };
 		2B5D44821F31EFE40035E7D4 /* FacebookEmailRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */; };
@@ -71,6 +76,11 @@
 		19A5293E47050F297FCD5D4C /* Pods-VitaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B463E1C1F3082D400367EB9 /* VitaActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaActivityIndicator.swift; sourceTree = "<group>"; };
 		2B4D558C1F2A166400B7A7D7 /* ForgotPasswordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordData.swift; sourceTree = "<group>"; };
+		2B50F5D81F33051A009D76F4 /* VitaUpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaUpdatesViewController.swift; sourceTree = "<group>"; };
+		2B50F5DA1F33053D009D76F4 /* AroundMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundMeViewController.swift; sourceTree = "<group>"; };
+		2B50F5DC1F33054E009D76F4 /* HighFivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFivesViewController.swift; sourceTree = "<group>"; };
+		2B50F5DE1F33055D009D76F4 /* WatchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
+		2B50F5E01F330574009D76F4 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaAlertViewController.swift; sourceTree = "<group>"; };
 		2B58BCEF1F2229A400B49013 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Vita/HelperClasses/Constants.swift; sourceTree = SOURCE_ROOT; };
 		2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookEmailRegisterViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +279,11 @@
 				2BAECB101F25D491001BF62C /* ForgotPasswordViewController.swift */,
 				2BAECB121F25D4B6001BF62C /* VerificationCodeViewController.swift */,
 				2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */,
+				2B50F5D81F33051A009D76F4 /* VitaUpdatesViewController.swift */,
+				2B50F5DA1F33053D009D76F4 /* AroundMeViewController.swift */,
+				2B50F5DC1F33054E009D76F4 /* HighFivesViewController.swift */,
+				2B50F5DE1F33055D009D76F4 /* WatchListViewController.swift */,
+				2B50F5E01F330574009D76F4 /* FeaturedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -576,10 +591,13 @@
 				985857D31EE1ECCA00CC2755 /* RegistrationViewModel.swift in Sources */,
 				2B5D44821F31EFE40035E7D4 /* FacebookEmailRegisterViewController.swift in Sources */,
 				988A90F81F1E3656005E272E /* AYSwipeController.swift in Sources */,
+				2B50F5D91F33051A009D76F4 /* VitaUpdatesViewController.swift in Sources */,
+				2B50F5E11F330574009D76F4 /* FeaturedViewController.swift in Sources */,
 				98707F171E9BC81100652782 /* AppDelegate.swift in Sources */,
 				98439E281EB381E400FB4331 /* LoginViewModel.swift in Sources */,
 				98707F2C1E9BEFFE00652782 /* ConfigEndPoints.swift in Sources */,
 				984A9E0C1EE2E77A00B20B45 /* ErrorManager.swift in Sources */,
+				2B50F5DF1F33055D009D76F4 /* WatchListViewController.swift in Sources */,
 				2B7E09471F2B56A7007B270A /* ResetPasswordData.swift in Sources */,
 				989911031F20DDC500F57C64 /* NavigationBar.swift in Sources */,
 				988A90F41F1E34BD005E272E /* DashBoardController.swift in Sources */,
@@ -590,9 +608,11 @@
 				988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */,
 				98284B9E1E9E460D00FB3CEB /* APIEndPoints.swift in Sources */,
 				2B7E09491F2B5914007B270A /* ResetPasswordViewModel.swift in Sources */,
+				2B50F5DB1F33053D009D76F4 /* AroundMeViewController.swift in Sources */,
 				2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */,
 				988A90F61F1E354D005E272E /* MapViewController.swift in Sources */,
 				2BAECB131F25D4B6001BF62C /* VerificationCodeViewController.swift in Sources */,
+				2B50F5DD1F33054E009D76F4 /* HighFivesViewController.swift in Sources */,
 				9861FD921F1EBF170070CC4D /* MIBadgeButton.swift in Sources */,
 				985857D11EE1DB9800CC2755 /* CommonProtocols.swift in Sources */,
 				985857D91EE242F700CC2755 /* UserInfo.swift in Sources */,
