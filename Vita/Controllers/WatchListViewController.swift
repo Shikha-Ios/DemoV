@@ -20,7 +20,10 @@ class WatchListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //MARK: Action Methods
+    @IBAction func backClicked(sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation
