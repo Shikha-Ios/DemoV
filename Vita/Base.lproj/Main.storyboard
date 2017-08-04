@@ -14,7 +14,7 @@
         <scene sceneID="onR-VX-CrV">
             <objects>
                 <navigationController storyboardIdentifier="signInNavigationIdentifier" navigationBarHidden="YES" id="8Ya-e1-Hov" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E7g-LJ-pmc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="E7g-LJ-pmc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1850,7 +1850,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Mmf-NH-wLH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m3V-ZF-Oeh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m3V-ZF-Oeh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
