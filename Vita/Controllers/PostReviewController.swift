@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostReviewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class PostReviewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var images_Collectionview: UICollectionView!
     
@@ -25,6 +25,7 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     var selectItem = -1
+    var tapImg = -1
     override func viewDidLoad() {
         super.viewDidLoad()
         fullImg_View.isHidden = true
@@ -37,6 +38,8 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Collection View Delegates
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == images_Collectionview{
         return CameraViewModel.sharedInstance.imageArray.count
@@ -48,8 +51,6 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
     }
-    
-    //3
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -74,16 +75,12 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
              return cell
         }
         
-        
-        // cell.backgroundColor = UIColor.black
-       
-        
     }
-    //52, 180, 196
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         selectItem = indexPath.row
+        tapImg = indexPath.row
         if collectionView == emojies_CollectionView{
             let cell = collectionView.cellForItem(at: indexPath)
             cell?.contentView.backgroundColor =  UIColor(red: 52/255, green: 180/255, blue: 196/255, alpha: 1)
@@ -98,11 +95,24 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
             full_img.image = CameraViewModel.sharedInstance.imageArray[indexPath.row]
         }
         
-        
+    }
+    
+    // MARK: UITextField Delegates
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        caption_txtView.text = ""
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        addEvent_txt.text = ""
     }
     
     
-    
+    //MARK: Action Methods
     
     @IBAction func crossBtn(_ sender: Any) {
         fullImg_View.isHidden = true
@@ -116,6 +126,18 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     @IBAction func postBtn(_ sender: Any) {
     }
+    
+    @IBAction func downloadImg_button(_ sender: Any) {
+    }
+    
+    @IBAction func deleteImg_button(_ sender: Any) {
+        CameraViewModel.sharedInstance.imageArray.remove(at: tapImg)
+        images_Collectionview.reloadData()
+        fullImg_View.isHidden = true
+    
+        
+    }
+    
     /*
     // MARK: - Navigation
 

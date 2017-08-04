@@ -9,6 +9,7 @@
 import UIKit
 
 class AroundViewController: UIViewController {
+    @IBOutlet weak var collectionVC: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,10 @@ class AroundViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //MARK: Action Methods
+    @IBAction func backClicked(sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation
@@ -32,4 +36,27 @@ class AroundViewController: UIViewController {
     }
     */
 
+}
+
+extension AroundViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return 14
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIndentifier", for: indexPath)
+        cell.backgroundColor = UIColor.black
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfColumns: CGFloat = 3
+        let yourWidth = (self.collectionVC!.frame.width - (numberOfColumns - 1)) / numberOfColumns
+        return CGSize(width: yourWidth, height: yourWidth)
+    }
+    
+    
 }

@@ -235,8 +235,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
                 print("no email id")
                 self.fbAccessToken = response.dictionaryValue?["id"] as! String
                 VitaActivityIndicator.hideIndicator()
-                self.showAlertControllerWithTitle(title: "Email Required", message: "Email Id is required to login to Vita App" )
-
+                self.performSegue(withIdentifier:"FbEmailVC", sender: nil)
             }
            
             let loginManager = LoginManager()
@@ -255,11 +254,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         let appearance = VitaAlertViewController.SCLAppearance(showCloseButton: false)
         let alert = VitaAlertViewController(appearance: appearance)
         alert.addButton("Ok"){
-            
-            if(message == "Email Id is required to login to Vita App")
-            {
-                self.performSegue(withIdentifier:"FbEmailVC", sender: nil)
-            }
             print("Ok tapped")
         }
         alert.showWarning(title!, subTitle: message!)
@@ -283,8 +277,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         // Pass the selected object to the new view controller.
         if (segue.identifier == "FbEmailVC") {
             // pass data to next view
-           // let viewController: FacebookEmailRegisterViewController = (segue.destination as? FacebookEmailRegisterViewController)!
-           // viewController.fbAccessToken = fbAccessToken
+            let viewController: FacebookNoEmailViewController = (segue.destination as? FacebookNoEmailViewController)!
+            viewController.fbAccessToken = fbAccessToken
         }
 
     }

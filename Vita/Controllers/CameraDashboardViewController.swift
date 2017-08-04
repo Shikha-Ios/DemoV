@@ -44,9 +44,11 @@ class CameraDashboardViewController: UIViewController {
     self.camera.start()
     if CameraViewModel.sharedInstance.imageArray.count > 0{
         caneraNext_btn.isEnabled = true
+        self.cameraCapture.badgeString = "\(CameraViewModel.sharedInstance.imageArray.count)"
     }
     else{
     caneraNext_btn.isEnabled = false
+        self.cameraCapture.badgeString = "\(CameraViewModel.sharedInstance.imageArray.count)"
     }
     
   }
