@@ -53,6 +53,10 @@
 		988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A90F91F1E36D8005E272E /* ContainerViewController.swift */; };
 		989911031F20DDC500F57C64 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989911021F20DDC500F57C64 /* NavigationBar.swift */; };
 		C39D622C54D21A8175B70C3B /* Pods_Vita.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E23BAD1EE76B716D68D928 /* Pods_Vita.framework */; };
+		E608DFA61F330ED70038ADFE /* PostReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608DFA51F330ED70038ADFE /* PostReviewController.swift */; };
+		E608DFAA1F331D740038ADFE /* ReviewImagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E608DFA91F331D740038ADFE /* ReviewImagesViewCell.swift */; };
+		E62E48E41F31F62A00E732AD /* emojiDummy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E62E48E31F31F62A00E732AD /* emojiDummy.jpeg */; };
+		E62E48E61F31F93100E732AD /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62E48E51F31F93100E732AD /* ReviewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +126,10 @@
 		989911021F20DDC500F57C64 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A6A19353B5E75044083ADC12 /* Pods-VitaTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VitaTests.production.xcconfig"; path = "Pods/Target Support Files/Pods-VitaTests/Pods-VitaTests.production.xcconfig"; sourceTree = "<group>"; };
 		C3F5C1E1F27D706A4F8ACDBE /* Pods-Vita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.debug.xcconfig"; sourceTree = "<group>"; };
+		E608DFA51F330ED70038ADFE /* PostReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostReviewController.swift; sourceTree = "<group>"; };
+		E608DFA91F331D740038ADFE /* ReviewImagesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewImagesViewCell.swift; sourceTree = "<group>"; };
+		E62E48E31F31F62A00E732AD /* emojiDummy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emojiDummy.jpeg; sourceTree = "<group>"; };
+		E62E48E51F31F93100E732AD /* ReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 		F2B8D91D8F6C294533765CFC /* Pods-Vita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.release.xcconfig"; sourceTree = "<group>"; };
 		F3CD46E1B6071BFDD10FDC56 /* Pods-Vita.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vita.development.xcconfig"; path = "Pods/Target Support Files/Pods-Vita/Pods-Vita.development.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +237,7 @@
 		98707EED1E9BC5AA00652782 /* Vita */ = {
 			isa = PBXGroup;
 			children = (
+				E62E48E31F31F62A00E732AD /* emojiDummy.jpeg */,
 				98707F181E9BC83C00652782 /* HelperClasses */,
 				98707F151E9BC7F400652782 /* SingletonResources */,
 				98707F001E9BC70100652782 /* LauchUI */,
@@ -266,6 +275,9 @@
 				988A90F51F1E354D005E272E /* MapViewController.swift */,
 				2BAECB101F25D491001BF62C /* ForgotPasswordViewController.swift */,
 				2BAECB121F25D4B6001BF62C /* VerificationCodeViewController.swift */,
+				E62E48E51F31F93100E732AD /* ReviewController.swift */,
+				E608DFA51F330ED70038ADFE /* PostReviewController.swift */,
+				E608DFA91F331D740038ADFE /* ReviewImagesViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -412,7 +424,7 @@
 				TargetAttributes = {
 					98707EEA1E9BC5AA00652782 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2KAL3NND99;
+						DevelopmentTeam = EKP6R7DDEX;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
@@ -452,6 +464,7 @@
 				98707EF91E9BC5AA00652782 /* LaunchScreen.storyboard in Resources */,
 				2BDB28BE1F20D55400477E6E /* GoogleService-Info.plist in Resources */,
 				98707EF61E9BC5AA00652782 /* Assets.xcassets in Resources */,
+				E62E48E41F31F62A00E732AD /* emojiDummy.jpeg in Resources */,
 				98707EF41E9BC5AA00652782 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +580,8 @@
 				2BD1E1D71F1CCA50009EC279 /* InitialViewController.swift in Sources */,
 				98860E0E1F27DCB100705A8A /* PHImageManagerCategory.swift in Sources */,
 				2BD1E1D51F1CC79E009EC279 /* LoginViewController.swift in Sources */,
+				E608DFAA1F331D740038ADFE /* ReviewImagesViewCell.swift in Sources */,
+				E608DFA61F330ED70038ADFE /* PostReviewController.swift in Sources */,
 				985857D71EE2409200CC2755 /* BaseViewModels.swift in Sources */,
 				9861FD941F1EBFF80070CC4D /* StoryBoardHelper.swift in Sources */,
 				98284BA01E9E502500FB3CEB /* Requestable.swift in Sources */,
@@ -595,6 +610,7 @@
 				9825911E1F267A5F0093C9A2 /* UICategory.swift in Sources */,
 				2BAECB111F25D492001BF62C /* ForgotPasswordViewController.swift in Sources */,
 				2BD1E1DD1F1CD5BC009EC279 /* CameraDashboardViewController.swift in Sources */,
+				E62E48E61F31F93100E732AD /* ReviewController.swift in Sources */,
 				985857CE1EE1CDE400CC2755 /* WebAPIWrapper.swift in Sources */,
 				2B4D558D1F2A166400B7A7D7 /* ForgotPasswordData.swift in Sources */,
 				2B7E09451F2B4DB2007B270A /* ForgotPaswordViewModel.swift in Sources */,
@@ -752,14 +768,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 2KAL3NND99;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EKP6R7DDEX;
 				INFOPLIST_FILE = Vita/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QDiBrand.a1;
 				PRODUCT_NAME = Vita;
-				PROVISIONING_PROFILE = "652c27c4-4700-4614-b0d5-e0be425b77e3";
-				PROVISIONING_PROFILE_SPECIFIER = Distribute_A1;
+				PROVISIONING_PROFILE = "dbec7f06-63c8-4616-86c8-d38e7b864284";
+				PROVISIONING_PROFILE_SPECIFIER = iBrandPP_Debug;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -777,8 +794,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 2KAL3NND99;
 				INFOPLIST_FILE = Vita/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QDiBrand.a1;
 				PRODUCT_NAME = Vita;
 				PROVISIONING_PROFILE = "652c27c4-4700-4614-b0d5-e0be425b77e3";
 				PROVISIONING_PROFILE_SPECIFIER = Distribute_A1;
@@ -885,14 +903,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: A-1 Technology Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 2KAL3NND99;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EKP6R7DDEX;
 				INFOPLIST_FILE = Vita/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QDiBrand.a1;
 				PRODUCT_NAME = Vita;
-				PROVISIONING_PROFILE = "652c27c4-4700-4614-b0d5-e0be425b77e3";
-				PROVISIONING_PROFILE_SPECIFIER = Distribute_A1;
+				PROVISIONING_PROFILE = "dbec7f06-63c8-4616-86c8-d38e7b864284";
+				PROVISIONING_PROFILE_SPECIFIER = iBrandPP_Debug;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vita/HelperClasses/BridgedClasses/Vita-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -976,8 +995,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 2KAL3NND99;
 				INFOPLIST_FILE = Vita/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.a1distribute.vita;
+				PRODUCT_BUNDLE_IDENTIFIER = com.QDiBrand.a1;
 				PRODUCT_NAME = Vita;
 				PROVISIONING_PROFILE = "652c27c4-4700-4614-b0d5-e0be425b77e3";
 				PROVISIONING_PROFILE_SPECIFIER = Distribute_A1;

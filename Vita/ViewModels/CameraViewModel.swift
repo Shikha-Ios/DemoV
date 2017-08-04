@@ -25,9 +25,16 @@ class CameraViewModel {
 
   fileprivate var image: UIImage?
   
+
   static var defaultModel = CameraViewModel()
   var delegate: CameraViewModelDelegate?
 		
+    
+    static let sharedInstance : CameraViewModel = {
+        let instance = CameraViewModel()
+        return instance
+    }()
+    
   init() {
     self.option.isSynchronous = true
     self.option.deliveryMode = .highQualityFormat
@@ -49,7 +56,10 @@ class CameraViewModel {
     }
     delegate?.updateUI()
   }
+    
   
+    
+    
 fileprivate func getAssetImage(asset: PHAsset) {
       manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: self.option, resultHandler: {(result, info)->Void in
         self.imageArray.append(result!)

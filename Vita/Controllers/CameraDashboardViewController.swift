@@ -26,15 +26,15 @@ class CameraDashboardViewController: UIViewController {
   @IBOutlet weak var cameraBottomLayer: UIView!
   
   var flashSelecteion = 0
-  var cameraViewModel = CameraViewModel()
+  //var cameraViewModel : CameraViewModel?
 		
-  
+    @IBOutlet weak var caneraNext_btn: UIButton!
   var camera = LLSimpleCamera()
   var snapButton: UIButton?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    cameraViewModel.delegate = self
+    CameraViewModel.sharedInstance.delegate = self
     self.initializeCamera()
     self.brignSubViewsToFront()
     
@@ -42,6 +42,13 @@ class CameraDashboardViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     self.camera.start()
+    if CameraViewModel.sharedInstance.imageArray.count > 0{
+        caneraNext_btn.isEnabled = true
+    }
+    else{
+    caneraNext_btn.isEnabled = false
+    }
+    
   }
   
   override func didReceiveMemoryWarning() {
@@ -119,8 +126,10 @@ class CameraDashboardViewController: UIViewController {
       if error == nil {
         print(image?.size.height ?? 0.0)
         self.camera.start()
-        self.cameraViewModel.imageArray.append(image!)
-        self.cameraCapture.badgeString = "\(self.cameraViewModel.imageArray.count)"
+        CameraViewModel.sharedInstance.imageArray.append(image!)
+        self.cameraCapture.badgeString = "\(CameraViewModel.sharedInstance.imageArray.count)"
+        self.caneraNext_btn.isEnabled = true
+    
       }
       else {
         print("An error has occured: \(String(describing: error))")
@@ -168,12 +177,12 @@ class CameraDashboardViewController: UIViewController {
 extension CameraDashboardViewController: CTAssetsPickerControllerDelegate {
   func assetsPickerController(_ picker: CTAssetsPickerController!, didFinishPickingAssets assets: [Any]!) {
     picker.dismiss(animated: true, completion: nil)
-    self.cameraViewModel.getAssetFromMediaLibrary(asset: assets as! [PHAsset])
+    CameraViewModel.sharedInstance.getAssetFromMediaLibrary(asset: assets as! [PHAsset])
   }
 }
 
 extension CameraDashboardViewController: CameraViewModelDelegate {
   func updateUI() {
-    self.cameraCapture.badgeString = "\(self.cameraViewModel.imageArray.count)"
+    self.cameraCapture.badgeString = "\(CameraViewModel.sharedInstance.imageArray.count)"
   }
 }
