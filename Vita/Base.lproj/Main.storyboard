@@ -604,10 +604,10 @@
             </objects>
             <point key="canvasLocation" x="1159" y="-51"/>
         </scene>
-        <!--Vita Updates View Controller-->
+        <!--Vita Update View Controller-->
         <scene sceneID="Eyj-el-tNt">
             <objects>
-                <viewController id="OrT-eW-wb6" customClass="VitaUpdatesViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OrT-eW-wb6" customClass="VitaUpdateViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GLf-vG-fKa"/>
                         <viewControllerLayoutGuide type="bottom" id="fy7-vV-bez"/>
@@ -661,10 +661,10 @@
             </objects>
             <point key="canvasLocation" x="1784" y="-52"/>
         </scene>
-        <!--Around Me View Controller-->
+        <!--Around View Controller-->
         <scene sceneID="RZx-y5-G1p">
             <objects>
-                <viewController id="0xC-wz-l8S" customClass="AroundMeViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0xC-wz-l8S" customClass="AroundViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RG8-yb-WZO"/>
                         <viewControllerLayoutGuide type="bottom" id="8Zo-Hn-P4d"/>
@@ -712,10 +712,10 @@
             </objects>
             <point key="canvasLocation" x="2419" y="-53"/>
         </scene>
-        <!--High Fives View Controller-->
+        <!--High Five View Controller-->
         <scene sceneID="wz4-Wg-pci">
             <objects>
-                <viewController id="ju6-H3-B5u" customClass="HighFivesViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ju6-H3-B5u" customClass="HighFiveViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="loM-vU-Ymo"/>
                         <viewControllerLayoutGuide type="bottom" id="eBs-tN-juc"/>
@@ -763,10 +763,10 @@
             </objects>
             <point key="canvasLocation" x="3070" y="-55"/>
         </scene>
-        <!--Watch List View Controller-->
+        <!--Watchlist View Controller-->
         <scene sceneID="wfo-lj-koI">
             <objects>
-                <viewController id="WnA-SW-WTi" customClass="WatchListViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WnA-SW-WTi" customClass="WatchlistViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EF2-SL-4gH"/>
                         <viewControllerLayoutGuide type="bottom" id="Eyk-ZN-0TL"/>
@@ -814,10 +814,10 @@
             </objects>
             <point key="canvasLocation" x="3697" y="-55"/>
         </scene>
-        <!--Featured View Controller-->
+        <!--Feature View Controller-->
         <scene sceneID="W1t-e4-Ty4">
             <objects>
-                <viewController id="dZW-jK-r1v" customClass="FeaturedViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dZW-jK-r1v" customClass="FeatureViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IBe-uL-XgY"/>
                         <viewControllerLayoutGuide type="bottom" id="0lm-iT-5fA"/>
@@ -1850,7 +1850,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Mmf-NH-wLH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="m3V-ZF-Oeh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m3V-ZF-Oeh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1863,10 +1863,10 @@
             </objects>
             <point key="canvasLocation" x="-1733" y="-51"/>
         </scene>
-        <!--Facebook Email Register View Controller-->
+        <!--Facebook No Email View Controller-->
         <scene sceneID="SrZ-2d-aUv">
             <objects>
-                <viewController id="ozN-ol-ykM" customClass="FacebookEmailRegisterViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ozN-ol-ykM" customClass="FacebookNoEmailViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZuT-9B-grP"/>
                         <viewControllerLayoutGuide type="bottom" id="MsM-CO-f1W"/>
@@ -1995,8 +1995,8 @@
         <image name="whats" width="185" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Tx-rf-6Qq"/>
-        <segue reference="Ax0-RL-dGG"/>
+        <segue reference="dNK-MD-wYd"/>
         <segue reference="FQb-L0-Yti"/>
+        <segue reference="9Tx-rf-6Qq"/>
     </inferredMetricsTieBreakers>
 </document>

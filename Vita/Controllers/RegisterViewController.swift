@@ -283,8 +283,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, GIDSignInDe
         // Pass the selected object to the new view controller.
         if (segue.identifier == "FbEmailVC") {
             // pass data to next view
-            let viewController: FacebookEmailRegisterViewController = (segue.destination as? FacebookEmailRegisterViewController)!
-            viewController.fbAccessToken = fbAccessToken
+           // let viewController: FacebookEmailRegisterViewController = (segue.destination as? FacebookEmailRegisterViewController)!
+           // viewController.fbAccessToken = fbAccessToken
         }
 
     }
