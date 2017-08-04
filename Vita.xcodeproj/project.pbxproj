@@ -16,6 +16,10 @@
 		2B50F5E11F330574009D76F4 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50F5E01F330574009D76F4 /* FeaturedViewController.swift */; };
 		2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */; };
 		2B58BCF01F2229A400B49013 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58BCEF1F2229A400B49013 /* Constants.swift */; };
+		2B5C6AD71F34598600322987 /* FacebookEmailRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AD61F34598600322987 /* FacebookEmailRegisterViewController.swift */; };
+		2B5C6AD91F3459D300322987 /* VitaUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AD81F3459D300322987 /* VitaUpdatesViewController.swift */; };
+		2B5C6ADB1F345A2700322987 /* FacebookNoEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6ADA1F345A2700322987 /* FacebookNoEmailViewController.swift */; };
+		2B5C6ADD1F345A4100322987 /* VitaUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6ADC1F345A4100322987 /* VitaUpdateViewController.swift */; };
 		2B5D44821F31EFE40035E7D4 /* FacebookEmailRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */; };
 		2B7E09451F2B4DB2007B270A /* ForgotPaswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E09441F2B4DB2007B270A /* ForgotPaswordViewModel.swift */; };
 		2B7E09471F2B56A7007B270A /* ResetPasswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E09461F2B56A7007B270A /* ResetPasswordData.swift */; };
@@ -87,6 +91,10 @@
 		2B50F5E01F330574009D76F4 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		2B58BCEC1F22250C00B49013 /* VitaAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaAlertViewController.swift; sourceTree = "<group>"; };
 		2B58BCEF1F2229A400B49013 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Vita/HelperClasses/Constants.swift; sourceTree = SOURCE_ROOT; };
+		2B5C6AD61F34598600322987 /* FacebookEmailRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookEmailRegisterViewController.swift; sourceTree = "<group>"; };
+		2B5C6AD81F3459D300322987 /* VitaUpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaUpdatesViewController.swift; sourceTree = "<group>"; };
+		2B5C6ADA1F345A2700322987 /* FacebookNoEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNoEmailViewController.swift; sourceTree = "<group>"; };
+		2B5C6ADC1F345A4100322987 /* VitaUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaUpdateViewController.swift; sourceTree = "<group>"; };
 		2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookEmailRegisterViewController.swift; sourceTree = "<group>"; };
 		2B7E09441F2B4DB2007B270A /* ForgotPaswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPaswordViewModel.swift; sourceTree = "<group>"; };
 		2B7E09461F2B56A7007B270A /* ResetPasswordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordData.swift; sourceTree = "<group>"; };
@@ -290,6 +298,10 @@
 				E62E48E51F31F93100E732AD /* ReviewController.swift */,
 				E608DFA51F330ED70038ADFE /* PostReviewController.swift */,
 				E608DFA91F331D740038ADFE /* ReviewImagesViewCell.swift */,
+				2B5C6ADA1F345A2700322987 /* FacebookNoEmailViewController.swift */,
+				2B5C6ADC1F345A4100322987 /* VitaUpdateViewController.swift */,
+				2B5C6AD61F34598600322987 /* FacebookEmailRegisterViewController.swift */,
+				2B5C6AD81F3459D300322987 /* VitaUpdatesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -609,13 +621,17 @@
 				2B50F5DF1F33055D009D76F4 /* WatchListViewController.swift in Sources */,
 				2B7E09471F2B56A7007B270A /* ResetPasswordData.swift in Sources */,
 				989911031F20DDC500F57C64 /* NavigationBar.swift in Sources */,
+				2B5C6AD71F34598600322987 /* FacebookEmailRegisterViewController.swift in Sources */,
 				988A90F41F1E34BD005E272E /* DashBoardController.swift in Sources */,
 				9861FD8E1F1E90260070CC4D /* CameraViewModel.swift in Sources */,
 				2B463E1D1F3082D400367EB9 /* VitaActivityIndicator.swift in Sources */,
 				2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */,
+				2B5C6ADD1F345A4100322987 /* VitaUpdateViewController.swift in Sources */,
 				2BD1E1DB1F1CCB43009EC279 /* PrivacyPolicyViewController.swift in Sources */,
 				988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */,
 				98284B9E1E9E460D00FB3CEB /* APIEndPoints.swift in Sources */,
+				2B5C6ADB1F345A2700322987 /* FacebookNoEmailViewController.swift in Sources */,
+				2B5C6AD91F3459D300322987 /* VitaUpdatesViewController.swift in Sources */,
 				2B7E09491F2B5914007B270A /* ResetPasswordViewModel.swift in Sources */,
 				2B50F5DB1F33053D009D76F4 /* AroundMeViewController.swift in Sources */,
 				2B58BCED1F22250C00B49013 /* VitaAlertViewController.swift in Sources */,
