@@ -22,6 +22,8 @@
 		2B5C6AE11F345B3200322987 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AE01F345B3200322987 /* WatchlistViewController.swift */; };
 		2B5C6AE31F345B4E00322987 /* AroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AE21F345B4E00322987 /* AroundViewController.swift */; };
 		2B5C6AE51F345B5D00322987 /* HighFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AE41F345B5D00322987 /* HighFiveViewController.swift */; };
+		2B5C6AE81F34855900322987 /* WatchListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AE71F34855900322987 /* WatchListHeaderCell.swift */; };
+		2B5C6AEA1F3485AB00322987 /* WatchListDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C6AE91F3485AB00322987 /* WatchListDetailCell.swift */; };
 		2B5D44821F31EFE40035E7D4 /* FacebookEmailRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */; };
 		2B7E09451F2B4DB2007B270A /* ForgotPaswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E09441F2B4DB2007B270A /* ForgotPaswordViewModel.swift */; };
 		2B7E09471F2B56A7007B270A /* ResetPasswordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E09461F2B56A7007B270A /* ResetPasswordData.swift */; };
@@ -99,6 +101,8 @@
 		2B5C6AE01F345B3200322987 /* WatchlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		2B5C6AE21F345B4E00322987 /* AroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundViewController.swift; sourceTree = "<group>"; };
 		2B5C6AE41F345B5D00322987 /* HighFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighFiveViewController.swift; sourceTree = "<group>"; };
+		2B5C6AE71F34855900322987 /* WatchListHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchListHeaderCell.swift; path = Vita/CustomCells/WatchListHeaderCell.swift; sourceTree = SOURCE_ROOT; };
+		2B5C6AE91F3485AB00322987 /* WatchListDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchListDetailCell.swift; path = Vita/CustomCells/WatchListDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		2B5D44811F31EFE30035E7D4 /* FacebookEmailRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookEmailRegisterViewController.swift; sourceTree = "<group>"; };
 		2B7E09441F2B4DB2007B270A /* ForgotPaswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPaswordViewModel.swift; sourceTree = "<group>"; };
 		2B7E09461F2B56A7007B270A /* ResetPasswordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordData.swift; sourceTree = "<group>"; };
@@ -203,6 +207,16 @@
 			path = BridgedClasses;
 			sourceTree = "<group>";
 		};
+		2B5C6AE61F34851600322987 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C6AE71F34855900322987 /* WatchListHeaderCell.swift */,
+				2B5C6AE91F3485AB00322987 /* WatchListDetailCell.swift */,
+			);
+			name = CustomCells;
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4588C20C3D5F0C36091F743A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +281,7 @@
 				98707F001E9BC70100652782 /* LauchUI */,
 				98707F011E9BC73D00652782 /* Controllers */,
 				98707F021E9BC73D00652782 /* Models */,
+				2B5C6AE61F34851600322987 /* CustomCells */,
 				98707F031E9BC73D00652782 /* ViewModels */,
 				98707F041E9BC73D00652782 /* Views */,
 				98707EFA1E9BC5AA00652782 /* Info.plist */,
@@ -611,6 +626,7 @@
 				2B5C6AE31F345B4E00322987 /* AroundViewController.swift in Sources */,
 				98860E0E1F27DCB100705A8A /* PHImageManagerCategory.swift in Sources */,
 				2BD1E1D51F1CC79E009EC279 /* LoginViewController.swift in Sources */,
+				2B5C6AEA1F3485AB00322987 /* WatchListDetailCell.swift in Sources */,
 				E608DFAA1F331D740038ADFE /* ReviewImagesViewCell.swift in Sources */,
 				E608DFA61F330ED70038ADFE /* PostReviewController.swift in Sources */,
 				985857D71EE2409200CC2755 /* BaseViewModels.swift in Sources */,
@@ -635,6 +651,7 @@
 				2B5C6AE11F345B3200322987 /* WatchlistViewController.swift in Sources */,
 				2BD1E1D91F1CCAD1009EC279 /* RegisterViewController.swift in Sources */,
 				2B5C6ADD1F345A4100322987 /* VitaUpdateViewController.swift in Sources */,
+				2B5C6AE81F34855900322987 /* WatchListHeaderCell.swift in Sources */,
 				2BD1E1DB1F1CCB43009EC279 /* PrivacyPolicyViewController.swift in Sources */,
 				988A90FA1F1E36D8005E272E /* ContainerViewController.swift in Sources */,
 				2B5C6AE51F345B5D00322987 /* HighFiveViewController.swift in Sources */,

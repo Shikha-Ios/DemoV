@@ -10,6 +10,9 @@ import UIKit
 
 class WatchlistViewController: UIViewController {
 
+    @IBOutlet var tableViewWatchList : UITableView!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,4 +39,49 @@ class WatchlistViewController: UIViewController {
     }
     */
 
+}
+
+extension WatchlistViewController : UITableViewDataSource,UITableViewDelegate
+{
+    public func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 4
+    }
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 1
+    }
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell : WatchListDetailCell = tableView.dequeueReusableCell(withIdentifier: "WatchListDetailCell", for: indexPath) as! WatchListDetailCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
+        return 50
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "WatchListHeaderCell") as! WatchListHeaderCell
+        return headerCell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 120
+    }
+    
+}
+extension WatchlistViewController: UICollectionViewDataSource {
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+            return 7
+        
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIndentifier", for: indexPath)
+            cell.backgroundColor = UIColor.black
+            return cell
+    }
 }

@@ -29,6 +29,10 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         fullImg_View.isHidden = true
+        addEvent_txt.attributedPlaceholder = NSAttributedString(string: "Add Event Title...",
+                                                               attributes: [NSForegroundColorAttributeName: UIColor.white])
+        applyPlaceholderStyle(aTextview: caption_txtView, placeholderText: "Write a caption ...")
+
 
         // Do any additional setup after loading the view.
     }
@@ -51,6 +55,61 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
     }
+    
+    func applyPlaceholderStyle(aTextview: UITextView, placeholderText: String)
+    {
+        // make it look (initially) like a placeholder
+        aTextview.textColor = UIColor.white
+        aTextview.text = placeholderText
+    }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if textField == addEvent_txt{
+//            if range.location == 0{
+//                addEvent_txt.text = "Add Event Title..."
+//            }
+//        
+//        }
+//        return true
+//    }
+    func moveCursorToStart(aTextView: UITextView)
+    {
+        DispatchQueue.main.async(execute: {
+            aTextView.selectedRange = NSMakeRange(0, 0);
+        })
+    }
+    func applyNonPlaceholderStyle(aTextview: UITextView)
+    {
+        // make it look like normal text instead of a placeholder
+        aTextview.textColor = UIColor.white
+        aTextview.alpha = 1.0
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+       
+        let newLength = textView.text.utf16.count + text.utf16.count - range.length
+        if newLength > 0 // have text, so don't show the placeholder
+        {
+            
+            if textView == caption_txtView && textView.text == "Write a caption ..."
+            {
+                if text.utf16.count == 0 // they hit the back button
+                {
+                    return false // ignore it
+                }
+               applyNonPlaceholderStyle(aTextview: textView)
+                textView.text = ""
+            }
+            return true
+        }
+        else  // no text, so show the placeholder
+        {
+            applyPlaceholderStyle(aTextview: textView, placeholderText: "Write a caption ...")
+            moveCursorToStart(aTextView: textView)
+            return false
+        }
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -104,9 +163,16 @@ class PostReviewController: UIViewController, UICollectionViewDataSource, UIColl
         return true
     }
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        caption_txtView.text = ""
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == ""
+        {
+            applyPlaceholderStyle(aTextview: textView, placeholderText: "Write a caption ...")
+        }
     }
+    
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        caption_txtView.text = ""
+//    }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         addEvent_txt.text = ""
     }
