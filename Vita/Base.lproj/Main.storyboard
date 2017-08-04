@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mmf-NH-wLH">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,7 +47,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-e6-S1P">
+
                                 <rect key="frame" x="111" y="316" width="153" height="35"/>
+
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg">
                                     <color key="titleColor" red="0.12941176469999999" green="0.50588235290000005" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,6 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-2s-YH2">
+
                                 <rect key="frame" x="111" y="365" width="153" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Sign In" backgroundImage="Common_buttonBg">
@@ -85,7 +89,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_VitaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-bA-ogR">
+
                                 <rect key="frame" x="112" y="156" width="151" height="128"/>
+
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,6 +146,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwq-n9-pfE">
+                        <rect key="frame" x="210" y="558" width="40" height="40"/>
+
                                 <rect key="frame" x="199" y="508" width="31" height="31"/>
                                 <state key="normal" image="icon_googlePlus"/>
                                 <connections>
@@ -147,6 +155,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In With:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJs-BR-a13">
+
                                 <rect key="frame" x="145" y="477" width="85" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -209,6 +218,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxR-2E-Vpg">
+
                                 <rect key="frame" x="111" y="366" width="153" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Sign In" backgroundImage="Common_buttonBg">
@@ -255,6 +265,7 @@
                         <outlet property="userNameTextField" destination="S7a-SZ-a7l" id="7jk-n7-reV"/>
                         <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="Ax0-RL-dGG"/>
                         <segue destination="Zml-4T-12S" kind="show" identifier="PasswordVC" id="LCZ-yH-AYi"/>
+                        <segue destination="ozN-ol-ykM" kind="show" identifier="FbEmailVC" id="1rg-DH-FXa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzD-RG-PcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,6 +297,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whF-h9-pTv">
+
                                 <rect key="frame" x="111" y="367" width="153" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg">
@@ -299,6 +311,7 @@
                                 <rect key="frame" x="112" y="107" width="151" height="128"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="EhJ-H2-EXV">
+
                                 <rect key="frame" x="111" y="267" width="153" height="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -313,6 +326,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="s4U-7w-3H3">
+
                                 <rect key="frame" x="111" y="316" width="153" height="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -327,6 +341,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up With:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9j-ud-MsY">
+
                                 <rect key="frame" x="141" y="433" width="93" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -340,6 +355,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76U-0R-WNh">
+
                                 <rect key="frame" x="203" y="464" width="31" height="31"/>
                                 <state key="normal" image="icon_googlePlus"/>
                                 <connections>
@@ -385,6 +401,7 @@
                         <outlet property="emailAddressTextField" destination="EhJ-H2-EXV" id="7aI-If-A9c"/>
                         <outlet property="passwordTextField" destination="s4U-7w-3H3" id="hrH-Hs-XOa"/>
                         <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="WFE-G2-c8O"/>
+                        <segue destination="ozN-ol-ykM" kind="show" identifier="FbEmailVC" id="FQb-L0-Yti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcX-QF-lEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,6 +458,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3Rt-Og-N8f">
+
                                         <rect key="frame" x="157" y="31" width="61" height="21"/>
                                     </imageView>
                                 </subviews>
@@ -508,6 +526,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="S8x-DN-dg6">
+
                                         <rect key="frame" x="157" y="31" width="61" height="21"/>
                                     </imageView>
                                 </subviews>
@@ -526,37 +545,57 @@
                                 <rect key="frame" x="0.0" y="69" width="375" height="598"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="971-Rp-hpa">
+
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2T-EK-tsQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
                                                 <state key="normal" image="my_vita"/>
+                                                <connections>
+                                                    <action selector="navigateToMyVitaUpdates:" destination="7ja-vD-07E" eventType="touchUpInside" id="24K-Td-YOr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="KhE-Ki-uXh">
+
                                         <rect key="frame" x="0.0" y="136" width="375" height="199"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C37-RH-ssh">
                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="199"/>
                                                 <state key="normal" image="whats"/>
+                                                <connections>
+                                                    <action selector="navigateToAroundMe:" destination="7ja-vD-07E" eventType="touchUpInside" id="pda-1E-gjT"/>
+                                                </connections>
                                             </button>
+
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-FJ-FwG">
                                                 <rect key="frame" x="189" y="0.0" width="186" height="199"/>
                                                 <state key="normal" image="high"/>
+                                                <connections>
+                                                    <action selector="navigateToHighFives:" destination="7ja-vD-07E" eventType="touchUpInside" id="aEh-6s-Gmp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="llh-ce-gmi">
+
                                         <rect key="frame" x="0.0" y="337" width="375" height="261"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Z-U5-wLE">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
                                                 <state key="normal" image="watch"/>
+                                                <connections>
+                                                    <action selector="navigateToWatchList:" destination="7ja-vD-07E" eventType="touchUpInside" id="FGh-zY-CSu"/>
+                                                </connections>
                                             </button>
+
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-j8-wtp">
                                                 <rect key="frame" x="0.0" y="132" width="375" height="129"/>
                                                 <state key="normal" image="feature"/>
+                                                <connections>
+                                                    <action selector="navigateToFeatured:" destination="7ja-vD-07E" eventType="touchUpInside" id="8qE-jO-GQI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -575,10 +614,107 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <segue destination="OrT-eW-wb6" kind="show" identifier="UpdatesVC" id="j2U-bx-tnk"/>
+                        <segue destination="0xC-wz-l8S" kind="show" identifier="AroundVC" id="bcZ-Ja-0IH"/>
+                        <segue destination="ju6-H3-B5u" kind="show" identifier="HighVC" id="ukl-JJ-FJH"/>
+                        <segue destination="WnA-SW-WTi" kind="show" identifier="WatchVC" id="pyV-of-5ny"/>
+                        <segue destination="dZW-jK-r1v" kind="show" identifier="FeaturedVC" id="NWS-Ir-FPd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmh-mq-Dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="-51"/>
+        </scene>
+        <!--Vita Updates View Controller-->
+        <scene sceneID="Eyj-el-tNt">
+            <objects>
+                <viewController id="OrT-eW-wb6" customClass="VitaUpdatesViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GLf-vG-fKa"/>
+                        <viewControllerLayoutGuide type="bottom" id="fy7-vV-bez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y6u-UA-1W9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqx-E3-ZWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="-52"/>
+        </scene>
+        <!--Around Me View Controller-->
+        <scene sceneID="RZx-y5-G1p">
+            <objects>
+                <viewController id="0xC-wz-l8S" customClass="AroundMeViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RG8-yb-WZO"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Zo-Hn-P4d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Tj-46-SRA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqL-dw-O4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2419" y="-53"/>
+        </scene>
+        <!--High Fives View Controller-->
+        <scene sceneID="wz4-Wg-pci">
+            <objects>
+                <viewController id="ju6-H3-B5u" customClass="HighFivesViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="loM-vU-Ymo"/>
+                        <viewControllerLayoutGuide type="bottom" id="eBs-tN-juc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NJC-xl-RLs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCe-vr-bhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3070" y="-55"/>
+        </scene>
+        <!--Watch List View Controller-->
+        <scene sceneID="wfo-lj-koI">
+            <objects>
+                <viewController id="WnA-SW-WTi" customClass="WatchListViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EF2-SL-4gH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eyk-ZN-0TL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ih4-X7-PNW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Faj-1v-MY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3697" y="-55"/>
+        </scene>
+        <!--Featured View Controller-->
+        <scene sceneID="W1t-e4-Ty4">
+            <objects>
+                <viewController id="dZW-jK-r1v" customClass="FeaturedViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IBe-uL-XgY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0lm-iT-5fA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u9a-Hm-O8X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNC-jn-4rJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4304" y="-56"/>
         </scene>
         <!--Camera Dashboard View Controller-->
         <scene sceneID="svt-9t-JdE">
@@ -649,6 +785,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zin-2L-qid" userLabel="Camera Capture" customClass="MIBadgeButton" customModule="Vita" customModuleProvider="target">
+
                                 <rect key="frame" x="160" y="587" width="55" height="80"/>
                                 <state key="normal" image="camera"/>
                                 <userDefinedRuntimeAttributes>
@@ -670,6 +807,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-oR-DpM" userLabel="Camera swipe">
+
                                 <rect key="frame" x="156" y="628" width="63" height="34"/>
                                 <state key="normal" title="Camera">
                                     <color key="titleColor" red="0.2740222812" green="0.71355134249999996" blue="0.78995603319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -679,6 +817,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPa-k2-4Gq" userLabel="video Swipe">
+
                                 <rect key="frame" x="269" y="628" width="47" height="34"/>
                                 <state key="normal" title="Video"/>
                                 <connections>
@@ -1300,12 +1439,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email and we'll send you a verification code to get back into your account." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-Ea-5iT">
+
                                 <rect key="frame" x="20" y="358" width="335" height="33"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trouble Logging In?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFJ-JD-N6B">
+
                                 <rect key="frame" x="125.5" y="325.5" width="124" height="16"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1322,6 +1463,7 @@
                                 <rect key="frame" x="112" y="166" width="151" height="128"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-qL-NTe">
+
                                 <rect key="frame" x="111" y="422.5" width="153" height="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -1336,6 +1478,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbY-mz-mLb">
+
                                 <rect key="frame" x="111" y="472.5" width="153" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Send Link" backgroundImage="Common_buttonBg">
@@ -1413,6 +1556,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-Nh-Yag">
+
                                 <rect key="frame" x="111" y="316" width="153" height="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -1427,6 +1571,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verification Code" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="dIx-Km-IYL">
+
                                 <rect key="frame" x="111" y="366" width="153" height="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -1441,6 +1586,7 @@
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Gt-NW-EN8">
+
                                 <rect key="frame" x="111" y="415" width="153" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="DNi-jw-nSv">
@@ -1460,6 +1606,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Retype Password" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="h28-tv-Pch">
+
                                 <rect key="frame" x="111" y="464" width="153" height="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -1474,6 +1621,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-p9-9cC">
+
                                 <rect key="frame" x="111" y="514" width="153" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Sign In" backgroundImage="Common_buttonBg">
@@ -1485,12 +1633,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trouble Logging In?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-ES-AnB">
+
                                 <rect key="frame" x="125.5" y="235" width="124" height="16.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have Your Verification Code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU9-Gz-7rg">
+
                                 <rect key="frame" x="96.5" y="268.5" width="182.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1508,6 +1658,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_VitaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fy8-2C-LZs">
+
                                 <rect key="frame" x="112" y="76" width="151" height="128"/>
                             </imageView>
                         </subviews>
@@ -1578,6 +1729,103 @@
             </objects>
             <point key="canvasLocation" x="-1733" y="-51"/>
         </scene>
+        <!--Facebook Email Register View Controller-->
+        <scene sceneID="SrZ-2d-aUv">
+            <objects>
+                <viewController id="ozN-ol-ykM" customClass="FacebookEmailRegisterViewController" customModule="Vita" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZuT-9B-grP"/>
+                        <viewControllerLayoutGuide type="bottom" id="MsM-CO-f1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xz7-Li-DYy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_bg" translatesAutoresizingMaskIntoConstraints="NO" id="dTt-Eo-tvX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email to Register To Vita App." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-Jr-33N">
+                                <rect key="frame" x="81" y="360" width="253" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsJ-Gs-OhR">
+                                <rect key="frame" x="16" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backClickedWithSender:" destination="ozN-ol-ykM" eventType="touchUpInside" id="n1R-HN-6t4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Common_VitaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="35p-3D-DsQ">
+                                <rect key="frame" x="109" y="164" width="196" height="165"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" background="textField_bg" translatesAutoresizingMaskIntoConstraints="NO" id="eJI-PW-Zlq">
+                                <rect key="frame" x="109" y="408" width="197" height="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="ozN-ol-ykM" id="g1M-EK-EDc"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpY-8O-0HO">
+                                <rect key="frame" x="109" y="468" width="197" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Sign Up" backgroundImage="Common_buttonBg">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.50588235290000005" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RegisterClickedWithSender:" destination="ozN-ol-ykM" eventType="touchUpInside" id="FRU-x9-245"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPW-sl-eg6">
+                                <rect key="frame" x="106" y="687" width="202" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Privacy Policy and Terms of Use">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyClickedWithSender:" destination="ozN-ol-ykM" eventType="touchUpInside" id="f7S-lB-AbT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="height" secondItem="gpY-8O-0HO" secondAttribute="height" id="0lQ-zE-HiH"/>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="top" secondItem="nJd-Jr-33N" secondAttribute="bottom" constant="31" id="1M0-fR-f2B"/>
+                            <constraint firstAttribute="trailing" secondItem="dTt-Eo-tvX" secondAttribute="trailing" id="1XP-t9-Osg"/>
+                            <constraint firstItem="nJd-Jr-33N" firstAttribute="top" secondItem="35p-3D-DsQ" secondAttribute="bottom" constant="31.329999999999998" id="AUE-e1-7UP"/>
+                            <constraint firstItem="MsM-CO-f1W" firstAttribute="top" secondItem="dTt-Eo-tvX" secondAttribute="bottom" id="Dzt-nN-Zls"/>
+                            <constraint firstItem="nJd-Jr-33N" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="GHX-eD-X95"/>
+                            <constraint firstItem="dTt-Eo-tvX" firstAttribute="top" secondItem="xz7-Li-DYy" secondAttribute="top" id="HL8-T4-uHf"/>
+                            <constraint firstItem="CsJ-Gs-OhR" firstAttribute="leading" secondItem="xz7-Li-DYy" secondAttribute="leading" constant="16" id="T3b-s0-pnc"/>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="width" secondItem="gpY-8O-0HO" secondAttribute="width" id="UzT-9k-P86"/>
+                            <constraint firstItem="MsM-CO-f1W" firstAttribute="top" secondItem="gPW-sl-eg6" secondAttribute="bottom" constant="20" id="YqL-nu-aOm"/>
+                            <constraint firstItem="35p-3D-DsQ" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="ZDC-hT-o84"/>
+                            <constraint firstItem="eJI-PW-Zlq" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="asA-QS-uoK"/>
+                            <constraint firstItem="gpY-8O-0HO" firstAttribute="top" secondItem="eJI-PW-Zlq" secondAttribute="bottom" constant="15" id="cCm-Qj-qH4"/>
+                            <constraint firstItem="nJd-Jr-33N" firstAttribute="centerY" secondItem="xz7-Li-DYy" secondAttribute="centerY" id="cqt-cY-aJA"/>
+                            <constraint firstItem="gpY-8O-0HO" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="jZo-qp-HcU"/>
+                            <constraint firstItem="dTt-Eo-tvX" firstAttribute="leading" secondItem="xz7-Li-DYy" secondAttribute="leading" id="pmz-A6-W4R"/>
+                            <constraint firstItem="CsJ-Gs-OhR" firstAttribute="top" secondItem="xz7-Li-DYy" secondAttribute="top" constant="15" id="sOC-Ye-ile"/>
+                            <constraint firstItem="gPW-sl-eg6" firstAttribute="centerX" secondItem="xz7-Li-DYy" secondAttribute="centerX" id="tvm-9k-l24"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="eJI-PW-Zlq" id="6pJ-Ak-evj"/>
+                        <segue destination="hwt-6q-dHI" kind="show" identifier="ContainerVC" id="dNK-MD-wYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFp-Hn-zqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-806"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Common_VitaLogo" width="151" height="128"/>
@@ -1611,6 +1859,7 @@
         <image name="whats" width="185" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
+
         <segue reference="9Tx-rf-6Qq"/>
         <segue reference="Ax0-RL-dGG"/>
     </inferredMetricsTieBreakers>

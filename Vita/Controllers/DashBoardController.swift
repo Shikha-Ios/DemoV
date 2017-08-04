@@ -33,10 +33,30 @@ class DashBoardController: UIViewController {
     }
   }
   
-  @IBAction func navigateToMyVitaUpdates(_ sender: UIButton) {
+    @IBAction func navigateToMyVitaUpdates(_ sender: UIButton) {
+        self.performSegue(withIdentifier:"UpdatesVC", sender: nil)
+
     
-  }
- 
+    }
+    @IBAction func navigateToAroundMe(_ sender: UIButton) {
+        self.performSegue(withIdentifier:"AroundVC", sender: nil)
+
+        
+    }
+    @IBAction func navigateToHighFives(_ sender: UIButton) {
+        self.performSegue(withIdentifier:"HighVC", sender: nil)
+
+        
+    }
+    @IBAction func navigateToWatchList(_ sender: UIButton) {
+        self.performSegue(withIdentifier:"WatchVC", sender: nil)
+
+        
+    }
+    @IBAction func navigateToFeatured(_ sender: UIButton) {
+        self.performSegue(withIdentifier:"FeaturedVC", sender: nil)
+
+    }
   /*
    // MARK: - Navigation
    
