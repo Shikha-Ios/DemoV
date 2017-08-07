@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Identifiable {
-    static func parseJSON(data:Any?)->ResponseResult<Any>?
+    static func parseJSON(data:String,errorStatusCode : Int?)->ResponseResult<Any>?
 }
 
 class UserInfo:Identifiable {
@@ -17,15 +17,16 @@ class UserInfo:Identifiable {
     var email:String?
     var token:String?
 
-    static func parseJSON(data:Any?)->ResponseResult<Any>? {
-        if let responseData = data as? [String : AnyObject] {
-            print("value is\(responseData)")
+    static func parseJSON(data:String,errorStatusCode : Int?)->ResponseResult<Any>? {
+        
+        if let responseData = data.convertToDictionary(){
+            print("parsed Api response\(responseData)")
             let status : String = (responseData["status"]! as AnyObject).stringValue
             if status != "1"
             {
                 print("check error")
                 let desc = responseData["error"]
-                let err = APIResponseError.generalError(domain: "Parsing Error", description: desc as? String, errorCode:111)
+                let err = APIResponseError.generalError(domain: "Parsing Error", description: desc as? String, errorCode:errorStatusCode )
                 return .failure(err)
             }
             let userDict = responseData["user"] as! NSDictionary
@@ -35,7 +36,7 @@ class UserInfo:Identifiable {
             user.token =  responseData["token"] as? String
             return .success(user)
         }
-        let err = APIResponseError.generalError(domain: "Parsing Error", description: "Wrong Data Format", errorCode:111)
+        let err = APIResponseError.generalError(domain: "Parsing Error", description: "Wrong Data Format", errorCode:errorStatusCode )
         return .failure(err)
     }
 

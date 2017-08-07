@@ -16,7 +16,7 @@ protocol WebApiWrapperDelegate:class {
 class WebAPIWrapper {
     var delegate:WebApiWrapperDelegate?
     
-    /* Developers can add NSURLSession Code Respectively */
+    
     func callServiceWithRequest(requestEnvelop:Requestable) {
         let method = requestEnvelop.httpType.rawValue
         let type = HTTPMethod(rawValue: method)
@@ -27,16 +27,26 @@ class WebAPIWrapper {
             parameters: requestEnvelop.pathType.httpBodyEnvelop(),
             encoding:JSONEncoding.default,
             headers: requestEnvelop.httpHeaders())
-            .responseJSON { (response) -> Void in
+            .responseString { (response) -> Void in
                 print("api response\(response)")
-                
                 if let cls = requestEnvelop.modelType  {
-                   let results = cls.parseJSON(data: response.result.value)
-                    self.delegate?.didReceiveResponse(request:requestEnvelop , data: results, error: response.result.error)
-                    return
+                    if(response.result.isSuccess) {
+                        print("Response Recieved\(String(describing: response.value))")
+                        guard let responseString = response.value else {
+                            self.delegate?.didReceiveResponse(request:requestEnvelop , data: response.data, error: response.result.error)
+                            return
+                        }
+                        
+                        let status = response.response?.statusCode
+                        let results = cls.parseJSON(data: responseString, errorStatusCode: status)
+                        
+                        self.delegate?.didReceiveResponse(request:requestEnvelop , data: results, error: response.result.error)
+                        return
+                    }
                 }
                 self.delegate?.didReceiveResponse(request:requestEnvelop , data: response.data, error: response.result.error)
-                }
         }
+    }
+
 }
 
